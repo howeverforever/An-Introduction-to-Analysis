@@ -1,0 +1,111 @@
+\documentclass{report}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath}
+\usepackage{natbib}
+\usepackage{mathpazo}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{type1cm}
+\usepackage{exercise,chngcntr}
+
+\begin{document}
+
+\counterwithin{Exercise}{section}
+
+\setcounter{chapter}{4}
+\chapter{Integrability}
+
+
+\setcounter{section}{2}
+
+\section{The Fundamental Theorem of Calculus}
+\setcounter{Exercise}{2}
+% === Exercise 5.3.3 ===
+\begin{Exercise}
+
+\begin{enumerate}[a)]
+\item Answer is $-\frac{1}{2}$. Let $u=x^2+1,\ du=2xdx$, and use Change of Variables Rule.
+\item Answer is $-4$. Let $u=\sqrt{1-x^2},\ u^2=1-x^2,\ udu=-xdx$, and use Change of Variables Rule.
+\end{enumerate}
+\end{Exercise}
+
+\vspace{12pt}
+% === Exercise 5.3.4 ===
+\begin{Exercise}
+\begin{enumerate}[a)]
+\item Use Integration by Part.
+\item Use Integration by Part.
+\item Use Integration by Part.
+\end{enumerate}
+\end{Exercise}
+
+\vspace{12pt}
+% === Exercise 5.3.5 ===
+\begin{Exercise}
+Set $g(x) = 1,\ \forall x \in [a,b]$
+\end{Exercise}
+
+\vspace{12pt}
+% === Exercise 5.3.6 ===
+\begin{Exercise}
+Set 
+\begin{flalign*}
+           g(t) &= \alpha \int_{a}^{t} f(x) dx + \beta \int_{t}^{b} f(x) dx& \\
+\implies  g'(t) &= \alpha f(t) - \beta f(t)& \\
+                &= (\alpha - \beta) f(t)&
+\end{flalign*}
+\end{Exercise}
+
+\setcounter{Exercise}{8}
+\vspace{12pt}
+% === Exercise 5.3.9 ===
+\begin{Exercise}
+$$ \int_{f(a)}^{f(b)} f^{-1}(x) dx = \int_{a}^{b} f^{-1}(f(y)) f'(y) dy $$
+Then, use Integration by Part to get the equation.
+\end{Exercise}
+
+\vspace{12pt}
+% === Exercise 5.3.10 ===
+\begin{Exercise}
+$$ f \circ \phi = (f \circ \phi) |\phi'| |\frac{1}{\phi'}| $$ 
+Use Change of Variables Rule and the fact that $\phi' \neq 0 $ and both $\phi'$ and $\frac{1}{\phi'}$ are continuous on $[a,b]$.
+\end{Exercise}
+
+
+\section{Improper Riemann Integration}
+\setcounter{Exercise}{0}
+
+% === Exercise 5.4.1 ===
+\begin{Exercise}
+\begin{enumerate}[a)]
+\item $\frac{3}{2}$
+\item $\frac{1}{3}$
+\item $\frac{3}{2}$
+\item $-1$
+\end{enumerate}
+\end{Exercise}
+
+\setcounter{Exercise}{6}
+\vspace{12pt}
+% === Exercise 5.4.7 ===
+\begin{Exercise}
+\begin{enumerate}[a)]
+\item Assume $L > 0$ and use Comparison Theorem for Improper Integrals to lead a contradiction.
+\item ???
+\end{enumerate}
+\end{Exercise}
+
+\vspace{12pt}
+% === Exercise 5.4.8 ===
+\begin{Exercise}
+Let 
+\begin{flalign*}
+          t &= x^n &\\
+\implies dt &= nx^{n-1}dx &\\
+\implies dx &= \frac{dt}{nt^{\frac{n-1}{n}}} &
+\end{flalign*}
+Use Change of Variables Rule and the fact that $f$ is absolutely integrable on $[1, \infty)$. i.e. $$\int_{1}^{\infty} |f(x)| dx < \infty $$
+\end{Exercise}
+
+\end{document}
