@@ -1,0 +1,135 @@
+\documentclass{report}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{fancyhdr}
+\usepackage{natbib}
+\usepackage{mathpazo}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{type1cm}
+\usepackage{exercise,chngcntr}
+
+\newenvironment{solution}
+  {\begin{proof}[Solution]}
+  {\end{proof}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\rightmark}
+\rfoot{\thepage}
+
+\begin{document}
+
+\counterwithin{Exercise}{section}
+
+\setcounter{chapter}{5}
+\chapter{Infinite Series of Real Numbers}
+\thispagestyle{empty}
+\newpage
+
+\section{Introduction}
+\setcounter{Exercise}{3}
+% === Exercise 6.1.4 ===
+\begin{Exercise}
+\begin{solution}
+\begin{flalign*}
+&\sum_{k=1}^{\infty} (a_{k+1}-2a_k+a_{k-1}) = \lim_{n\to\infty} (a_0-a_1+a_{n+1}-a_n) = a_0-a_1 &
+\end{flalign*}
+\end{solution}
+\end{Exercise}
+
+\vspace{12pt}
+% === Exercise 6.1.5 ===
+\begin{Exercise}
+\begin{solution}
+\begin{flalign*}
+ &\sum_{k=1}^{\infty}(x^k-x^{k-1})(x^k+x^{k-1}) = \sum_{k=1}^{\infty}(x^{2k}-x^{2k-2}) = \lim_{n\to\infty}(x^{2n}-1)\ \text{converges} &\\
+\iff& |x| \leq 1 &
+\end{flalign*}
+If $x = \pm 1$, then the value of the series is $0$, \\
+otherwise $x \in (-1,1)$, the value of the series is $-1$.
+\end{solution}
+\end{Exercise}
+
+\setcounter{Exercise}{6}
+\vspace{12pt}
+% === Exercise 6.1.7 ===
+\begin{Exercise}
+\begin{enumerate}[a)]
+\item 
+\begin{proof}
+Since $f'(x)$ exists for all $x \in \mathbb{R}$, we conclude $F'(x)$ exists. \\
+By the Mean Value Theorem, there is a number $c \in I$ so that $$ |F(x)-F(y)| = F'(c)(x-y),\ \forall x,y \in I$$
+where $$F'(c) = 1-\frac{f'(c)}{f'(a)}$$
+Since $c \in I$, we know $\frac{f'(c)}{f'(a)} \in [1-r,1]$. Therefore $$ 0 \leq F'(c) = 1-\frac{f'(c)}{f'(a)} \leq r$$
+As a result, we conclude that $$|F(x)-F(y)| = |F'(c)||x-y| \leq r|x-y|,\ \forall x,y \in I $$
+\end{proof}
+
+\item
+\begin{proof}
+For $n=1$, by definition of $x_n$, we get $$|x_2-x_1| = |F(x_1)-F(x_0)| \leq r|x_1-x_0|$$
+Assume for $n=k$, $$|x_{k+1}-x_{k}| \leq r^k|x_1-x_0|$$ holds, then for $n=k+1$, $$|x_{k+2}-x_{k+1}| = |F(x_{k+1})-F(x_{k})| \leq r|x_{k+1}-x_{k}| \leq r^{k+1}|x_1-x_0|$$ also holds.
+By induction, we conclude $$|x_{n+1}-x_{n}| \leq r^n|x_1-x_0|,\ \forall n \in \mathbb{N}$$
+\end{proof}
+
+\item 
+\begin{proof}
+Since $f(I) \subseteq I$ and $x_0 \in I$, we hold $x_n \in I,\ \forall n \in \mathbb{N}$. And $I$ is a closed interval, by Bolzano-Weierstrass Theorem, there is a subsequence $\{x_{n_k}\}$ which converges to a fixed number $b \in I$.
+
+\vspace{1ex}
+
+Moreover, by part b), we get $ \{x_n\}$  is Cauchy. Hence $$\lim_{n\to\infty} x_n = b $$
+
+Besides, $F$ is differentiable on $I$, so $F$ is continuous on $I$. \\
+Consider the equation $x_n = F(x_{n-1})$ and notice $F$ is continuous on $I$. Take the limit on both sides as $n\to\infty$, we have $b=F(b)$ which implies that $$b=b-\frac{f(b)}{f'(a)}$$
+Then, we conclude $f(b)=0$, as promised.
+\end{proof}
+\end{enumerate}
+\end{Exercise}
+
+
+\setcounter{Exercise}{8}
+\vspace{12pt}
+% === Exercise 6.1.9 ===
+\begin{Exercise}
+\begin{enumerate}[a)]
+\item
+\begin{proof}
+For all $n>N$,
+\begin{flalign*}
+&\left|nb-\sum_{k=1}^{n}b_k\right| = \left|\sum_{k=1}^{n}(b-b_k)\right| \leq \sum_{k=1}^{n}|b-b_k| \leq \sum_{k=1}^{N} |b-b_k| + \sum_{k=N+1}^{n}M = \sum_{k=1}^{N}|b_k-b| + M(n-N) &
+\end{flalign*}
+\end{proof}
+
+\item
+\begin{proof}
+Since $\lim_{n\to\infty} b_n = b$, given $\epsilon>0$, $\exists N\in\mathbb{N}$ such that $n \geq N \implies |b_n-b| < \epsilon$.
+Then if $n > N$, by part a), $$\left|\frac{b_1+b_2+...+b_n}{n}-b\right| = \left|\frac{b_1+b_2+...+b_n-nb}{n}\right| \leq \left|\frac{\sum_{k=1}^{n}\left|b_k-b\right|}{n}\right|+\epsilon(1-\frac{N}{n}) $$
+Take the limit of both sides as $n\to\infty$, we have $$\limsup_{n\to\infty}\left|\frac{b_1+b_2+...+b_n}{n}-b\right| \leq \epsilon$$
+This hold for any $\epsilon > 0$, so $$\lim_{n\to\infty}\left|\frac{b_1+b_2+...+b_n}{n}-b\right| = 0 $$
+which means $$\frac{b_1+b_2+...+b_n}{n}\to b \text{ as } n\to\infty$$
+\end{proof}
+
+\item
+\begin{solution}
+The counter-example is $b_k=(-1)^{k-1}$.
+\end{solution}
+\end{enumerate}
+\end{Exercise}
+
+
+\setcounter{Exercise}{11}
+\vspace{12pt}
+% === Exercise 6.1.12 ===
+\begin{Exercise}
+\begin{proof}
+Let $$b_n := \sum_{k=1}^{n} k a_k = \frac{n+1}{n+2} $$
+So $$b_{n+1}-b_n=(n+1)a_{n+1}=\frac{1}{(n+2)(n+3)} $$
+We have $$a_1=\frac{2}{3}\text{ and } a_n=\frac{1}{n(n+1)(n+2)}\text{ for } n > 1$$
+Calculate the summation and we get $$\sum_{k=1}^{\infty} a_k = a_1+\sum_{k=2}^{\infty} a_k = \frac{2}{3}+\frac{1}{12} = \frac{3}{4}$$
+\end{proof}
+\end{Exercise}
+
+\end{document}
