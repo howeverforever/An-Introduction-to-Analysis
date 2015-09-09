@@ -132,4 +132,101 @@ Calculate the summation and we get $$\sum_{k=1}^{\infty} a_k = a_1+\sum_{k=2}^{\
 \end{proof}
 \end{Exercise}
 
+
+\section{Series with Nonnegative Terms}
+
+% === Exercise 6.2.1 ===
+\begin{Exercise}
+\begin{enumerate}[a)]
+\item 
+\begin{proof}
+Let $$a_n := \frac{2n+5}{3n^3+2n-1}\text{ and } b_n :=\frac{1}{n^2}$$
+Since $\sum_{k=1}^{\infty}\frac{1}{k^2}$ converges by the p-Series Test, besides
+$$0<\lim_{n\to\infty}\frac{a_n}{b_n} = \frac{2}{3} < \infty$$
+By the Limit Comparison Test, we conclude $$\sum_{k=1}^{\infty}\frac{2k+5}{3k^3+2k-1}$$ converges.
+\end{proof}
+
+\item [d)]
+\begin{proof}
+Since $\log{k} < k,\ \forall k \in \mathbb{N}$, we have $$\sum_{k=1}^{\infty}\frac{k^3\log^2{k}}{e^k} \leq \sum_{k=1}^{\infty}\frac{k^5}{e^k}$$
+Let $$a_n := \frac{n^5}{e^n}\text{ and } b_n :=\frac{1}{n^2}$$
+Since $\sum_{k=1}^{\infty}\frac{1}{k^2}$ converges by the p-Series Test, besides
+$$\lim_{n\to\infty}\frac{a_n}{b_n} = \lim_{n\to\infty}\frac{n^7}{e^n} = 0 $$
+By the Limit Comparison Test and the Comparison Test, we conclude $$\sum_{k=1}^{\infty}\frac{k^3\log^2{k}}{e^k}$$ converges.
+\end{proof}
+\end{enumerate}
+\end{Exercise}
+
+\vspace{12pt}
+% === Exercise 6.2.2 ===
+\begin{Exercise}
+\begin{enumerate}[a)]
+\item 
+\begin{proof}
+Let $$a_n := \frac{3n^3+n-4}{5n^4-n^2+1}\text{ and } b_n :=\frac{1}{n}$$
+Since $\sum_{k=1}^{\infty}\frac{1}{k}$ diverges by the p-Series Test, besides
+$$0<\lim_{n\to\infty}\frac{a_n}{b_n} = \frac{3}{5} < \infty$$
+By the Limit Comparison Test, we conclude $$\sum_{k=1}^{\infty}\frac{3k^3+k-4}{5k^4-k^2+1}$$ diverges.
+\end{proof}
+
+\item [d)]
+\begin{proof}
+Consider $$\int_{2}^{\infty}\frac{1}{x\log^p{x}} = \left|(\log{x})^{1-p}\right|_{2}^{\infty} + p\int_{2}^{\infty}\frac{1}{x\log^p{x}}$$
+Since $p \leq 1$, then $1-p \geq 0$, we have $$\int_{2}^{\infty}\frac{1}{x\log^p{x}} = \frac{\left|(\log{x})^{1-p}\right|_{2}^{\infty}}{1-p} = \infty$$
+By the Integral Test, we conclude $$\int_{2}^{\infty}\frac{1}{x\log^p{x}}\quad for\ p \leq 1$$
+diverges.
+\end{proof}
+\end{enumerate}
+\end{Exercise}
+
+
+\vspace{12pt}
+% === Exercise 6.2.3 ===
+\begin{Exercise}
+\begin{proof}
+Assume $a_k \leq M,\ \forall k \in \mathbb{N} $ where $M > 0$. Therefore $$ \frac{a_k}{(k+1)^p} < \frac{M}{k^p} $$
+Since $p>1$, by the p-Series Test and the Limit Comparison Test, we know $$\sum_{k=1}^{\infty}\frac{M}{k^p}$$ converges. Then by the Comparison Test, we conclude $$\sum_{k=1}^{\infty}\frac{a_k}{(k+1)^p}$$ converges.
+\end{proof}
+\end{Exercise}
+
+\setcounter{Exercise}{4}
+\vspace{12pt}
+% === Exercise 6.2.5 ===
+\begin{Exercise}
+\begin{proof}
+Since for $p \geq 0$, we have $$\frac{|a_k|}{k^p} \leq |a_k|$$
+By the Comparison Test, we know $$\sum_{k=1}^{\infty}\frac{|a_k|}{k^p}$$
+converges. When $p < 0$, the series might converge or diverge. e.g. set $p=-1$ and $a_k=\frac{1}{k}$, then $$\sum_{k=1}^{\infty}\frac{|a_k|}{k^p} = \sum_{k=1}^{\infty}1$$ which diverges. For the same $p$, set $a_k = \frac{1}{k^3}$, then the series $$\sum_{k=1}^{\infty}\frac{|a_k|}{k^p} = \sum_{k=1}^{\infty}\frac{1}{k^2}$$ converges by the p-Series Test.
+\end{proof}
+\end{Exercise}
+
+\setcounter{Exercise}{6}
+\vspace{12pt}
+% === Exercise 6.2.7 ===
+\begin{Exercise}
+\begin{proof}
+Since the series $\sum_{k=1}^{\infty}a_k$ converges, then $a_k \leq M$ for all $k$. It follows that $0 \leq a_kb_k \leq Mb_k$ and the series  $\sum_{k=1}^{\infty}b_k$ converges. By the Comparison Test, we conclude $\sum_{k=1}^{\infty}a_kb_k$ converges.
+\end{proof}
+\end{Exercise}
+
+\setcounter{Exercise}{8}
+\vspace{12pt}
+% === Exercise 6.2.9 ===
+\begin{Exercise}
+\begin{proof}
+$(\Longrightarrow)$
+Let $s_n = \sum_{k=1}^{\infty}a_k$. Since $$\sum_{k=1}^{\infty}a_k = \lim_{n\to\infty}\sum_{k=1}^{n}a_k = \lim_{n\to\infty}s_n = S \in \mathbb{R}$$
+converges, so does its partial sum. Then $$\sum_{k=1}^{\infty}(a_{2k}+a_{2k+1}) = \lim_{n\to\infty}(s_{2n+1}-a_1) = S-s_1 \in \mathbb{R}$$ converges. 
+
+\vspace{2ex}
+
+$(\Longleftarrow)$ Since  $$\sum_{k=1}^{\infty}(a_{2k}+a_{2k+1}) = \lim_{n\to\infty}(s_{2n+1}-a_1)$$ converges so does $s_{2n+1}$. Consider $$s_{2n+2} = s_{2n+1}+a_{2n+2}$$
+Taking the limit of both sides as $n\to\infty$, we have $$\lim_{n\to\infty}s_{2n+2} = \lim_{n\to\infty}s_{2n+1}$$
+which means $s_{2n+2}$ also converges.
+
+\vspace{2ex}
+
+Combining above discussion, no matter the number of terms is either odd or even, the series always converges. We conclude $$ \sum_{k=1}^{\infty}a_k$$ converges.
+\end{proof}
+\end{Exercise}
 \end{document}
