@@ -229,4 +229,75 @@ which means $s_{2n+2}$ also converges.
 Combining above discussion, no matter the number of terms is either odd or even, the series always converges. We conclude $$ \sum_{k=1}^{\infty}a_k$$ converges.
 \end{proof}
 \end{Exercise}
+
+\section{Absolute Convergence}
+\setcounter{Exercise}{2}
+% === Exercise 6.3.3 ===
+\begin{Exercise}
+\begin{enumerate}[a)]
+\item
+\begin{solution}
+Consider $$\int_{2}^{\infty}\left|\frac{1}{x\log^p{x}}\right| = \int_{2}^{\infty}\frac{1}{x\log^p{x}} = \frac{\left|(\log{x})^{1-p}\right|_{2}^{\infty}}{1-p} $$
+converges by the Integral Test if and only if $1-p<0$. So $$p \in (1,\infty)$$
+\end{solution}
+
+\item [c)]
+\begin{solution}
+Let $$a_k = \frac{k^p}{p^k}. $$
+Consider
+$$\lim_{k\to\infty}\left|\frac{a_{k+1}}{a_k}\right| = \lim_{k\to\infty}\left|\left(\frac{k+1}{k}\right)^p\left(\frac{1}{p}\right)\right| = \frac{1}{|p|} < 1$$
+which implies $$|p|>1.$$
+So$$p\in(-\infty,-1)\cup (1,\infty).$$
+\end{solution}
+
+\item [e)]
+\begin{solution}
+Let $$a_k := \sqrt{k^{2p}+1}-k^p = \frac{1}{\sqrt{k^{2p}+1}+k^p}\text{ and } b_k := \frac{1}{k^p}.$$
+Since $\sum_{k=1}^{\infty}\frac{1}{k^p}$ converges if and only if $p>1$ by the p-Series Test, besides
+$$\lim_{k\to\infty}\frac{a_k}{b_k} = \frac{1}{\sqrt{1+\frac{1}{k^{2p}}}+1} = \begin{cases}0 & \mbox{if }p<0 \\ \frac{1}{2} & \mbox{if }p>0 \\ \frac{1}{\sqrt{2}+1} & \mbox{if } p = 0\end{cases}.$$
+By the Limit Comparison Test, we have the series converges when $p>1$. For $p<0$, consider $$\sum_{k=1}^{\infty}\frac{1}{\sqrt{k^{2p}+1}+k^p} \geq \sum_{k=1}^{\infty}\frac{1}{2\sqrt{k^{2p}+1}}.$$
+Since $$\lim_{k\to\infty}\frac{1}{2\sqrt{k^{2p}+1}} = \frac{1}{2},$$
+by the Divergence Test and the Comparison Test, we know the series diverges when $p<0$.
+Together above discussion, we conclude $$p\in(1,\infty).$$
+\end{solution}
+\end{enumerate}
+\end{Exercise}
+
+\setcounter{Exercise}{4}
+\vspace{12pt}
+% === Exercise 6.3.5 ===
+\begin{Exercise}
+\begin{proof}
+Since $0<\frac{1}{k}\leq1 \mbox{ and } \sin{\frac{1}{k}} > 0$ for all $k\in\mathbb{N}$, we know $$ 1+k\sin{\frac{1}{k}} > 0.$$
+Hence $$ \lim_{k\to\infty}\left|\frac{a_k}{a_{k-1}}\right| = \lim_{k\to\infty}\left(\frac{1}{1+k\sin{\frac{1}{k}}}\right) = \frac{1}{2} < 1 $$ where $$ \lim_{k\to\infty}\left(k\sin{\frac{1}{k}}\right) = \lim_{k\to\infty}\left(\frac{\sin{\frac{1}{k}}}{\frac{1}{k}}\right) = \lim_{k\to\infty}\left(\cos{\frac{1}{k}}\right) = 1.$$
+By the Ratio Test, we conclude $$\sum_{k=1}^{\infty}a_k$$ converges absolutely.
+\end{proof}
+\end{Exercise}
+
+\vspace{12pt}
+% === Exercise 6.3.6 ===
+\begin{Exercise}
+\begin{enumerate}[a)]
+\item 
+\begin{proof}
+For $N\in\mathbb{N}$, $$ \sum_{k=1}^{\infty}\left( \sum_{j=1}^{N}a_{kj} \right) = \sum_{j=1}^{N}\left( \sum_{k=1}^{\infty}a_{kj} \right) $$ by the Limit Theorem. Then fix $N$, for any $K\in\mathbb{N}$, $$ \sum_{k=1}^{K}\left( \sum_{j=1}^{N}a_{kj} \right) \leq \sum_{k=1}^{\infty}\left( \sum_{j=1}^{\infty}a_{kj} \right).$$
+If right hand side is finite, by the Monotone Convergence Theorem, we have $$\sum_{k=1}^{\infty}\left( \sum_{j=1}^{N}a_{kj} \right) \leq \sum_{k=1}^{\infty}\left( \sum_{j=1}^{\infty}a_{kj} \right).$$
+On the other hand if it is infinite, then it holds trivially. Hence for any $N\in\mathbb{N}$, $$\sum_{j=1}^{N}\left( \sum_{k=1}^{\infty}a_{kj} \right) \leq \sum_{k=1}^{\infty}\left( \sum_{j=1}^{\infty}a_{kj} \right).$$ Use the Monotone Convergence Theorem again, we conclude $$\sum_{j=1}^{\infty}\left( \sum_{k=1}^{\infty}a_{kj} \right) \leq \sum_{k=1}^{\infty}\left( \sum_{j=1}^{\infty}a_{kj} \right).$$
+\end{proof}
+
+\item
+\begin{proof}
+Set $B_j = \sum_{k=1}^{\infty}a_{kj}$. From part a), $$ \sum_{j=1}^{\infty}B_j = \sum_{j=1}^{\infty}\left( \sum_{k=1}^{\infty}a_{kj} \right) \leq \sum_{k=1}^{\infty}\left( \sum_{j=1}^{\infty}a_{kj} \right) = \sum_{k=1}^{\infty}A_k$$ converges so does $\sum_{j=1}^{\infty}B_j$ which means both $$\sum_{j=1}^{\infty}\left( \sum_{k=1}^{\infty}a_{kj} \right) \leq \sum_{k=1}^{\infty}\left( \sum_{j=1}^{\infty}a_{kj} \right) \mbox{ and } \sum_{k=1}^{\infty}\left( \sum_{j=1}^{\infty}a_{kj} \right) \leq \sum_{j=1}^{\infty}\left( \sum_{k=1}^{\infty}a_{kj} \right) $$ hold. So we conclude $$\sum_{j=1}^{\infty}\left( \sum_{k=1}^{\infty}a_{kj} \right) = \sum_{k=1}^{\infty}\left( \sum_{j=1}^{\infty}a_{kj} \right).$$
+\end{proof}
+
+\item
+\begin{proof}
+Consider $$a_{kj} = \begin{cases}1 & \mbox{if } j=k \\
+-1 & \mbox{if }j=k+1 \\
+0 & \mbox{otherwise} \end{cases}.$$
+Then the equation from part b) means $$ 1 = 0 $$ which is obviously a contradiction.
+\end{proof}
+\end{enumerate}
+\end{Exercise}
+
 \end{document}
