@@ -35,7 +35,7 @@
 \begin{Exercise}
 \begin{solution}
 \begin{flalign*}
-&\sum_{k=1}^{\infty} (a_{k+1}-2a_k+a_{k-1}) = \lim_{n\to\infty} (a_0-a_1+a_{n+1}-a_n) = a_0-a_1 &
+&\sum_{k=1}^{\infty} \left(a_{k+1}-2a_k+a_{k-1}\right) = \lim_{n\to\infty} \left(a_0-a_1+a_{n+1}-a_n\right) = a_0-a_1. &
 \end{flalign*}
 \end{solution}
 \end{Exercise}
@@ -45,11 +45,11 @@
 \begin{Exercise}
 \begin{solution}
 \begin{flalign*}
- &\sum_{k=1}^{\infty}(x^k-x^{k-1})(x^k+x^{k-1}) = \sum_{k=1}^{\infty}(x^{2k}-x^{2k-2}) = \lim_{n\to\infty}(x^{2n}-1)\ \text{converges} &\\
-\iff& |x| \leq 1 &
+ &\sum_{k=1}^{\infty}\left(x^k-x^{k-1}\right)\left(x^k+x^{k-1}\right) = \sum_{k=1}^{\infty}\left(x^{2k}-x^{2k-2}\right) = \lim_{n\to\infty}\left(x^{2n}-1\right)\ \text{converges.} &\\
+\iff& |x| \leq 1. &
 \end{flalign*}
-If $x = \pm 1$, then the value of the series is $0$, \\
-otherwise $x \in (-1,1)$, the value of the series is $-1$.
+As a result, $$\sum_{k=1}^{\infty}\left(x^k-x^{k-1}\right)\left(x^k+x^{k-1}\right) = \begin{cases} 0 & \mbox{for } x=\pm1 \\
+-1 & \mbox{for } x\in(-1,1)\end{cases}.$$
 \end{solution}
 \end{Exercise}
 
@@ -62,16 +62,16 @@ otherwise $x \in (-1,1)$, the value of the series is $-1$.
 \begin{proof}
 Since $f'(x)$ exists for all $x \in \mathbb{R}$, we conclude $F'(x)$ exists. \\
 By the Mean Value Theorem, there is a number $c \in I$ so that $$ |F(x)-F(y)| = F'(c)(x-y),\ \forall x,y \in I$$
-where $$F'(c) = 1-\frac{f'(c)}{f'(a)}$$
-Since $c \in I$, we know $\frac{f'(c)}{f'(a)} \in [1-r,1]$. Therefore $$ 0 \leq F'(c) = 1-\frac{f'(c)}{f'(a)} \leq r$$
-As a result, we conclude that $$|F(x)-F(y)| = |F'(c)||x-y| \leq r|x-y|,\ \forall x,y \in I $$
+where $$F'(c) = 1-\frac{f'(c)}{f'(a)}.$$
+Since $c \in I$, we know $\frac{f'(c)}{f'(a)} \in [1-r,1]$. Therefore $$ 0 \leq F'(c) = 1-\frac{f'(c)}{f'(a)} \leq r.$$
+As a result, we conclude that $$|F(x)-F(y)| = |F'(c)||x-y| \leq r|x-y|,\ \forall x,y \in I. $$
 \end{proof}
 
 \item
 \begin{proof}
-For $n=1$, by definition of $x_n$, we get $$|x_2-x_1| = |F(x_1)-F(x_0)| \leq r|x_1-x_0|$$
+For $n=1$, by definition of $x_n$, we get $$|x_2-x_1| = |F(x_1)-F(x_0)| \leq r|x_1-x_0|.$$
 Assume for $n=k$, $$|x_{k+1}-x_{k}| \leq r^k|x_1-x_0|$$ holds, then for $n=k+1$, $$|x_{k+2}-x_{k+1}| = |F(x_{k+1})-F(x_{k})| \leq r|x_{k+1}-x_{k}| \leq r^{k+1}|x_1-x_0|$$ also holds.
-By induction, we conclude $$|x_{n+1}-x_{n}| \leq r^n|x_1-x_0|,\ \forall n \in \mathbb{N}$$
+By induction, we conclude $$|x_{n+1}-x_{n}| \leq r^n|x_1-x_0|,\ \forall n \in \mathbb{N}.$$
 \end{proof}
 
 \item 
@@ -80,10 +80,13 @@ Since $f(I) \subseteq I$ and $x_0 \in I$, we hold $x_n \in I,\ \forall n \in \ma
 
 \vspace{1ex}
 
-Moreover, by part b), we get $ \{x_n\}$  is Cauchy. Hence $$\lim_{n\to\infty} x_n = b $$
+Moreover, by part b), we get $ \{x_n\}$  is Cauchy. Hence $$\lim_{n\to\infty} x_n = b. $$
 
-Besides, $F$ is differentiable on $I$, so $F$ is continuous on $I$. \\
-Consider the equation $x_n = F(x_{n-1})$ and notice $F$ is continuous on $I$. Take the limit on both sides as $n\to\infty$, we have $b=F(b)$ which implies that $$b=b-\frac{f(b)}{f'(a)}$$
+Besides, $F$ is differentiable on $I$, so $F$ is continuous on $I$.
+
+\vspace{1ex}
+
+Consider the equation $x_n = F(x_{n-1})$ and notice $F$ is continuous on $I$. Taking the limit on both sides as $n\to\infty$, we have $b=F(b)$ which implies that $$b=b-\frac{f(b)}{f'(a)}.$$
 Then, we conclude $f(b)=0$, as promised.
 \end{proof}
 \end{enumerate}
@@ -99,17 +102,17 @@ Then, we conclude $f(b)=0$, as promised.
 \begin{proof}
 For all $n>N$,
 \begin{flalign*}
-&\left|nb-\sum_{k=1}^{n}b_k\right| = \left|\sum_{k=1}^{n}(b-b_k)\right| \leq \sum_{k=1}^{n}|b-b_k| \leq \sum_{k=1}^{N} |b-b_k| + \sum_{k=N+1}^{n}M = \sum_{k=1}^{N}|b_k-b| + M(n-N) &
+&\left|nb-\sum_{k=1}^{n}b_k\right| = \left|\sum_{k=1}^{n}(b-b_k)\right| \leq \sum_{k=1}^{n}|b-b_k| \leq \sum_{k=1}^{N} |b-b_k| + \sum_{k=N+1}^{n}M = \sum_{k=1}^{N}|b_k-b| + M(n-N). &
 \end{flalign*}
 \end{proof}
 
 \item
 \begin{proof}
 Since $\lim_{n\to\infty} b_n = b$, given $\epsilon>0$, $\exists N\in\mathbb{N}$ such that $n \geq N \implies |b_n-b| < \epsilon$.
-Then if $n > N$, by part a), $$\left|\frac{b_1+b_2+...+b_n}{n}-b\right| = \left|\frac{b_1+b_2+...+b_n-nb}{n}\right| \leq \left|\frac{\sum_{k=1}^{n}\left|b_k-b\right|}{n}\right|+\epsilon(1-\frac{N}{n}) $$
-Take the limit of both sides as $n\to\infty$, we have $$\limsup_{n\to\infty}\left|\frac{b_1+b_2+...+b_n}{n}-b\right| \leq \epsilon$$
+Then if $n > N$, by part a), $$\left|\frac{b_1+b_2+...+b_n}{n}-b\right| = \left|\frac{b_1+b_2+...+b_n-nb}{n}\right| \leq \left|\frac{\sum_{k=1}^{n}\left|b_k-b\right|}{n}\right|+\epsilon\left(1-\frac{N}{n}\right). $$
+Taking the limit of both sides as $n\to\infty$, we have $$\limsup_{n\to\infty}\left|\frac{b_1+b_2+...+b_n}{n}-b\right| \leq \epsilon.$$
 This hold for any $\epsilon > 0$, so $$\lim_{n\to\infty}\left|\frac{b_1+b_2+...+b_n}{n}-b\right| = 0 $$
-which means $$\frac{b_1+b_2+...+b_n}{n}\to b \text{ as } n\to\infty$$
+which implies $$\frac{b_1+b_2+...+b_n}{n}\to b \text{ as } n\to\infty.$$
 \end{proof}
 
 \item
@@ -125,10 +128,10 @@ The counter-example is $b_k=(-1)^{k-1}$.
 % === Exercise 6.1.12 ===
 \begin{Exercise}
 \begin{proof}
-Let $$b_n := \sum_{k=1}^{n} k a_k = \frac{n+1}{n+2} $$
-So $$b_{n+1}-b_n=(n+1)a_{n+1}=\frac{1}{(n+2)(n+3)} $$
-We have $$a_1=\frac{2}{3}\text{ and } a_n=\frac{1}{n(n+1)(n+2)}\text{ for } n > 1$$
-Calculate the summation and we get $$\sum_{k=1}^{\infty} a_k = a_1+\sum_{k=2}^{\infty} a_k = \frac{2}{3}+\frac{1}{12} = \frac{3}{4}$$
+Let $$b_n := \sum_{k=1}^{n} k a_k = \frac{n+1}{n+2}. $$
+So $$b_{n+1}-b_n=(n+1)a_{n+1}=\frac{1}{(n+2)(n+3)}. $$
+We have $$a_1=\frac{2}{3}\text{ and } a_n=\frac{1}{n(n+1)(n+2)}\mbox{ for }n > 1.$$
+Calculate the summation and we get $$\sum_{k=1}^{\infty} a_k = a_1+\sum_{k=2}^{\infty} a_k = \frac{2}{3}+\frac{1}{12} = \frac{3}{4}.$$
 \end{proof}
 \end{Exercise}
 
@@ -140,18 +143,18 @@ Calculate the summation and we get $$\sum_{k=1}^{\infty} a_k = a_1+\sum_{k=2}^{\
 \begin{enumerate}[a)]
 \item 
 \begin{proof}
-Let $$a_n := \frac{2n+5}{3n^3+2n-1}\text{ and } b_n :=\frac{1}{n^2}$$
+Let $$a_n := \frac{2n+5}{3n^3+2n-1}\text{ and } b_n :=\frac{1}{n^2}.$$
 Since $\sum_{k=1}^{\infty}\frac{1}{k^2}$ converges by the p-Series Test, besides
-$$0<\lim_{n\to\infty}\frac{a_n}{b_n} = \frac{2}{3} < \infty$$
+$$0<\lim_{n\to\infty}\frac{a_n}{b_n} = \frac{2}{3} < \infty.$$
 By the Limit Comparison Test, we conclude $$\sum_{k=1}^{\infty}\frac{2k+5}{3k^3+2k-1}$$ converges.
 \end{proof}
 
 \item [d)]
 \begin{proof}
-Since $\log{k} < k,\ \forall k \in \mathbb{N}$, we have $$\sum_{k=1}^{\infty}\frac{k^3\log^2{k}}{e^k} \leq \sum_{k=1}^{\infty}\frac{k^5}{e^k}$$
-Let $$a_n := \frac{n^5}{e^n}\text{ and } b_n :=\frac{1}{n^2}$$
+Since $\log{k} < k,\ \forall k \in \mathbb{N}$, we have $$\sum_{k=1}^{\infty}\frac{k^3\log^2{k}}{e^k} \leq \sum_{k=1}^{\infty}\frac{k^5}{e^k}.$$
+Let $$a_n := \frac{n^5}{e^n}\text{ and } b_n :=\frac{1}{n^2}.$$
 Since $\sum_{k=1}^{\infty}\frac{1}{k^2}$ converges by the p-Series Test, besides
-$$\lim_{n\to\infty}\frac{a_n}{b_n} = \lim_{n\to\infty}\frac{n^7}{e^n} = 0 $$
+$$\lim_{n\to\infty}\frac{a_n}{b_n} = \lim_{n\to\infty}\frac{n^7}{e^n} = 0. $$
 By the Limit Comparison Test and the Comparison Test, we conclude $$\sum_{k=1}^{\infty}\frac{k^3\log^2{k}}{e^k}$$ converges.
 \end{proof}
 \end{enumerate}
@@ -163,17 +166,17 @@ By the Limit Comparison Test and the Comparison Test, we conclude $$\sum_{k=1}^{
 \begin{enumerate}[a)]
 \item 
 \begin{proof}
-Let $$a_n := \frac{3n^3+n-4}{5n^4-n^2+1}\text{ and } b_n :=\frac{1}{n}$$
+Let $$a_n := \frac{3n^3+n-4}{5n^4-n^2+1}\text{ and } b_n :=\frac{1}{n}.$$
 Since $\sum_{k=1}^{\infty}\frac{1}{k}$ diverges by the p-Series Test, besides
-$$0<\lim_{n\to\infty}\frac{a_n}{b_n} = \frac{3}{5} < \infty$$
+$$0<\lim_{n\to\infty}\frac{a_n}{b_n} = \frac{3}{5} < \infty.$$
 By the Limit Comparison Test, we conclude $$\sum_{k=1}^{\infty}\frac{3k^3+k-4}{5k^4-k^2+1}$$ diverges.
 \end{proof}
 
 \item [d)]
 \begin{proof}
-Consider $$\int_{2}^{\infty}\frac{1}{x\log^p{x}} = \left|(\log{x})^{1-p}\right|_{2}^{\infty} + p\int_{2}^{\infty}\frac{1}{x\log^p{x}}$$
-Since $p \leq 1$, then $1-p \geq 0$, we have $$\int_{2}^{\infty}\frac{1}{x\log^p{x}} = \frac{\left|(\log{x})^{1-p}\right|_{2}^{\infty}}{1-p} = \infty$$
-By the Integral Test, we conclude $$\int_{2}^{\infty}\frac{1}{x\log^p{x}}\quad for\ p \leq 1$$
+Consider $$\int_{2}^{\infty}\frac{1}{x\log^p{x}} = \left|(\log{x})^{1-p}\right|_{2}^{\infty} + p\int_{2}^{\infty}\frac{1}{x\log^p{x}}.$$
+Since $p \leq 1$, then $1-p \geq 0$, we have $$\int_{2}^{\infty}\frac{1}{x\log^p{x}} = \frac{\left|(\log{x})^{1-p}\right|_{2}^{\infty}}{1-p} = \infty.$$
+By the Integral Test, we conclude $$\int_{2}^{\infty}\frac{1}{x\log^p{x}}\quad\mbox{ for }p \leq 1$$
 diverges.
 \end{proof}
 \end{enumerate}
@@ -184,7 +187,7 @@ diverges.
 % === Exercise 6.2.3 ===
 \begin{Exercise}
 \begin{proof}
-Assume $a_k \leq M,\ \forall k \in \mathbb{N} $ where $M > 0$. Therefore $$ \frac{a_k}{(k+1)^p} < \frac{M}{k^p} $$
+Assume $a_k \leq M,\ \forall k \in \mathbb{N} $ where $M > 0$. Therefore $$ \frac{a_k}{(k+1)^p} < \frac{M}{k^p}. $$
 Since $p>1$, by the p-Series Test and the Limit Comparison Test, we know $$\sum_{k=1}^{\infty}\frac{M}{k^p}$$ converges. Then by the Comparison Test, we conclude $$\sum_{k=1}^{\infty}\frac{a_k}{(k+1)^p}$$ converges.
 \end{proof}
 \end{Exercise}
@@ -194,9 +197,9 @@ Since $p>1$, by the p-Series Test and the Limit Comparison Test, we know $$\sum_
 % === Exercise 6.2.5 ===
 \begin{Exercise}
 \begin{proof}
-Since for $p \geq 0$, we have $$\frac{|a_k|}{k^p} \leq |a_k|$$
+Since for $p \geq 0$, we have $$\frac{|a_k|}{k^p} \leq |a_k|.$$
 By the Comparison Test, we know $$\sum_{k=1}^{\infty}\frac{|a_k|}{k^p}$$
-converges. When $p < 0$, the series might converge or diverge. e.g. set $p=-1$ and $a_k=\frac{1}{k}$, then $$\sum_{k=1}^{\infty}\frac{|a_k|}{k^p} = \sum_{k=1}^{\infty}1$$ which diverges. For the same $p$, set $a_k = \frac{1}{k^3}$, then the series $$\sum_{k=1}^{\infty}\frac{|a_k|}{k^p} = \sum_{k=1}^{\infty}\frac{1}{k^2}$$ converges by the p-Series Test.
+converges. When $p < 0$, the series might converge or diverge. e.g. set $p=-1$ and $a_k=\frac{1}{k}$, then $$\sum_{k=1}^{\infty}\frac{|a_k|}{k^p} = \sum_{k=1}^{\infty}1$$ diverges. For the same $p$, set $a_k = \frac{1}{k^3}$, then the series $$\sum_{k=1}^{\infty}\frac{|a_k|}{k^p} = \sum_{k=1}^{\infty}\frac{1}{k^2}$$ converges by the p-Series Test.
 \end{proof}
 \end{Exercise}
 
@@ -220,11 +223,11 @@ converges, so does its partial sum. Then $$\sum_{k=1}^{\infty}(a_{2k}+a_{2k+1}) 
 
 \vspace{2ex}
 
-$(\Longleftarrow)$ Since  $$\sum_{k=1}^{\infty}(a_{2k}+a_{2k+1}) = \lim_{n\to\infty}(s_{2n+1}-a_1)$$ converges so does $s_{2n+1}$. Consider $$s_{2n+2} = s_{2n+1}+a_{2n+2}$$
+$(\Longleftarrow)$ Since  $$\sum_{k=1}^{\infty}(a_{2k}+a_{2k+1}) = \lim_{n\to\infty}(s_{2n+1}-a_1)$$ converges so does $s_{2n+1}$. Consider $$s_{2n+2} = s_{2n+1}+a_{2n+2}.$$
 Taking the limit of both sides as $n\to\infty$, we have $$\lim_{n\to\infty}s_{2n+2} = \lim_{n\to\infty}s_{2n+1}$$
-which means $s_{2n+2}$ also converges.
+which implies $s_{2n+2}$ also converges.
 
-\vspace{2ex}
+\vspace{1ex}
 
 Combining above discussion, no matter the number of terms is either odd or even, the series always converges. We conclude $$ \sum_{k=1}^{\infty}a_k$$ converges.
 \end{proof}
@@ -238,7 +241,7 @@ Combining above discussion, no matter the number of terms is either odd or even,
 \item
 \begin{solution}
 Consider $$\int_{2}^{\infty}\left|\frac{1}{x\log^p{x}}\right| = \int_{2}^{\infty}\frac{1}{x\log^p{x}} = \frac{\left|(\log{x})^{1-p}\right|_{2}^{\infty}}{1-p} $$
-converges by the Integral Test if and only if $1-p<0$. So $$p \in (1,\infty)$$
+converges by the Integral Test if and only if $1-p<0$. So $$p \in (1,\infty).$$
 \end{solution}
 
 \item [c)]
@@ -282,12 +285,12 @@ By the Ratio Test, we conclude $$\sum_{k=1}^{\infty}a_k$$ converges absolutely.
 \begin{proof}
 For $N\in\mathbb{N}$, $$ \sum_{k=1}^{\infty}\left( \sum_{j=1}^{N}a_{kj} \right) = \sum_{j=1}^{N}\left( \sum_{k=1}^{\infty}a_{kj} \right) $$ by the Limit Theorem. Then fix $N$, for any $K\in\mathbb{N}$, $$ \sum_{k=1}^{K}\left( \sum_{j=1}^{N}a_{kj} \right) \leq \sum_{k=1}^{\infty}\left( \sum_{j=1}^{\infty}a_{kj} \right).$$
 If right hand side is finite, by the Monotone Convergence Theorem, we have $$\sum_{k=1}^{\infty}\left( \sum_{j=1}^{N}a_{kj} \right) \leq \sum_{k=1}^{\infty}\left( \sum_{j=1}^{\infty}a_{kj} \right).$$
-On the other hand if it is infinite, then it holds trivially. Hence for any $N\in\mathbb{N}$, $$\sum_{j=1}^{N}\left( \sum_{k=1}^{\infty}a_{kj} \right) \leq \sum_{k=1}^{\infty}\left( \sum_{j=1}^{\infty}a_{kj} \right).$$ Use the Monotone Convergence Theorem again, we conclude $$\sum_{j=1}^{\infty}\left( \sum_{k=1}^{\infty}a_{kj} \right) \leq \sum_{k=1}^{\infty}\left( \sum_{j=1}^{\infty}a_{kj} \right).$$
+On the other hand if it is infinite, then it holds trivially. Hence for any $N\in\mathbb{N}$, $$\sum_{j=1}^{N}\left( \sum_{k=1}^{\infty}a_{kj} \right) \leq \sum_{k=1}^{\infty}\left( \sum_{j=1}^{\infty}a_{kj} \right).$$ Using the Monotone Convergence Theorem again, we conclude $$\sum_{j=1}^{\infty}\left( \sum_{k=1}^{\infty}a_{kj} \right) \leq \sum_{k=1}^{\infty}\left( \sum_{j=1}^{\infty}a_{kj} \right).$$
 \end{proof}
 
 \item
 \begin{proof}
-Set $B_j = \sum_{k=1}^{\infty}a_{kj}$. From part a), $$ \sum_{j=1}^{\infty}B_j = \sum_{j=1}^{\infty}\left( \sum_{k=1}^{\infty}a_{kj} \right) \leq \sum_{k=1}^{\infty}\left( \sum_{j=1}^{\infty}a_{kj} \right) = \sum_{k=1}^{\infty}A_k$$ converges so does $\sum_{j=1}^{\infty}B_j$ which means both $$\sum_{j=1}^{\infty}\left( \sum_{k=1}^{\infty}a_{kj} \right) \leq \sum_{k=1}^{\infty}\left( \sum_{j=1}^{\infty}a_{kj} \right) \mbox{ and } \sum_{k=1}^{\infty}\left( \sum_{j=1}^{\infty}a_{kj} \right) \leq \sum_{j=1}^{\infty}\left( \sum_{k=1}^{\infty}a_{kj} \right) $$ hold. So we conclude $$\sum_{j=1}^{\infty}\left( \sum_{k=1}^{\infty}a_{kj} \right) = \sum_{k=1}^{\infty}\left( \sum_{j=1}^{\infty}a_{kj} \right).$$
+Set $B_j = \sum_{k=1}^{\infty}a_{kj}$. From part a), $$ \sum_{j=1}^{\infty}B_j = \sum_{j=1}^{\infty}\left( \sum_{k=1}^{\infty}a_{kj} \right) \leq \sum_{k=1}^{\infty}\left( \sum_{j=1}^{\infty}a_{kj} \right) = \sum_{k=1}^{\infty}A_k$$ converges so does $\sum_{j=1}^{\infty}B_j$ which implies both $$\sum_{j=1}^{\infty}\left( \sum_{k=1}^{\infty}a_{kj} \right) \leq \sum_{k=1}^{\infty}\left( \sum_{j=1}^{\infty}a_{kj} \right) \mbox{ and } \sum_{k=1}^{\infty}\left( \sum_{j=1}^{\infty}a_{kj} \right) \leq \sum_{j=1}^{\infty}\left( \sum_{k=1}^{\infty}a_{kj} \right) $$ hold. So we conclude $$\sum_{j=1}^{\infty}\left( \sum_{k=1}^{\infty}a_{kj} \right) = \sum_{k=1}^{\infty}\left( \sum_{j=1}^{\infty}a_{kj} \right).$$
 \end{proof}
 
 \item
@@ -295,7 +298,7 @@ Set $B_j = \sum_{k=1}^{\infty}a_{kj}$. From part a), $$ \sum_{j=1}^{\infty}B_j =
 Consider $$a_{kj} = \begin{cases}1 & \mbox{if } j=k \\
 -1 & \mbox{if }j=k+1 \\
 0 & \mbox{otherwise} \end{cases}.$$
-Then the equation from part b) means $$ 1 = 0 $$ which is obviously a contradiction.
+Then the equation from part b) implies $$ 1 = 0 $$ which is obviously a contradiction.
 \end{proof}
 \end{enumerate}
 \end{Exercise}
@@ -308,13 +311,13 @@ Then the equation from part b) means $$ 1 = 0 $$ which is obviously a contradict
 \item
 \begin{proof}
 Let $s:=\liminf_{k\to\infty}x_k$ and $s_n := \inf_{k>n}x_k$. We observe that $\lim_{n\to\infty}s_n = s$.\\
-If $s>x$ for some $x\in\mathbb{R}$, $$\exists N\in\mathbb{N}\text{ such that } s_n>x.$$ i.e. $x_k>x,\ \forall k > N$, as promised.
+If $s>x$ for some $x\in\mathbb{R}$, $$\exists N\in\mathbb{N}\text{ such that } s_n>x.$$ i.e., $x_k>x,\ \forall k > N$, as promised.
 \end{proof}
 
 \item
 \begin{proof}
 If $x_k$ converges to $x$, given $\epsilon > 0$, $$\exists N \in\mathbb{N}\text{ such that } k\geq N \implies \left|x_k-x\right|<\epsilon.$$
-i.e. for any $n\geq N$, $$x_k<x-\epsilon,\ \forall k>n.$$
+i.e., for any $n\geq N$, $$x_k<x-\epsilon,\ \forall k>n.$$
 Taking the infimum of this last inequality over $k>n$, we see that $$s_n\leq x+\epsilon\text{ for any } n\geq N.$$ Hence, the limit of the $s_n$'s satisfies $s\leq x+\epsilon$. Thus $s\leq x$.
 
 \vspace{2ex}
@@ -343,10 +346,90 @@ Combining all above discussions and replacing the notation $n$ with $k$, we conc
 \item
 \begin{proof}
 Notice $|b_n| > 0,\ \forall n\in\mathbb{N}$. Since $$\lim_{n\to\infty}\left|\frac{b_{n+1}}{b_n}\right| = r \in \mathbb{R},$$ we have $$\liminf_{n\to\infty}\left|\frac{b_{n+1}}{b_n}\right| = \limsup_{n\to\infty}\left|\frac{b_{n+1}}{b_n}\right| = r.$$
-From part c), it squeeze that $$\liminf_{n\to\infty}\sqrt[n]{|b_n|} = \limsup_{n\to\infty}\sqrt[n]{|b_n|} = r.$$
-which means $$\lim_{n\to\infty}\left|b_n\right|^{\frac{1}{n}} = r.$$
+From part c), it squeezes that $$\liminf_{n\to\infty}\sqrt[n]{|b_n|} = \limsup_{n\to\infty}\sqrt[n]{|b_n|} = r.$$
+which implies $$\lim_{n\to\infty}\left|b_n\right|^{\frac{1}{n}} = r.$$
 \end{proof}
 \end{enumerate}
+\end{Exercise}
+
+\section{Alternating Series}
+\setcounter{Exercise}{2}
+% === Exercise 6.4.3 ===
+\begin{Exercise}
+\begin{enumerate}[a)]
+\item
+\begin{solution}
+Let $$a_k := \frac{(-1)^kk^3}{(k+1)!}.$$
+Since $$\lim_{k\to\infty}\left|\frac{a_{k+1}}{a_k}\right| = \lim_{k\to\infty}\left|\frac{-1}{k+2}\left(\frac{k+1}{k}\right)^3\right| = 0 < 1,$$ by the Ratio Test, we conclude the series \textbf{converges absolutely}.
+\end{solution}
+
+\item
+\begin{solution}
+Let $$a_k := \frac{(-1)\times(-3)\times...\times(1-2k)}{1 \times 4 \times ... \times (3k-2)}.$$
+Since $$\lim_{k\to\infty}\left|\frac{a_{k+1}}{a_k}\right| = \lim_{k\to\infty}\left|\frac{-2k-1}{3k+1}\right| = \frac{2}{3} < 1,$$ by the Ratio Test, we conclude the series \textbf{converges absolutely}.
+\end{solution}
+
+\item
+\begin{solution}
+Let $$a_k := \frac{\left( k+1 \right)^k}{p^k k!}.$$
+Since $$\lim_{k\to\infty}\left|\frac{a_{k+1}}{a_k}\right| = \lim_{k\to\infty}\left|\frac{k+2}{p\left(k+1\right)}\left(1+\frac{1}{k+1}\right)^k\right| = \frac{e}{p}$$ where $$\lim_{k\to\infty}\left(1+\frac{1}{k+1}\right)^k = e,$$
+by the Ratio Test, we conclude the series \textbf{converges absolutely}.
+\end{solution}
+
+\item
+\begin{solution}
+Let $$a_k := \frac{\sqrt{k}}{k+1}.$$
+Calculate $$a_k' = \frac{-3k-1}{2\sqrt{k}\left(k+1\right)^2} < 0$$ since $k\in\mathbb{N}$. Moreover, $$\lim_{k\to\infty}a_k = 0,$$ so we know $$a_k\downarrow 0\text{ as }k\to\infty.$$ By the Alternating Series Test, we have $$\sum_{k=1}^{\infty}\left(-1\right)^{k+1}a_k$$ which converges.
+Is it absolutely convergent? Using the divergent p-Series $$b_k := \frac{1}{k},$$ we have $$\lim_{k\to\infty}\frac{a_k}{b_k} = \lim_{k\to\infty}\left(\frac{\sqrt{k}}{1+\frac{1}{k}}\right) = \infty.$$ By the Limit Comparison Test, we know $$\sum_{k=1}^{\infty}a_k$$ diverges. Then we conclude the series \textbf{converges conditionally}.
+\end{solution}
+
+\item
+\begin{solution}
+Let $$a_k := \frac{(-1)^k\sqrt{k+1}}{\sqrt{k}\ k^k}.$$
+Since $$\lim_{k\to\infty}\left|\frac{a_{k+1}}{a_k}\right| =
+\lim_{k\to\infty}\left(\sqrt{\frac{k+2}{k+1}}\sqrt{\frac{k}{k+1}}\left(\frac{1}{k+1}\right)\left(1-\frac{1}{k+1}\right)^k\right) = 0 < 1$$
+where $$\lim_{k\to\infty}\left(1-\frac{1}{k+1}\right)^k = \frac{1}{e}.$$
+By the Ratio Test, we conclude the series \textbf{converges absolutely}.
+\end{solution}
+\end{enumerate}
+\end{Exercise}
+
+\vspace{12pt}
+% === Exercise 6.4.4 ===
+\begin{Exercise}
+\begin{proof}
+Consider $$\sum_{k=1}^{\infty}a_k b_k =
+\sum_{k=1}^{\infty}\left( a_k(b_k-b) - a_k b\right) = 
+\sum_{k=1}^{\infty}\left[ a_k(b_k-b) \right] - b\sum_{k=1}^{\infty}a_k.$$
+By the Dirichlet's Test, we know $$\sum_{k=1}^{\infty}\left[ a_k(b_k-b) \right]$$ converges and $\sum_{k=1}^{\infty}a_k$ converges by the assumption so does $$b\sum_{k=1}^{\infty}a_k,$$ then we conclude $$\sum_{k=1}^{\infty}a_k b_k$$ converges.
+\end{proof}
+\end{Exercise}
+
+\vspace{12pt}
+% === Exercise 6.4.5 ===
+\begin{Exercise}
+\begin{proof}
+By Abel's formula, consider $$\sum_{k=1}^{n}a_k b_k = 
+A_{n,1}b_n - \sum_{k=1}^{n-1}A_{k,1}(b_{k+1}-b_k) = A_{n,1}b_n + \sum_{k=1}^{n-1}A_{k,1}(b_k-b_{k+1}).$$ Notice $A_{n,1} = \sum_{k=1}^{n}a_k = s_n$ and $s_n$ is bounded by the hypotheses. Since $b_n\to 0\text{ as } n\to\infty$, then $s_n b_n\to 0\text{ as } n\to\infty$. Now taking the limit on both sides as $n\to\infty$, we conclude  $$\sum_{k=1}^{\infty}a_k b_k = \sum_{k=1}^{\infty}s_k (b_k - b_{k+1}).$$
+\end{proof}
+\end{Exercise}
+
+\vspace{12pt}
+% === Exercise 6.4.6 ===
+\begin{Exercise}
+\begin{proof}
+Let $$B_{n,m} := \sum_{k=m}^{n}b_k.$$
+By Abel's formula, consider \begin{equation}\label{eq:abel}
+\sum_{k=1}^{n}a_k b_k = 
+B_{n,1}a_n + \sum_{k=1}^{n-1}B_{k,1}(a_k-a_{k+1}).
+\end{equation}
+Since $a_n\to 0$ as $n\to\infty$ and $B_{n,1}$ is bounded by the hypotheses, then $$B_{n,1}a_n\to 0\text{ as }n\to\infty.$$
+On the other hand, $$\sum_{k=1}^{n-1}\left|B_{k,1}(a_k-a_{k+1})\right| \leq
+M\sum_{k=1}^{n-1}\left|a_k-a_{k+1}\right|.$$ Since $$\sum_{k=1}^{\infty}\left|a_k-a_{k+1}\right| =
+\sum_{k=1}^{\infty}\left|a_{k+1}-a_k\right|$$ converges by the hypotheses. By the Comparison Test, we know $$\sum_{k=1}^{\infty}\left|B_{k,1}(a_k-a_{k+1})\right|$$ converges so does $$\sum_{k=1}^{\infty}B_{k,1}(a_k-a_{k+1}).$$
+Finally, taking the limit of both sides on the equation \eqref{eq:abel}, we conclude $$\sum_{k=1}^{\infty}a_k b_k = 
+\sum_{k=1}^{\infty}B_{k,1}(a_k-a_{k+1})$$ converges, as promised.
+\end{proof}
 \end{Exercise}
 
 \end{document}
