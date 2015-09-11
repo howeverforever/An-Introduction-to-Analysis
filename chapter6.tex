@@ -343,10 +343,90 @@ Combining all above discussions and replacing the notation $n$ with $k$, we conc
 \item
 \begin{proof}
 Notice $|b_n| > 0,\ \forall n\in\mathbb{N}$. Since $$\lim_{n\to\infty}\left|\frac{b_{n+1}}{b_n}\right| = r \in \mathbb{R},$$ we have $$\liminf_{n\to\infty}\left|\frac{b_{n+1}}{b_n}\right| = \limsup_{n\to\infty}\left|\frac{b_{n+1}}{b_n}\right| = r.$$
-From part c), it squeeze that $$\liminf_{n\to\infty}\sqrt[n]{|b_n|} = \limsup_{n\to\infty}\sqrt[n]{|b_n|} = r.$$
+From part c), it squeezes that $$\liminf_{n\to\infty}\sqrt[n]{|b_n|} = \limsup_{n\to\infty}\sqrt[n]{|b_n|} = r.$$
 which means $$\lim_{n\to\infty}\left|b_n\right|^{\frac{1}{n}} = r.$$
 \end{proof}
 \end{enumerate}
+\end{Exercise}
+
+\section{Alternating Series}
+\setcounter{Exercise}{2}
+% === Exercise 6.4.3 ===
+\begin{Exercise}
+\begin{enumerate}[a)]
+\item
+\begin{solution}
+Let $$a_k := \frac{(-1)^kk^3}{(k+1)!}.$$
+Since $$\lim_{k\to\infty}\left|\frac{a_{k+1}}{a_k}\right| = \lim_{k\to\infty}\left|\frac{-1}{k+2}\left(\frac{k+1}{k}\right)^3\right| = 0 < 1,$$ by the Ratio Test, we conclude the series \textbf{converges absolutely}.
+\end{solution}
+
+\item
+\begin{solution}
+Let $$a_k := \frac{(-1)\times(-3)\times...\times(1-2k)}{1 \times 4 \times ... \times (3k-2)}.$$
+Since $$\lim_{k\to\infty}\left|\frac{a_{k+1}}{a_k}\right| = \lim_{k\to\infty}\left|\frac{-2k-1}{3k+1}\right| = \frac{2}{3} < 1,$$ by the Ratio Test, we conclude the series \textbf{converges absolutely}.
+\end{solution}
+
+\item
+\begin{solution}
+Let $$a_k := \frac{\left( k+1 \right)^k}{p^k k!}.$$
+Since $$\lim_{k\to\infty}\left|\frac{a_{k+1}}{a_k}\right| = \lim_{k\to\infty}\left|\frac{k+2}{p\left(k+1\right)}\left(1+\frac{1}{k+1}\right)^k\right| = \frac{e}{p}$$ where $$\lim_{k\to\infty}\left(1+\frac{1}{k+1}\right)^k = e,$$
+by the Ratio Test, we conclude the series \textbf{converges absolutely}.
+\end{solution}
+
+\item
+\begin{solution}
+Let $$a_k := \frac{\sqrt{k}}{k+1}.$$
+Calculate $$a_k' = \frac{-3k-1}{2\sqrt{k}\left(k+1\right)^2} < 0$$ since $k\in\mathbb{N}$. Moreover, $$\lim_{k\to\infty}a_k = 0,$$ so we know $$a_k\downarrow 0\text{ as }k\to\infty.$$ By the Alternating Series Test, we have $$\sum_{k=1}^{\infty}\left(-1\right)^{k+1}a_k$$ which converges.
+Is it absolutely convergent? Using the divergent p-Series $$b_k := \frac{1}{k},$$ we have $$\lim_{k\to\infty}\frac{a_k}{b_k} = \lim_{k\to\infty}\left(\frac{\sqrt{k}}{1+\frac{1}{k}}\right) = \infty.$$ By the Limit Comparison Test, we know $$\sum_{k=1}^{\infty}a_k$$ diverges. Then we conclude the series \textbf{converges conditionally}.
+\end{solution}
+
+\item
+\begin{solution}
+Let $$a_k := \frac{(-1)^k\sqrt{k+1}}{\sqrt{k}\ k^k}.$$
+Since $$\lim_{k\to\infty}\left|\frac{a_{k+1}}{a_k}\right| =
+\lim_{k\to\infty}\left(\sqrt{\frac{k+2}{k+1}}\sqrt{\frac{k}{k+1}}\left(\frac{1}{k+1}\right)\left(1-\frac{1}{k+1}\right)^k\right) = 0 < 1$$
+where $$\lim_{k\to\infty}\left(1-\frac{1}{k+1}\right)^k = \frac{1}{e}.$$
+By the Ratio Test, we conclude the series \textbf{converges absolutely}.
+\end{solution}
+\end{enumerate}
+\end{Exercise}
+
+\vspace{12pt}
+% === Exercise 6.4.4 ===
+\begin{Exercise}
+\begin{proof}
+Consider $$\sum_{k=1}^{\infty}a_k b_k =
+\sum_{k=1}^{\infty}\left( a_k(b_k-b) - a_k b\right) = 
+\sum_{k=1}^{\infty}\left[ a_k(b_k-b) \right] - b\sum_{k=1}^{\infty}a_k.$$
+By the Dirichlet's Test, we know $$\sum_{k=1}^{\infty}\left[ a_k(b_k-b) \right]$$ converges and $\sum_{k=1}^{\infty}a_k$ converges by the assumption so does $$b\sum_{k=1}^{\infty}a_k,$$ then we conclude $$\sum_{k=1}^{\infty}a_k b_k$$ converges.
+\end{proof}
+\end{Exercise}
+
+\vspace{12pt}
+% === Exercise 6.4.5 ===
+\begin{Exercise}
+\begin{proof}
+By Abel's formula, consider $$\sum_{k=1}^{n}a_k b_k = 
+A_{n,1}b_n - \sum_{k=1}^{n-1}A_{k,1}(b_{k+1}-b_k) = A_{n,1}b_n + \sum_{k=1}^{n-1}A_{k,1}(b_k-b_{k+1}).$$ Notice $A_{n,1} = \sum_{k=1}^{n}a_k = s_n$ and $s_n$ is bounded by the hypotheses. Since $b_n\to 0\text{ as } n\to\infty$, then $s_n b_n\to 0\text{ as } n\to\infty$. Now taking the limit on both sides as $n\to\infty$, we conclude  $$\sum_{k=1}^{\infty}a_k b_k = \sum_{k=1}^{\infty}s_k (b_k - b_{k+1}).$$
+\end{proof}
+\end{Exercise}
+
+\vspace{12pt}
+% === Exercise 6.4.6 ===
+\begin{Exercise}
+\begin{proof}
+Let $$B_{n,m} := \sum_{k=m}^{n}b_k.$$
+By Abel's formula, consider \begin{equation}\label{eq:abel}
+\sum_{k=1}^{n}a_k b_k = 
+B_{n,1}a_n + \sum_{k=1}^{n-1}B_{k,1}(a_k-a_{k+1}).
+\end{equation}
+Since $a_n\to 0$ as $n\to\infty$ and $B_{n,1}$ is bounded by the hypotheses, then $$B_{n,1}a_n\to 0\text{ as }n\to\infty.$$
+On the other hand, $$\sum_{k=1}^{n-1}\left|B_{k,1}(a_k-a_{k+1})\right| \leq
+M\sum_{k=1}^{n-1}\left|a_k-a_{k+1}\right|.$$ Since $$\sum_{k=1}^{\infty}\left|a_k-a_{k+1}\right| =
+\sum_{k=1}^{\infty}\left|a_{k+1}-a_k\right|$$ converges by the hypotheses. By the Comparison Test, we know $$\sum_{k=1}^{\infty}\left|B_{k,1}(a_k-a_{k+1})\right|$$ converges so does $$\sum_{k=1}^{\infty}B_{k,1}(a_k-a_{k+1}).$$
+Finally, taking the limit of both sides on the equation \eqref{eq:abel}, we conclude $$\sum_{k=1}^{\infty}a_k b_k = 
+\sum_{k=1}^{\infty}B_{k,1}(a_k-a_{k+1})$$ converges, as promised.
+\end{proof}
 \end{Exercise}
 
 \end{document}
