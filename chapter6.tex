@@ -35,7 +35,7 @@
 \begin{Exercise}
 \begin{solution}
 \begin{flalign*}
-&\sum_{k=1}^{\infty} (a_{k+1}-2a_k+a_{k-1}) = \lim_{n\to\infty} (a_0-a_1+a_{n+1}-a_n) = a_0-a_1. &
+&\sum_{k=1}^{\infty} \left(a_{k+1}-2a_k+a_{k-1}\right) = \lim_{n\to\infty} \left(a_0-a_1+a_{n+1}-a_n\right) = a_0-a_1. &
 \end{flalign*}
 \end{solution}
 \end{Exercise}
@@ -45,11 +45,11 @@
 \begin{Exercise}
 \begin{solution}
 \begin{flalign*}
- &\sum_{k=1}^{\infty}(x^k-x^{k-1})(x^k+x^{k-1}) = \sum_{k=1}^{\infty}(x^{2k}-x^{2k-2}) = \lim_{n\to\infty}(x^{2n}-1)\ \text{converges.} &\\
+ &\sum_{k=1}^{\infty}\left(x^k-x^{k-1}\right)\left(x^k+x^{k-1}\right) = \sum_{k=1}^{\infty}\left(x^{2k}-x^{2k-2}\right) = \lim_{n\to\infty}\left(x^{2n}-1\right)\ \text{converges.} &\\
 \iff& |x| \leq 1. &
 \end{flalign*}
-If $x = \pm 1$, then the value of the series is $0$, \\
-otherwise $x \in (-1,1)$, the value of the series is $-1$.
+As a result, $$\sum_{k=1}^{\infty}\left(x^k-x^{k-1}\right)\left(x^k+x^{k-1}\right) = \begin{cases} 0 & \mbox{for } x=\pm1 \\
+-1 & \mbox{for } x\in(-1,1)\end{cases}.$$
 \end{solution}
 \end{Exercise}
 
@@ -109,7 +109,7 @@ For all $n>N$,
 \item
 \begin{proof}
 Since $\lim_{n\to\infty} b_n = b$, given $\epsilon>0$, $\exists N\in\mathbb{N}$ such that $n \geq N \implies |b_n-b| < \epsilon$.
-Then if $n > N$, by part a), $$\left|\frac{b_1+b_2+...+b_n}{n}-b\right| = \left|\frac{b_1+b_2+...+b_n-nb}{n}\right| \leq \left|\frac{\sum_{k=1}^{n}\left|b_k-b\right|}{n}\right|+\epsilon(1-\frac{N}{n}). $$
+Then if $n > N$, by part a), $$\left|\frac{b_1+b_2+...+b_n}{n}-b\right| = \left|\frac{b_1+b_2+...+b_n-nb}{n}\right| \leq \left|\frac{\sum_{k=1}^{n}\left|b_k-b\right|}{n}\right|+\epsilon\left(1-\frac{N}{n}\right). $$
 Taking the limit of both sides as $n\to\infty$, we have $$\limsup_{n\to\infty}\left|\frac{b_1+b_2+...+b_n}{n}-b\right| \leq \epsilon.$$
 This hold for any $\epsilon > 0$, so $$\lim_{n\to\infty}\left|\frac{b_1+b_2+...+b_n}{n}-b\right| = 0 $$
 which implies $$\frac{b_1+b_2+...+b_n}{n}\to b \text{ as } n\to\infty.$$
