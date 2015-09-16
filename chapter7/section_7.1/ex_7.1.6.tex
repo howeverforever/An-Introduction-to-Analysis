@@ -1,0 +1,14 @@
+% === Exercise 7.1.6 ===
+\begin{Exercise}
+\begin{proof}
+Since $f_n \to f$ uniformly on $E$, given $\epsilon > 0$, $\exists N\in\mathbb{N}$ such that $$n\geq N \implies \left| f_n(x)-f(x) \right| < \frac{\epsilon}{3}\mbox{ for all } x\in E$$
+Consider $f_N$ and since each $f_n$ is uniformly continuous on $E$, for the same $\epsilon$, $\exists \delta>0$ such that $$\left| x-y \right| < \delta \implies \left| f_N(x)-f_N(y) \right| < \frac{\epsilon}{3}\mbox{ for all }x,y\in E.$$
+Hence, for any $x, y\in E$ with $\left| x-y \right| < \delta$, we have
+\begin{align*}
+\left| f(x) - f(y) \right| 
+&\leq \left| f(x) - f_N(x) \right| + \left| f_N(x) - f_N(y) \right| + \left| f_N(y) - f(y) \right| \\
+&< \frac{\epsilon}{3} + \frac{\epsilon}{3} + \frac{\epsilon}{3} = \epsilon.
+\end{align*}
+So, $f$ is uniformly continuous on $E$.
+\end{proof}
+\end{Exercise}

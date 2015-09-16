@@ -1,0 +1,38 @@
+% === Exercise 7.2.10 ===
+\begin{Exercise}
+\begin{proof}
+Let $$g_n(x) := \left( \sum_{k=1}^{n} f_k^n(x) \right)^\frac{1}{n}.$$
+Consider for all $x\in[a,b]$, since $0 \leq f_k(x) \leq f_{k+1}(x) \implies f_k^n(x) \leq f_{k+1}^{n}(x)$. 
+Hence
+$$g_n(x) \leq \left( nf_n^n(x) \right)^\frac{1}{n} = n^{\frac{1}{n}}f_n(x) \leq 2f_n(x)$$ for $n$ sufficiently large.
+Notice $f_n\to f$ uniformly on $[a,b]$, hence $g_n$ converges uniformly on $[a,b]$.
+We know given $\epsilon > 0$, $\exists N\in\mathbb{N}$ such that $$n\geq N \implies n^{\frac{1}{n}} < 1+\epsilon,$$ hence
+\begin{flalign*}
+&g_n(x) \leq (1+\epsilon)f_n(x) \\
+\implies& \int_{a}^{b} g_n(x) dx \leq (1+\epsilon)\int_{a}^{b}f_n(x) dx \\
+\implies& \lim_{n\to\infty} \int_{a}^{b} g_n(x) dx \leq \lim_{n\to\infty}\left( (1+\epsilon)\int_{a}^{b}f_n(x) dx \right) = (1+\epsilon)\int_{a}^{b}\lim_{n\to\infty}f_n(x) dx = (1+\epsilon)\int_{a}^{b}f(x) dx
+\end{flalign*}
+
+This holds for any $\epsilon>0$, hence
+\begin{equation}\label{eq:ex10.1}
+\lim_{n\to\infty} \int_{a}^{b} g_n(x) dx \leq \int_{a}^{b} f(x) dx.
+\end{equation}
+On the other hand, since $f_{k+1}(x) \geq f_k(x) \geq 0$ on $[a,b]$,
+\begin{flalign*}
+g_n(x)
+=& \left( \sum_{k=1}^{n} f_k^n(x) \right)^{\frac{1}{n}} \\
+=& \left( \sum_{k=1}^{N-1}f_k^n(x) + \sum_{k=N}^{n}f_k^n(x) \right)^{\frac{1}{n}} \\
+\geq& \left( \sum_{k=N}^{n}f_k^n(x) \right)^{\frac{1}{n}} \\
+\geq& (n-N)^{\frac{1}{n}} f_N(x).
+\end{flalign*}
+Then, $$\int_{a}^{b} \left( \sum_{k=1}^{n} f_k^n(x) \right)^{\frac{1}{n}} dx \geq \int_{a}^{b} (n-N)^{\frac{1}{n}} f_N(x) dx.$$
+Taking the limit of both sides as $n\to\infty$,
+$$ \lim_{n\to\infty} \int_{a}^{b} \left( \sum_{k=1}^{n} f_k^n(x) \right)^{\frac{1}{n}} dx \geq \int_{a}^{b} f_N(x) dx.$$
+Taking the limit of both sides as $N\to\infty$, 
+\begin{equation}\label{eq:ex10.2}
+\lim_{n\to\infty} \int_{a}^{b} \left( \sum_{k=1}^{n} f_k^n(x) \right)^{\frac{1}{n}} dx \geq \int_{a}^{b} f(x) dx.
+\end{equation}
+From equation \eqref{eq:ex10.1} and \eqref{eq:ex10.2}, we conclude $$
+\lim_{n\to\infty} \int_{a}^{b} \left( \sum_{k=1}^{n} f_k^n(x) \right)^{\frac{1}{n}} dx = \int_{a}^{b} f(x) dx.$$
+\end{proof}
+\end{Exercise}
