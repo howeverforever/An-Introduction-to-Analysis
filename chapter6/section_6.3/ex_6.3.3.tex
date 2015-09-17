@@ -1,0 +1,30 @@
+% === Exercise 6.3.3 ===
+\begin{Exercise}
+\begin{enumerate}[a)]
+\item
+\begin{solution}
+Consider $$\int_{2}^{\infty}\left|\frac{1}{x\log^p{x}}\right| = \int_{2}^{\infty}\frac{1}{x\log^p{x}} = \frac{\left|(\log{x})^{1-p}\right|_{2}^{\infty}}{1-p} $$
+converges by the Integral Test if and only if $1-p<0$. So $$p \in (1,\infty).$$
+\end{solution}
+
+\item [c)]
+\begin{solution}
+Let $$a_k = \frac{k^p}{p^k}. $$
+Consider
+$$\lim_{k\to\infty}\left|\frac{a_{k+1}}{a_k}\right| = \lim_{k\to\infty}\left|\left(\frac{k+1}{k}\right)^p\left(\frac{1}{p}\right)\right| = \frac{1}{|p|} < 1$$
+which implies $$|p|>1.$$
+So$$p\in(-\infty,-1)\cup (1,\infty).$$
+\end{solution}
+
+\item [e)]
+\begin{solution}
+Let $$a_k := \sqrt{k^{2p}+1}-k^p = \frac{1}{\sqrt{k^{2p}+1}+k^p}\text{ and } b_k := \frac{1}{k^p}.$$
+Since $\sum_{k=1}^{\infty}\frac{1}{k^p}$ converges if and only if $p>1$ by the p-Series Test, besides
+$$\lim_{k\to\infty}\frac{a_k}{b_k} = \frac{1}{\sqrt{1+\frac{1}{k^{2p}}}+1} = \begin{cases}0 & \mbox{if }p<0 \\ \frac{1}{2} & \mbox{if }p>0 \\ \frac{1}{\sqrt{2}+1} & \mbox{if } p = 0\end{cases}.$$
+By the Limit Comparison Test, we have the series converges when $p>1$. For $p<0$, consider $$\sum_{k=1}^{\infty}\frac{1}{\sqrt{k^{2p}+1}+k^p} \geq \sum_{k=1}^{\infty}\frac{1}{2\sqrt{k^{2p}+1}}.$$
+Since $$\lim_{k\to\infty}\frac{1}{2\sqrt{k^{2p}+1}} = \frac{1}{2},$$
+by the Divergence Test and the Comparison Test, we know the series diverges when $p<0$.
+Together above discussion, we conclude $$p\in(1,\infty).$$
+\end{solution}
+\end{enumerate}
+\end{Exercise}

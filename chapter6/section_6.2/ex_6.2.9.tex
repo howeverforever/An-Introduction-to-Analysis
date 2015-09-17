@@ -1,0 +1,18 @@
+% === Exercise 6.2.9 ===
+\begin{Exercise}
+\begin{proof}
+$(\Longrightarrow)$
+Let $s_n = \sum_{k=1}^{\infty}a_k$. Since $$\sum_{k=1}^{\infty}a_k = \lim_{n\to\infty}\sum_{k=1}^{n}a_k = \lim_{n\to\infty}s_n = S \in \mathbb{R}$$
+converges, so does its partial sum. Then $$\sum_{k=1}^{\infty}(a_{2k}+a_{2k+1}) = \lim_{n\to\infty}(s_{2n+1}-a_1) = S-s_1 \in \mathbb{R}$$ converges. 
+
+\vspace{2ex}
+
+$(\Longleftarrow)$ Since  $$\sum_{k=1}^{\infty}(a_{2k}+a_{2k+1}) = \lim_{n\to\infty}(s_{2n+1}-a_1)$$ converges so does $s_{2n+1}$. Consider $$s_{2n+2} = s_{2n+1}+a_{2n+2}.$$
+Taking the limit of both sides as $n\to\infty$, we have $$\lim_{n\to\infty}s_{2n+2} = \lim_{n\to\infty}s_{2n+1}$$
+which implies $s_{2n+2}$ also converges.
+
+\vspace{1ex}
+
+Combining above discussion, no matter the number of terms is either odd or even, the series always converges. We conclude $$ \sum_{k=1}^{\infty}a_k$$ converges.
+\end{proof}
+\end{Exercise}
