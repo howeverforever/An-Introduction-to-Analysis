@@ -1,0 +1,48 @@
+% === Exercise 7.3.2 ===
+\begin{Exercise}
+\begin{enumerate}[a)]
+\item
+\begin{solution}
+Let $a_k = \frac{1}{2^k}$, then $$R=\frac{1}{\limsup_{k\to\infty}|a^k|^{\frac{1}{k}}} = 2.$$
+For $x=-2$, $$\sum_{k=0}^{\infty}(-1)^k$$ diverges.
+For $x=2$, $$\sum_{k=0}^{\infty}1$$ diverges.
+Hence the interval of convergence is $(-2,2)$.
+\end{solution}
+
+\item
+\begin{solution}
+Let $a_k = \left( (-1)^k + 3 \right)^k$, then
+$$R=\frac{1}{\limsup_{k\to\infty}|a^k|^{\frac{1}{k}}} = \frac{1}{4}.$$
+For $x=\frac{3}{4}$, $$\sum_{k=0}^{\infty}\left( \frac{-(-1)^k-3}{4} \right)^k = \sum_{k=0}^{\infty}\left( 1+\left( -\frac{1}{2} \right)^{2k+1} \right).$$ diverges.
+For $x=\frac{5}{4}$, $$\sum_{k=0}^{\infty}\left( \frac{(-1)^k+3}{4} \right)^k = \sum_{k=0}^{\infty}\left( 1+\left( \frac{1}{2} \right)^{2k+1} \right)$$ diverges.
+Hence the interval of convergence is $(\frac{3}{4}, \frac{5}{4})$.
+\end{solution}
+
+\item
+\begin{solution}
+Let $a_k = \log\left(\frac{k+1}{k}\right)$, then
+$$R=\lim_{k\to\infty}\left| \frac{a_k}{a_{k+1}} \right|
+= \lim_{k\to\infty}\left| \frac{\log\left(\frac{k+1}{k}\right)}{\log\left(\frac{k+2}{k+1}\right)} \right|
+= \lim_{k\to\infty}\left(\frac{k+2}{k}\right)
+= 1.$$
+For $x=-1$, $$\sum_{k=1}^{\infty}(-1)^k\log\left(1+\frac{1}{k}\right)$$ converges by the Alternating Series Test. For $x=1$, $$\sum_{k=1}^{\infty}\log\left(1+\frac{1}{k}\right)
+\geq \frac{1}{2}\sum_{k=1}^{\infty}\frac{1}{k}$$ diverges
+since $$\log(1+\frac{1}{k}) \geq \frac{1}{2k}$$ for all $k\in\mathbb{N}$. Hence the interval of convergence is $[-1,1)$.
+\end{solution}
+
+\item
+\begin{solution}
+Let $a_k = \frac{1\cdot 3\cdots (2k-1)}{(k+1)!}$, then
+$$R=\lim_{k\to\infty}\left| \frac{a_k}{a_{k+1}} \right|
+= \lim_{k\to\infty}\left| \frac{k+2}{2k+1} \right|
+= \frac{1}{2}.$$
+Now set $b_k = \frac{1\cdot 3\cdots (2k-1)}{(k+1)!}\left(\frac{1}{4}\right)^k$, since
+$$\lim_{k\to\infty}\left| \frac{b_{k+1}}{b_k} \right| 
+= \lim_{k\to\infty}\left| \frac{2k+1}{k+2}\cdot\frac{1}{4} \right|
+= \frac{1}{2}
+< 1,$$
+we know $\sum_{k=1}^{\infty}b_k$ converges by the Ratio Test. Hence the interval of convergence is $[-\frac{1}{2},\frac{1}{2}]$.
+\end{solution}
+
+\end{enumerate}
+\end{Exercise}
