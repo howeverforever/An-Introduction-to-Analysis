@@ -1,0 +1,10 @@
+% === Exercise 7.4.6 ===
+\begin{Exercise}
+\begin{proof}
+Since $f\in\mathbb{C}^{\infty}(-\infty, \infty)$, by the Lagrange Theorem, we know
+$$ R_n(x) = \frac{1}{(n-1)!} \int_{x_0}^{x} (x-t)^{n-1} f^{(n)} (t) \ dt$$ for all $x, x_0$ on $\mathbb{R}$. Then we set $x_0 := 0,\ x:=a,\ t:=x,\ n:=n+1$, by change of variables, we have
+$$ R_{n+1}(x) =  \frac{1}{n!} \int_{0}^{a} x^n f^{(n+1)} (x) \ dx.$$
+Since $\lim_{n\to\infty} R_{n+1}(x) = 0$ for all $a\in\mathbb{R}$, then the Taylor series of $f$ centered at $0$ converges to $f$ for all $x\in\mathbb{R}$. So $$f(x) = \sum_{k=0}^{\infty} \frac{f^{(k)}(0)}{k!} x^k$$
+for all $x\in\mathbb{R}$. By definition of analytic function, we conclude $f$ is analytic on $(-\infty, \infty)$.
+\end{proof}
+\end{Exercise}

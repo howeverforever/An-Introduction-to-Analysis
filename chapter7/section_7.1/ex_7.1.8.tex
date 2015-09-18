@@ -1,0 +1,16 @@
+% === Exercise 7.1.8 ===
+\begin{Exercise}
+\begin{proof}
+Consider $$f_n(x) = \left( 1+\frac{x}{n} \right)^n e^{-x}\text{ and } f(x)=\lim_{n\to\infty}f_n(x) = 1.$$
+Since each $f_n$ is continuous on $\mathbb{R}$, then so does integrable.
+For any $x\in\mathbb{R}$, we have $$ \left| f_n(x) - f(x) \right| =
+\left| e^{-x} \left( \left( 1+\frac{x}{n} \right)^n - e^x \right) \right| \leq
+\left| \left( 1+\frac{x}{n} \right)^n - e^x \right|
+\to0 \mbox{ as } n\to\infty.$$
+Given $\epsilon > 0$, $\exists N\in\mathbb{N}$ such that $$n \geq N \implies \left| f_n(x) - f(x) \right| < \epsilon,$$
+so $f_n \to f$ uniformly on $\mathbb{R}$ implies $f$ is integrable on $\mathbb{R}$. Finally, we conclude $$\lim_{n\to\infty} \int_{a}^{b} \left( 1+\frac{x}{n} \right)^n e^{-x}\ dx =
+\int_{a}^{b} \lim_{n\to\infty} \left( \left( 1+\frac{x}{n} \right)^n e^{-x}\right)\ dx =
+\int_{a}^{b} dx =
+b-a.$$
+\end{proof}
+\end{Exercise}

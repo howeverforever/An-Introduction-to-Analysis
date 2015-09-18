@@ -1,0 +1,13 @@
+% === Exercise 7.3.5 ===
+\begin{Exercise}
+\begin{proof}
+Since $a_k$ is bounded, there is a number $M > 0$ such that $|a_k| \leq M$ for all $k\in\mathbb{N}\bigcup\{0\}$.
+Consider $$\limsup_{k\to\infty}\sqrt[k]{|a_k|} 
+\leq \limsup_{k\to\infty}\sqrt[k]{M}
+= 1.$$ Hence,
+$$ R = \frac{1}{\limsup_{k\to\infty}\sqrt[k]{|a_k|}}
+\geq 1 
+> 0.$$
+We conclude $$f(x) := \sum_{k=0}^{\infty}a_k x^k$$ has a positive radius of convergence.
+\end{proof}
+\end{Exercise}

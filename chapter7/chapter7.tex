@@ -1,0 +1,115 @@
+\documentclass{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{fancyhdr}
+\usepackage{natbib}
+\usepackage{mathpazo}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{type1cm}
+\usepackage{exercise,chngcntr}
+
+\newenvironment{solution}
+  {\begin{proof}[Solution]}
+  {\end{proof}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\rightmark}
+\rfoot{\thepage}
+
+\begin{document}
+\counterwithin{Exercise}{section}
+
+\setcounter{chapter}{6}
+\chapter{Infinite Series of Functions}
+\thispagestyle{empty}
+\newpage
+
+% === Section 7.1 ===
+\section{Uniform Convergence of Sequences}
+
+\setcounter{Exercise}{1}
+\input{section_7.1/ex_7.1.2}
+
+\vspace{12pt}
+
+\input{section_7.1/ex_7.1.3}
+
+\vspace{12pt}
+
+\setcounter{Exercise}{5}
+\input{section_7.1/ex_7.1.6}
+
+\vspace{12pt}
+
+\setcounter{Exercise}{7}
+\input{section_7.1/ex_7.1.8}
+
+\vspace{12pt}
+
+\setcounter{Exercise}{9}
+\input{section_7.1/ex_7.1.10}
+
+\vspace{12pt}
+
+\input{section_7.1/ex_7.1.11}
+
+
+% === Section 7.2 ===
+\section{Uniform Convergence of Series}
+
+\input{section_7.2/ex_7.2.1}
+
+\vspace{12pt}
+
+\setcounter{Exercise}{3}
+\input{section_7.2/ex_7.2.4}
+
+\vspace{12pt}
+
+\setcounter{Exercise}{6}
+\input{section_7.2/ex_7.2.7}
+
+\vspace{12pt}
+
+\setcounter{Exercise}{9}
+\input{section_7.2/ex_7.2.10}
+
+
+% === Section 7.3 ===
+\section{Power Series}
+
+\setcounter{Exercise}{1}
+\input{section_7.3/ex_7.3.2}
+
+\vspace{12pt}
+
+\setcounter{Exercise}{4}
+\input{section_7.3/ex_7.3.5}
+
+\vspace{12pt}
+
+\setcounter{Exercise}{9}
+\input{section_7.3/ex_7.3.10}
+
+
+% === Section 7.4 ===
+\section{Analytic Functions}
+
+\input{section_7.4/ex_7.4.1}
+
+\vspace{12pt}
+
+\setcounter{Exercise}{3}
+\input{section_7.4/ex_7.4.4}
+
+\vspace{12pt}
+
+\setcounter{Exercise}{5}
+\input{section_7.4/ex_7.4.6}
+
+\end{document}
