@@ -1,0 +1,31 @@
+% === Exercise 7.4.1 ===
+\begin{Exercise}
+\begin{enumerate}[a)]
+\item 
+\begin{proof}
+Set $f(x) = x^2 + \cos(2x)$. Then 
+\begin{align*}
+f'(x) &= 2x - 2\sin(2x); & f''(x) &= 2-4\cos(2x);  \\
+f^{(4j+3)}(x) &= 2^{4j+3}\sin(2x); & f^{(4j+4)}(x) &= 2^{4j+4}\cos(2x); \\
+f^{(4j+5)}(x) &= -2^{4j+5}\sin(2x); & f^{(4j+6)}(x) &= -2^{4j+6}\cos(2x)
+\end{align*}
+for $j=0, 1,\cdots$. For any $C > 0$, we know 
+$$|f^{(n)}(x)| \leq \begin{cases} 2C+2 & \mbox{ for } n=0,\ 1 \\
+3^n & \mbox{ for } n\geq 2\end{cases}.$$
+\end{proof}
+Since $C>0$ is arbitrary, $f$ is analytic on $\mathbb{R}$. And then $$
+\cos(2x) = \sum_{k=0}^{\infty} \frac{(-1)^k (2x)^{2k}}{(2k)!}.$$ We conclude the Maclaurin expansion is $$ f(x) = x^2 + \sum_{k=0}^{\infty} \frac{(-1)^k (2x)^{2k}}{(2k)!}
+= 1-x^2 + \sum_{k=2}^{\infty} \frac{(-4)^k x^{2k}}{(2k)!}.$$
+
+\item [c)]
+\begin{proof}
+Set $f(x) = \sin^2(x) + \cos^2(x) = \cos(2x)$. Then 
+\begin{align*}
+f^{(4j)}(x) &= 2^{4j}\cos(2x); & f^{(4j+1)}(x) &= -2^{4j+1}\sin(2x); \\
+f^{(4j+2)}(x) &= -2^{4j+2}\cos(2x); & f^{(4j+3)}(x) &= 2^{4j+3}\sin(2x)
+\end{align*}
+for $j=0, 1,\cdots$. Since $|f^{(n)}(x)| \leq 3^n$ for $n\in\mathbb{N}$ and $x\in\mathbb{R}$, then $f$ is analytic on $\mathbb{R}$. We conclude the Maclaurin expansion is
+$$ f(x) = \cos(2x) = \sum_{k=0}^{\infty} \frac{(-4)^k x^{2k}}{(2k)!}.$$
+\end{proof}
+\end{enumerate}
+\end{Exercise}
