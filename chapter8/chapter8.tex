@@ -7,7 +7,10 @@
 \usepackage{fancyhdr}
 \usepackage{natbib}
 \usepackage{mathpazo}
+
 \usepackage{graphicx}
+\graphicspath{ {images/}{drafts/} }
+
 \usepackage{enumerate}
 \usepackage{type1cm}
 \usepackage{exercise,chngcntr}
@@ -16,6 +19,10 @@
   {\begin{proof}[Solution]}
   {\end{proof}}
 
+\newenvironment{sketch}
+  {\begin{proof}[Sketch]}
+  {\end{proof}}
+  
 \pagestyle{fancy}
 \fancyhf{}
 \rhead{\rightmark}
@@ -51,4 +58,19 @@
 
 \setcounter{Exercise}{10}
 \input{section_8.2/ex_8.2.11}
+
+
+% === Section 8.3 ===
+\section{Topology of $\mathbb{R}^n$}
+
+\setcounter{Exercise}{3}
+\input{section_8.3/ex_8.3.4}
+
+\vspace{12pt}
+
+\setcounter{Exercise}{5}
+\input{section_8.3/ex_8.3.6}
+
+
+
 \end{document}
