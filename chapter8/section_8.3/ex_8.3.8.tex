@@ -1,0 +1,25 @@
+% === Exercise 8.3.8 ===
+\begin{Exercise}
+\begin{enumerate}[a)]
+\item
+\begin{proof}
+$(\Longrightarrow)$
+
+For any $x\in V$, since $V$ is open, there exists $r(x)>0$ such that $B_{r(x)}(x)\subset V$. Then $$V\subset \bigcup_{x\in V}B_{r(x)}(x)\subset \bigcup_{x\in V}V = V.$$
+Hence $V=\bigcup_{\alpha\in A}B_{\alpha}$.
+
+\vspace{2ex}
+
+$(\Longleftarrow)$
+
+We replace the notation $B_{\alpha}$ with $V_{\alpha}$. Let $x\in\bigcup_{\alpha\in A} V_{\alpha}$. Then $x\in V_{\alpha}$ for some $\alpha\in A$. Since $V_{\alpha}$ is open, it follows that there is an $r>0$ such that $B_{r}(x)\subseteq V_{\alpha}$. Thus $B_r(x)\subseteq \bigcup_{\alpha\in A}V_{\alpha} = V$ is open. 
+\end{proof}
+
+\item
+\begin{solution}
+We interpret the statement as "Prove that $V$ is $\mathbf{closed}$ if and only if there is a collection of $\mathbf{closed}$ balls $\{B_{\alpha}:\alpha\in A\}$ such that $V=\bigcup_{\alpha\in A}B_{\alpha}$".
+
+So let $B_k = [\frac{1}{k+1}, \frac{k}{k+1}]$ is closed for each $k\in\mathbb{N}$. Then we know $$\bigcup_{k\in\mathbb{N}}B_k = (0, 1)$$ is open. Hence the result will fail.
+\end{solution}
+\end{enumerate}
+\end{Exercise}

@@ -1,0 +1,35 @@
+% === Exercise 8.2.11 ===
+\begin{Exercise}
+\begin{enumerate}[a)]
+\item 
+\begin{proof}
+Let $x \in \mathbb{R}^n$ with $\|x\|=1$, then
+$$ \| T(x) \|
+\leq \|T\| \|x\|
+= \|T\|.$$
+By definition of $M_1$, we conclude $M_1 \leq \|T\|$.
+\end{proof}
+
+\item
+\begin{proof}
+Since $T$ is linear, for $x \neq 0$,
+$$ \frac{\|T(x)\|}{\|x\|}
+= \left\| T\left( \frac{x}{\|x\|} \right) \right\|
+\leq M_1.$$ where $ \| \frac{x}{\|x\|} \| = 1$.
+\end{proof}
+
+\item 
+\begin{proof}
+From part a), we know $M_1 \leq \|T\|$. And from part b), taking the supremum of left hand, then by definition of $\|T\|$, we also know $$\sup_{x\neq 0}\frac{\|T(x)\|}{\|x\|} = \|T\| \leq M_1.$$
+Hence we have $M_1 = \|T\|$ at first.
+
+\vspace{1ex}
+
+For any $C>0$, considering $$\|T(x)\|\leq C\|x\|$$, we have $\|T\| \leq C$. Then taking the infimum of right hand, we know $\|T\| \leq M_2$. On the other hand, $\|T\|$ is finite and $$\|T(x)\| \leq \|T\|\|x\|.$$ Hence $M_2\leq \|T\|$, then we have $M_2 = \|T\|$.
+
+\vspace{1ex}
+
+Finally, together all the discussions, we conclude $M_1 = M_2 = \|T\|$ as promised.
+\end{proof}
+\end{enumerate}
+\end{Exercise}

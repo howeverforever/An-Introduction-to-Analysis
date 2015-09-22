@@ -1,0 +1,128 @@
+% === Exercise 8.3.7 ===
+\begin{Exercise}
+\begin{enumerate}[a)]
+\item
+\begin{proof}
+Suppose $A\cup B$ is $\mathbf{not}$ connected. i.e., there exists nonempty sets $U$, $V$ are relatively open in $A\cup B$ such that $U\cap V=\phi$ and $U\cup V=A\cup B$.
+\begin{enumerate}
+\item [$\mathbf{Case\ 1.}$] 
+$A\cap U\neq \phi$ and $B\cap V\neq \phi$.
+
+\vspace{1ex}
+
+Set $U' := A\cap U$ and $V' := A\cap V$. We claim $U'$ and $V'$ separate $A\cup B$. \\
+Consider $U'\cap V' = (A\cap U)\cap (A\cap V) = A\cap (U\cap V) = A\cap \phi = \phi.$
+Then since $U$ is relatively open in $A\cup B$, there exists an open set $G$ such that $U = (A\cup B)\cap G$. Moreover, 
+$$
+U'
+= A\cap U
+= A\left( (A\cup B)\cap G \right)
+= A\cap G.
+$$
+Hence $U'$ is relatively open in $A$ so is $V'$ with a similar argument.
+Finally, we verify
+$$
+U'\cup V'
+= (A\cap U)\cup(A\cap V)
+= A\cap (U\cup V)
+= A\cap (A\cup B)
+= A.
+$$
+By definition, we conclude $U'$ and $V'$ separate $A$ which implies $A$ is not connected. This leads to a contradiction with hypotheses that $A$ is connected.
+
+\item [$\mathbf{Case\ 2.}$]
+$A\cap U = \phi$ or $B\cap V = \phi$.
+
+\vspace{1ex}
+
+W.L.O.G., we assume $A\cap U = \phi$. Consider
+\begin{flalign*}
+& A\cup B = U\cup V &\\
+\implies& U\cap(A\cup B) = U\cap(U\cup V) &\\
+\implies& (U\cap A)\cup (U\cap B) = U &\\
+\implies& \phi\cup(U\cap) = U &\\
+\implies& U\cap B = U &\\
+\implies& U \subseteq B. &
+\end{flalign*}
+Set $B_1 := B\cap U$ and $B_2 := B\cap V$.
+We consider
+\begin{align*}
+B_1\cup B_2
+&= (B\cap U) \cup (B\cap V) \\
+&= B\cap(U\cup U) \\
+&= B\cap(A\cup B) \\
+&= B.
+\end{align*}
+Moreover, with a similar argument from $\mathbf{Case\ 1.}$, we also know $B_1$ and $B_2$ are relatively open in $B$. By the way, $U = U\cap B = B_1 \neq \phi$. Then we should discuss whether $B_2 = \phi$ or not.
+
+If $B_2 \neq \phi$, then since $B_2 = B\cap V$, we claim $B_1$ and $B_2$ separate $B$ by definition.
+Otherwise $B_2 = \phi$, then continue to consider
+\begin{flalign*}
+& A\cup B = U\cup V &\\
+\implies& A\cap(A\cup B) = A\cap(U\cup V) &\\
+\implies& A = (A\cap U)\cup (A\cap V) &\\
+\implies& A = A\cap V & \\
+\implies& A \subseteq V. &
+\end{flalign*}
+Since $B\cap V = \phi$ implies $V \subseteq B^c$, so $A \subseteq B^c$. We conclude $A\cap B = \phi$ which leads to a contradiction with hypotheses that $A\cap B\neq \phi$.
+
+A similar argument proves the condition $B\cap V = \phi$. 
+\end{enumerate}
+Finally, we conclude $A\cap B$ is connected under the hypotheses as promised.
+\end{proof}
+
+\item
+\begin{proof}
+Denote $$E_k := \bigcup_{i=1}^{k}E_{n_i}.$$
+where $n_i\in A \mbox{ for } i=1,2,\cdots,k$.
+We pick $n_1\in A$ arbitrarily, then $E_1 = E_{n_1}$ is connected by hypotheses.
+
+Assume for $n=k$, $E_k$ is connected. Then for $n=k+1$, we
+pick $n_{k+1}\in A$ arbitrarily, then we know $E_k$ and $E_{n_{k+1}}$ are connected sets. Since $\cap_{\alpha\in A}E_{\alpha} \neq \phi$, it follows that $E_k \cap E_{n_{k+1}} \neq \phi$. From part a), we have $E_k \cup E_{n_{k+1}} = E_{k+1}$ is also connected.
+By induction, we know $E_k$ is connected for all $k\in\mathbb{N}$ which implies
+$$
+E = \bigcup_{\alpha\in A} E_{\alpha}
+$$ is connected.
+\end{proof}
+
+\item
+\begin{proof}
+Since a subset of $\mathbb{R}$ is connected if and only if $E$ is an interval, we suppose $A = [a_1, b_1]$ and $B = [a_2, b_2]$. Since $A\cap B \neq \phi$, we discuss all conditions which are fulfilled.
+\begin{enumerate}
+\item [$\mathbf{Case\ 1.}$]
+$a_1 \leq b_1$ and $b_1 \leq a_2 < b_2$
+
+where $A\cap B = [b1, a2] \neq \phi$. Then $A\cup B = [a_1, b_2]$ is an interval, so is connected.
+
+\item [$\mathbf{Case\ 2.}$]
+$a_1 \leq b_1$ and $a_2 \geq b_2$.
+
+where $A\cap B = [b1, b2] \neq \phi$. Then $A\cup B = [a_1, a_2]$ is an interval, so is connected.
+
+\item [$\mathbf{Case\ 3.}$]
+$b_1 \leq a_1$ and $a_1 \leq b_2 < a_2$.
+
+where $A\cap B = [a1, b2] \neq \phi$. Then $A\cup B = [b_1, a_2]$ is an interval, so is connected.
+
+\item [$\mathbf{Case\ 4.}$]
+$b_1 \leq a_1$ and $b_2 \geq a_2$.
+
+where $A\cap B = [a1, a2] \neq \phi$. Then $A\cup B = [b_1, b_2]$ is an interval, so is connected.
+\end{enumerate}
+Hence, $A\cap B$ is always connected as promised.
+\end{proof}
+
+\item
+\begin{proof}
+The counter-example is that two subsets of $\mathbb{R}^2$ are supposed as following, 
+\begin{align*}
+A &:= \{(x,y) : -1\leq x \leq 1, -|x| \leq y \leq |x|\} \\
+B &:=\{(x,y) : -1 \leq x \leq 1, -1 \leq y \leq 1\}\backslash\{(0,0)\}
+\end{align*}
+where $A\cap B = \{(x, y): -1 \leq x \leq 1, -|x| \leq y \leq |x|\} \backslash \{(0,0)\} \neq \phi.$
+
+We can pick $U := \{(x,y):x<0\}$ and $V := \{(x,y):x>0\}$ to separate $A\cap B$, so $A\cap B$ is not connected.
+\end{proof}
+
+\end{enumerate}
+\end{Exercise}
