@@ -1,0 +1,65 @@
+% === Exercise 10.1.8 ===
+\begin{Exercise}
+\begin{enumerate}[a)]
+\item
+\begin{proof}
+Given $\epsilon>0$, there exists $N\in\mathbb{N}$ such that $$
+n,m\geq N \implies \sup_{x\in[a,b]}\left| f_n(x) - f_m(x) \right| < \epsilon.
+$$
+Taking $m\to\infty$ on both sides of the second inequality, we have
+$$
+\sup_{x\in[a,b]}\left| f_n(x) - f(x) \right| < \epsilon.
+$$
+Hence $f_n\to f$ uniformly converges on $[a,b]$.
+Moreover, since $f_n\in C[a,b]$, we have $f\in C[a,b]$. We conclude the metric space $C[a,b]$ with supremum norm is complete.
+\end{proof}
+
+\item 
+\begin{proof}
+We change the notation $"dist(a,b)"$ as $"\rho(a,b)"$. Suppose $f,g,h \in C[a,b]$.
+\item [$\mathbf{Positive\ Definite}$]
+$$
+\rho(f,g)
+= \| f-g \|_1
+= \int_{a}^{b} |f(x)-g(x)| dx
+\geq \int_{a}^{b} 0\ dx
+= 0.
+$$
+The equality holds if and only if $f(x)=g(x)$ for all $x\in[a,b]$.
+\item [$\mathbf{Symmetric}$]
+$$
+\rho(f,g)
+= \| f-g \|_1
+= \int_{a}^{b} |f(x)-g(x)| dx
+= \int_{a}^{b} |g(x)-f(x)| dx
+= \| g-f \|_1
+= \rho(g,f).
+$$
+\item [$\mathbf{Triangle\ Inequality}$]
+\begin{align*}
+\rho(f,g)
+= \| f-g \|_1
+&= \int_{a}^{b} |f(x)-g(x)| dx \\
+&= \int_{a}^{b} |f(x)-h(x)+h(x)-g(x)| dx \\
+&\leq \int_{a}^{b} |f(x)-h(x)| dx + \int_{a}^{b} |h(x)-g(x)| dx \\
+&= \| f-h \|_1 + \| h-g \|_1 \\
+&= \rho(f,h) + \rho(h,g).
+\end{align*}
+Hence the dist function makes $C[a,b]$ a metric space.
+\end{proof}
+
+\item
+\begin{proof}
+Assume $C[a,b]$ is complete in the metric $\rho$. Then $\{f_n\}$ converges to some functions which belongs to $C[a,b]$. 
+
+Set $f_n = x^n$ and $[a,b] = [0,1]$ and
+$$ 
+g(x) = \begin{cases}0 & \mbox{ for } 0\leq x < 1 \\
+1 & \mbox{ for } x = 1 \end{cases}.
+$$
+We know $\rho(f_n,g)\to 0$ as $n\to\infty$ which implies $g\in C[0,1]$. However $g$ is discontinuous at $x=1$. i.e., $g\notin C[0,1]$. This leads to a contradiction to $g\in C[0,1]$. 
+
+Hence we conclude $C[a,b]$ is not complete.
+\end{proof}
+\end{enumerate}
+\end{Exercise}

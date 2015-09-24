@@ -1,0 +1,27 @@
+% === Exercise 10.1.5 ===
+\begin{Exercise}
+\begin{enumerate}[a)]
+\item 
+\begin{proof}
+We suppose $\{x_n\}, \{y_n\}$ converges to a point $a\in X$. Given $\epsilon>0$, there exists $N_1,N_2\in\mathbb{N}$ such that
+\begin{align*}
+n\geq N_1 &\implies \rho(x_n,a)<\frac{\epsilon}{2}. \\
+n\geq N_2 &\implies \rho(y_n,a)<\frac{\epsilon}{2}.
+\end{align*}
+Set $N = \max\{N_1,N_2\}$. For any $n\geq N$,
+\begin{align*}
+\rho\{x_n,y_n\}
+&\leq \rho(x_n,a) + \rho(a,y_n) \\
+&= \rho(x_n,a) + \rho(y_n, a) \\
+&< \frac{\epsilon}{2} + \frac{\epsilon}{2} \\
+&= \epsilon.
+\end{align*}
+Hence $\rho(x_n,y_n)\to 0$ as $n\to\infty$ as promised.
+\end{proof}
+
+\item
+\begin{solution}
+Let $X$ be Euclidean space. Set $x_n = y_n = n$. We observe $\lim_{n\to\infty}\rho(x_n,y_n) = 0$, but both $x_n$ and $y_n$ diverge.
+\end{solution}
+\end{enumerate}
+\end{Exercise}

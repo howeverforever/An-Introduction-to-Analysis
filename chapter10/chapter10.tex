@@ -1,0 +1,68 @@
+\documentclass{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{fancyhdr}
+\usepackage{natbib}
+\usepackage{mathpazo}
+
+\usepackage{pgf,tikz}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+\usepackage{graphicx}
+\graphicspath{ {images/}{drafts/} }
+\usepackage{caption}
+
+\usepackage{enumerate}
+\usepackage{type1cm}
+\usepackage{exercise,chngcntr}
+
+\newenvironment{solution}
+  {\begin{proof}[Solution]}
+  {\end{proof}}
+
+\newenvironment{sketch}
+  {\begin{proof}[Sketch]}
+  {\end{proof}}
+  
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\rightmark}
+\rfoot{\thepage}
+
+\begin{document}
+\counterwithin{Exercise}{section}
+
+\setcounter{chapter}{9}
+\chapter{Metric Spaces}
+\thispagestyle{empty}
+\newpage
+
+% === Section 10.1 ===
+\section{Introduction}
+
+\setcounter{Exercise}{1}
+\input{section_10.1/ex_10.1.2}
+
+\vspace{12pt}
+
+\setcounter{Exercise} {4}
+\input{section_10.1/ex_10.1.5}
+
+\vspace{12pt}
+
+\setcounter{Exercise}{6}
+\input{section_10.1/ex_10.1.7}
+
+\vspace{12pt}
+
+\input{section_10.1/ex_10.1.8}
+
+\vspace{12pt}
+
+\setcounter{Exercise}{9}
+\input{section_10.1/ex_10.1.10}
+\end{document}
