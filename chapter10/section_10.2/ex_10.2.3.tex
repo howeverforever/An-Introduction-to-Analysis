@@ -1,0 +1,19 @@
+% === Exercise 10.2.3 ===
+\begin{Exercise}
+\begin{proof}
+$(\Longrightarrow)$
+Since $a$ is a cluster point, for any $\frac{1}{n} > 0$, we know $B_{\frac{1}{n}}(a)$ contains infinitely many points. Pick a sequence $x_n \neq a$ for all $n\in\mathbb{N}$ such that $|x_n - a| < \frac{1}{n}$ which implies 
+$$
+\lim_{n\to\infty}x_n = a.
+$$
+
+\vspace{2ex}
+
+$(\Longleftarrow)$
+Since $\lim_{n\to\infty}x_n = a$, there exists $N\in\mathbb{N}$ such that
+$$
+n\geq N \implies |x_n - a| < \epsilon.
+$$
+Then $\{x_n\}_{n\geq N}\subseteq B_{\epsilon}(a).$ The sequence have infinitely many elements. Hence $a$ is a cluster point.
+\end{proof}
+\end{Exercise}
