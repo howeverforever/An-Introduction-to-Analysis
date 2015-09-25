@@ -1,0 +1,60 @@
+% === Exercise 10.3.8 ===
+\begin{Exercise}
+\begin{enumerate}[a)]
+\item
+\begin{proof}
+$(\Longrightarrow)$
+For any $a\in V$, there exists $r(a)>0$ such that $B_{r(a)}^Y(a)\subseteq V$. Hence
+\begin{align*}
+V
+&= \bigcup_{a\in V}B_{r(a)}^Y(a) \\
+&= \bigcup_{a\in V}\left( B_{r(a)}(a)\cap Y \right) \\
+&= \left( \bigcup_{a\in V}B_{r(a)}(a) \right) \cap Y
+\end{align*}
+where $\bigcup_{a\in V}B_{r(a)}(a)$ is open in $X$.
+Set $U := \bigcup_{a\in V}B_{r(a)}(a)$. 
+
+We conclude there is an open set $U$ in $X$ such that $V=U\cap V$.
+
+\vspace{2ex}
+
+$(\Longleftarrow)$
+For any $a\in V$, since $V=U\cap Y$, then $a\in U$. Moreover, $U$ is open by hypotheses, hence there exists $r>0$ such that 
+$$
+B_r(a)\subseteq U.
+$$
+Then
+$$
+B_r(a)\cap Y = B_r^Y(a) \subseteq V.
+$$
+We conclude $V$ is open in $Y$.
+\end{proof}
+
+\item
+\begin{proof}
+$(\Longrightarrow)$
+Since $E$ is closed in $Y$, then $E^c$ is open in $Y$. From part a), there is an open set $U$ such that $E^c = U\cap V$. We consider
+\begin{align*}
+E
+&= E\cap Y \\
+&= \left( U\cap V \right)^c \cap Y \\
+&= \left( U^c\cup V^c \right) \cap Y \\
+&= U^c\cap Y
+\end{align*}
+We know $U^c$ is closed and hence set $A:=U^c$ as desired.
+
+\vspace{2ex}
+
+$(\Longleftarrow)$
+Considering $E=A\cap Y$ where $A$ is closed by hypotheses, we know $E\subseteq Y$. Moreover, 
+$$
+E^c = A^c\cup Y^c
+$$ 
+implies 
+$$
+E^c\cap Y = A^c\cap Y.
+$$
+Then $E^c\cap Y$ is open in $Y$. With $E\subseteq Y$, we conclude $E$ is closed in $Y$.
+\end{proof}
+\end{enumerate}
+\end{Exercise}
