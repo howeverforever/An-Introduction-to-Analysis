@@ -1,0 +1,38 @@
+% === Exercise 10.4.5 ===
+\begin{Exercise}
+\begin{proof}
+\begin{itemize}
+\item $\mathbf{The\ First\ Proposition}$
+
+Since $V$ is open, for any $a\in V$, pick $\delta_a>0$ such that $B_{\delta}(a) \subseteq V$. Moreover,
+$$
+V = \bigcup_{a\in V} B_{\delta_a}(a).
+$$
+Since $\left\{B_{\delta_a}(a)\right\}_{a\in V}$ is a collection of open sets, by Lindel$\ddot{\rm o}$f's Theorem, there exists a countable subset $V_0$ of $V$ such that 
+$$
+\bigcup_{a\in V} B_{\delta_a}(a)
+\subseteq \bigcup_{a\in V_0} B_{\delta_a}(a).
+$$
+A similar argument proves that the reverse containment relation holds. So
+$$
+\bigcup_{a\in V} B_{\delta_a}(a)
+= \bigcup_{a\in V_0} B_{\delta_a}(a)
+$$
+which implies that there are open balls $B_1,B_2,\cdots$ such that
+\begin{equation}\label{eq:openballs}
+V = \bigcup_{j\in\mathbb{N}}B_j.
+\end{equation}
+
+
+\item $\mathbf{The\ Second\ Proposition}$
+
+Since $\mathbb{R}$ is a separable metric space. Let $V$ be an open set in $\mathbb{R}$, then \eqref{eq:openballs} holds. We know $B_j$ for each $j\in\mathbb{N}$ is an open ball in $\mathbb{R}$ and there exists $x_j\in V$ and $r_j>0$ such that
+$$
+B_j = (x_j-r_j, x_j+r_j)
+$$
+which is an open interval.
+
+Since $V$ is arbitrary, we conclude every open set in $\mathbb{R}$ is a countable union of open intervals. 
+\end{itemize}
+\end{proof}
+\end{Exercise}
