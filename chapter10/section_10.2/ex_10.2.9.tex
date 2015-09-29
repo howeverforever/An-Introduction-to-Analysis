@@ -1,0 +1,46 @@
+% === Exercise 10.2.9 ===
+\begin{Exercise}
+\begin{enumerate}[a)]
+\item 
+\begin{proof}
+Since $x_n$ is bounded, there exists a subsequence $x_{n_k}$ of $x_n$ which converges to $a\in X$. In particular, since $x_{n_k}\in E$ and $E$ is closed, we have $a\in E$.
+\end{proof}
+
+\item
+\begin{proof}
+By contradiction, we suppose $f$ is not bounded on $E$. There exists $N\in\mathbb{N}$, for any $n\geq N$, there a sequence $x_n \in E$ such that
+$$|f(x_n)| > n.$$
+Moreover, since $E$ is closed and bounded in $X$, from part a), we know there is a subsequence $x_{n_k}$ of $x_n$ such that $x_{n_k}\to a$ as $n\to\infty$ where $a\in E$. Since $f$ is continuous on $E$, we know $f(x_n)\to f(a)$ as $n\to\infty$. Consider
+$$
+\left| f(x_{n_k}) \right| > n_k.
+$$
+Taking the limit of both sides as $k\to\infty$, we have
+$$
+\left| f(a) \right| = \infty.
+$$
+However $a\in E$ implies $f(a)\in\mathbb{R}$. This leads a contradiction to $|f(a)| = \infty \notin \mathbb{R}$. Hence $f$ is bounded on $E$ as promised.
+\end{proof}
+
+\item
+\begin{proof}
+Suppose to the contrary $f(x) < M := \sup_{x\in E}f(x)$ for all $x\in E$. Set
+$$
+g(x) = \frac{1}{M-f(x)} > 0
+$$
+is continuous and hence bounded on $E$. In particular, there is $C>0$ such that $|g(x)| = g(x) \leq C$. Then
+$$
+f(x) = M-\frac{1}{g(x)} \leq M-\frac{1}{C}.
+$$
+Taking the supremum of both sides over $E$, we get
+$$
+M\leq M-\frac{1}{C} < M
+$$
+which is a contradiction. Hence there is $x_M\in E$ such that 
+$$
+f(x_M) = M = \sup_{x\in E}f(x).
+$$
+
+A similar argument proves there is $x_m\in E$ such that $f(x_m) = \inf_{x\in E}f(x)$.
+\end{proof}
+\end{enumerate}
+\end{Exercise}

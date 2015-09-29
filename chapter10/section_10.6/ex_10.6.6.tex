@@ -1,0 +1,95 @@
+% === Exercise 10.6.6 ===
+\begin{Exercise}
+\begin{enumerate}[a)]
+\item
+\begin{proof}
+Since $f$ is continuous and $H$ is compact, then $Y$ is compact. Moreover by hypothesis, $Y$ is Euclidean space, then $Y$ is bounded and closed.
+
+Since $Y$ is bounded, then
+$$
+\sup_{x\in H} \| f(x) \|_Y
+$$ is finite.
+
+$Y$ has a finite supremum, hence, there exists a sequence $x_n\in Y$ such that
+$$
+x_n\to \sup Y = \sup_{x\in H} \| f(x) \|_Y \text{ as } n\to\infty.
+$$
+Because $Y$ is closed, $\sup Y\in Y$. It follows that
+there exists $x_0\in H$ such that
+$$
+\| f(x_0) \|_Y = \sup_{x\in H} \| f(x) \|_Y = \| f \|_H.
+$$
+\end{proof}
+
+\item
+\begin{proof}
+$(\Longrightarrow)$
+
+Given $\epsilon>0$, $\exists N\in\mathbb{N}$ such that
+$$
+n\geq N \implies \left\| f_n - f \right\|_H < \epsilon.
+$$
+Let $k\geq N$ and $x\in H$, Then
+$$
+\| f_k(x)-f(x) \|_Y \leq \sup_{x\in H} \| f_k(x)-f(x) \|_Y = \| f_k-f \|_H < \epsilon.
+$$
+By definition, $f_k\to f$ uniformly on $H$ as $k\to\infty$.
+
+\vspace{2ex}
+
+$(\Longleftarrow)$
+
+Given $\epsilon>0$, $\exists N\in\mathbb{N}$ such that
+$$
+k\geq N \text { and } x\in H \implies \| f_k - f \| < \frac{\epsilon}{2}.
+$$
+Let $n\geq N$, $\sup_{x\in H} \| f_k - f \|_Y \leq \frac{\epsilon}{2}$. Then
+$$
+\| f_k-f \|_H = \sup_{x\in H} \| f_k - f \|_Y \leq \frac{\epsilon}{2} < \epsilon
+$$
+which means $\| f_k-f \|_H \to 0$ as $k\to\infty$.
+\end{proof}
+
+\item
+\begin{proof}
+$(\Longrightarrow)$
+
+Given $\epsilon>0$, 
+\begin{align*}
+\exists N_1\in\mathbb{N} \text{ such that } k\geq N_1 \text{ and } x\in H &\implies \| f_k(x)-f(x) \|_Y<\frac{\epsilon}{4}; \\
+\exists N_2\in\mathbb{N} \text{ such that } j\geq N_2 \text{ and } x\in H &\implies \| f_j(x)-f(x) \|_Y<\frac{\epsilon}{4}.
+\end{align*}
+They follow that
+\begin{align*}
+\sup_{x\in H} \| f_k(x) - f(x) \|_Y \leq \frac{\epsilon}{4} < \frac{\epsilon}{2}; \\
+\sup_{x\in H} \| f_j(x) - f(x) \|_Y \leq \frac{\epsilon}{4} < \frac{\epsilon}{2}.
+\end{align*}
+Set $N = \max\{N_1, N_2\}$. We know for $k,j\geq N$ and $x\in H$, then
+\begin{align*}
+\| f_k - f_j \|_H
+&\leq \|f_k - f \|_H + \|f_j - f \|_H \\
+&= \sup_{x\in H} \| f_k-f \|_Y + \sup_{x\in H} \| f_j-f \|_Y \\
+&< \frac{\epsilon}{2} + \frac{\epsilon}{2} \\
+&= \epsilon.
+\end{align*}
+
+\vspace{2ex}
+
+$(\Longleftarrow)$
+
+Given $\epsilon>0$, $\exists N\in\mathbb{N}$ such that
+$$
+k,j \geq N \implies \|f_k - f_j \|_H < \epsilon.
+$$
+Consider
+$$
+\| f_k-f_j \|_Y \leq \sup_{x\in H} \| f_k-f_j \|_Y = \| f_k-f_j \|_H < \epsilon.
+$$
+Hence, $\{f_k(x)\}$ is Cauchy for all $x\in H$. Since Euclidean space is complete, then
+$$
+f(x) = \lim_{k\to\infty} f_k(x).
+$$
+It follows that $f_k$ converges uniformly on $H$.
+\end{proof}
+\end{enumerate}
+\end{Exercise}

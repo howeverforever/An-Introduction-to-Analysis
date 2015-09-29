@@ -1,0 +1,158 @@
+\documentclass{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{fancyhdr}
+\usepackage{natbib}
+\usepackage{mathpazo}
+
+\usepackage{pgf,tikz}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+\usepackage{graphicx}
+\graphicspath{ {images/}{drafts/} }
+\usepackage{caption}
+
+\usepackage{enumerate}
+\usepackage{type1cm}
+\usepackage{exercise,chngcntr}
+
+\newenvironment{solution}
+  {\begin{proof}[Solution]}
+  {\end{proof}}
+
+\newenvironment{sketch}
+  {\begin{proof}[Sketch]}
+  {\end{proof}}
+  
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\rightmark}
+\rfoot{\thepage}
+
+\begin{document}
+\counterwithin{Exercise}{section}
+
+\setcounter{chapter}{9}
+\chapter{Metric Spaces}
+\thispagestyle{empty}
+\newpage
+
+% === Section 10.1 ===
+\section{Introduction}
+
+\setcounter{Exercise}{1}
+\input{section_10.1/ex_10.1.2}
+
+\vspace{12pt}
+
+\setcounter{Exercise}{4}
+\input{section_10.1/ex_10.1.5}
+
+\vspace{12pt}
+
+\setcounter{Exercise}{6}
+\input{section_10.1/ex_10.1.7}
+
+\vspace{12pt}
+
+\input{section_10.1/ex_10.1.8}
+
+\vspace{12pt}
+
+\setcounter{Exercise}{9}
+\input{section_10.1/ex_10.1.10}
+
+
+% === Section 10.2 ===
+\section{Limits of Functions}
+
+\setcounter{Exercise}{2}
+\input{section_10.2/ex_10.2.3}
+
+\vspace{12pt}
+
+\setcounter{Exercise}{7}
+\input{section_10.2/ex_10.2.8}
+
+\vspace{12pt}
+
+\input{section_10.2/ex_10.2.9}
+
+
+% === Section 10.3 ===
+\section{Interior, Closure, and Boundary}
+
+\setcounter{Exercise}{4}
+\input{section_10.3/ex_10.3.5}
+
+\vspace{12pt}
+
+\setcounter{Exercise}{7}
+\input{section_10.3/ex_10.3.8}
+
+
+% === Section 10.4 ===
+\section{Compact Sets}
+
+\input{section_10.4/ex_10.4.1}
+
+\vspace{12pt}
+
+\setcounter{Exercise}{2}
+\input{section_10.4/ex_10.4.3}
+
+\vspace{12pt}
+
+\setcounter{Exercise}{4}
+\input{section_10.4/ex_10.4.5}
+
+\vspace{12pt}
+
+\setcounter{Exercise}{6}
+\input{section_10.4/ex_10.4.7}
+
+\vspace{12pt}
+
+\input{section_10.4/ex_10.4.8}
+
+
+% === Section 10.5 ===
+\section{Connected Sets}
+
+\setcounter{Exercise}{3}
+\input{section_10.5/ex_10.5.4}
+
+\vspace{12pt}
+
+\setcounter{Exercise}{5}
+\input{section_10.5/ex_10.5.6}
+
+\vspace{12pt}
+
+\input{section_10.5/ex_10.5.7}
+
+
+% === Section 10.6 ===
+\section{Continuous Functions}
+
+\setcounter{Exercise}{2}
+\input{section_10.6/ex_10.6.3}
+
+\vspace{12pt}
+
+\setcounter{Exercise}{4}
+\input{section_10.6/ex_10.6.5}
+
+\vspace{12pt}
+
+\input{section_10.6/ex_10.6.6}
+
+\vspace{12pt}
+
+\setcounter{Exercise}{8}
+\input{section_10.6/ex_10.6.9}
+\end{document}
