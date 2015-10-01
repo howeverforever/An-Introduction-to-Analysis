@@ -1,0 +1,56 @@
+\documentclass{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{fancyhdr}
+\usepackage{natbib}
+\usepackage{mathpazo}
+
+\usepackage{pgf,tikz}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+\usepackage{graphicx}
+\graphicspath{ {images/}{drafts/} }
+\usepackage{caption}
+
+\usepackage{enumerate}
+\usepackage{type1cm}
+\usepackage{exercise,chngcntr}
+
+\newenvironment{solution}
+  {\begin{proof}[Solution]}
+  {\end{proof}}
+
+\newenvironment{sketch}
+  {\begin{proof}[Sketch]}
+  {\end{proof}}
+  
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\rightmark}
+\rfoot{\thepage}
+
+\begin{document}
+\counterwithin{Exercise}{section}
+
+\setcounter{chapter}{10}
+\chapter{Differentiability on $\mathbb{R}$}
+\thispagestyle{empty}
+\newpage
+
+% === Section 11.1 ===
+\section{Partial Derivatives and Partial Integrals}
+
+\setcounter{Exercise}{1}
+\input{section_11.1/ex_11.1.2}
+
+\vspace{12pt}
+
+\setcounter{Exercise}{3}
+\input{section_11.1/ex_11.1.4}
+
+
+\end{document}

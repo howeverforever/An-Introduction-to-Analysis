@@ -1,0 +1,27 @@
+% === Exercise 11.1.4 ===
+\begin{Exercise}
+\begin{proof}
+For each $y\in[c,d]$, $f(\cdot, y)$ is continuous on $[a,b]$, then $f$ is integrable on $[a,b]$, so is $fg$ by the hypothesis that $g$ is integrable on $[a,b]$. Hence, $F(y)$ exists for all $y\in[c,d]$.
+
+$|g|$ is integrable and then set
+$$
+M := \int_{a}^{b} |g(x)|\ dx < \infty.
+$$
+
+Fix $y_0\in[c,d]$, given $\epsilon>0$, since $H$ is compact and $f$ is continuous on $H$, then $f$ is uniformly continuous on $H$. Hence there is $\delta >0$ such that
+$$
+\| (x_1,y_1) - (x_2,y_2) \| < \delta \text{ and } (x_1,y_1),\ (x_2,y_2)\in H
+\implies \left| f(x_1,y_1)-f(x_2,y_2) \right| < \frac{\epsilon}{M+1}.
+$$
+
+Because $|(y,y_0)| = \| (x,y)-(x,y_0) \|$, for all $y\in[c,d]$ with $|y-y_0|<\delta$,
+\begin{align*}
+\left| F(y) - F(y_0) \right|
+&\leq \int_{a}^{b} |g(x)| |f(x,y) - f(x,y_0)|\ dx \\
+&< \frac{M}{M+1}\epsilon \\
+&< \epsilon.
+\end{align*}
+
+Hence, $F$ is continuous on $[c,d]$. Moreover, $[c,d]$ is compact, then we conclude $F$ is uniformly continuous on $[c,d]$.
+\end{proof}
+\end{Exercise}
