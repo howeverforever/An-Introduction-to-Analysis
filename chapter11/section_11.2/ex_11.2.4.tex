@@ -1,0 +1,20 @@
+% === Exercise 11.2.4 ===
+\begin{Exercise}
+\begin{proof}
+Calculate
+$$
+f_x(0,0) 
+= \lim_{h\to 0} \frac{f(h,0)-f(0,0)}{h}
+= \lim_{h\to 0} \frac{h}{\sin|h|}.
+$$
+
+Moreover,
+\begin{align*}
+\lim_{h\to0+} \frac{h}{\sin|h|} &= \lim_{h\to0+} \frac{1}{\cos h} = 1; \\
+\lim_{h\to0-} \frac{h}{\sin|h|} &= \lim_{h\to0-} \frac{1}{-\cos h} = -1.
+\end{align*}
+Since the left limit doesn't equal to the right limit, hence, the limit doesn't exist.
+
+Since the partial derivative of $f$ at $(0,0)$ doesn't exist, so doesn't the total derivative.
+\end{proof}
+\end{Exercise}
