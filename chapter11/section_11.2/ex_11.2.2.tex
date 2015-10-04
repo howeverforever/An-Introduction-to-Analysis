@@ -1,0 +1,28 @@
+% === Exercise 11.2.2 ===
+\begin{Exercise}
+\begin{proof}
+Consider
+$$
+\lim_{x\to a} \frac{\| f(x) \|}{\| g(x) \|}
+= \lim_{x\to a} \frac{\frac{\| f(x) \|}{x-a}}{\frac{\| g(x) \|}{x-a}}.
+$$
+Then
+\begin{align*}
+\lim_{x\to a} \frac{\| f(x) \|}{x-a}
+&= \lim_{x\to a} \left\| \frac{f(x)}{x-a} \right\| \\
+&= \lim_{x\to a} \left\| \frac{f(x)-f(a)}{x-a} \right\| \\
+&= \lim_{x\to a} \left\| \frac{f(x)-f(a)-D f(a)(x-a)}{x-a} + D f(a) \right\| \\
+&= \left\| \lim_{x\to a} \left( \frac{f(x)-f(a)-D f(a)(x-a)}{x-a} + D f(a) \right) \right\| \\
+&= \| D f(a) \|.
+\end{align*}
+A similar argument establishes
+$$
+\lim_{x\to a} \frac{\| g(x) \|}{x-a} = \|D g(a) \|.
+$$
+We conclude
+$$
+\lim_{x\to a}\frac{\| f(x) \|}{\| g(x) \|}
+= \frac{\| D f(a) \|}{\| D g(a) \|}.
+$$
+\end{proof}
+\end{Exercise}
