@@ -1,0 +1,30 @@
+% === Exercise 11.5.6 ===
+\begin{Exercise}
+\begin{enumerate}[a)]
+\item
+\begin{solution}
+\begin{align*}
+g'(t)
+&= \frac{\partial}{\partial x}f(t x+(1-t)a, y)\cdot\frac{\partial}{\partial t}(t x+(1-t)a) \\
+&\quad +\frac{\partial}{\partial y}f(t x+(1-t)a,y)\cdot\frac{\partial}{\partial t}(y) \\
+&\quad +\frac{\partial}{\partial x}f(a, t y+(1-t)b)\cdot\frac{\partial}{\partial t}(a) \\
+&\quad +\frac{\partial}{\partial y}f(a, t y+(1-t)b)\cdot\frac{\partial}{\partial t}(t y+(1-t)b) \\
+&= (x-a)\frac{\partial}{\partial x}f(t x+(1-t)a,y) + (y-b)\frac{\partial}{\partial y}f(a,t y+(1-t)b).
+\end{align*}
+\end{solution}
+
+\item
+\begin{proof}
+By hypotheses which satisfy the Mean Value Theorem, there is $t\in(0,1)$ such that
+$$
+g(1)-g(0) = g'(t).
+$$
+which implies there are numbers $c=t x+(1-t)a$ and $d=t y+(1-t)b$ so that $c$ is between $a$ and $x$, and $d$ is between $b$ and $y$, such that
+\begin{alignat*}{7}
+\quad&& g(1)-g(0) &= g'(t) \\
+\implies&& f(x,y)-f(a,b) &= (x-a)\frac{\partial}{\partial x}f(t x+(1-t)a,y) + (y-b)\frac{\partial}{\partial y}f(a,t y+(1-t)b) \\
+\implies&& f(x,y)-f(a,b) &= (x-a)f_x(c,y)+(y-b)f_y(a,d).
+\end{alignat*}
+\end{proof}
+\end{enumerate}
+\end{Exercise}

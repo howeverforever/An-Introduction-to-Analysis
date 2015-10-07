@@ -1,0 +1,38 @@
+% === Exercise 11.5.8 ===
+\begin{Exercise}
+\begin{proof}
+We pick $h\in\mathbb{R}^n$ such that $x=a+h\in H$, and also fix $n$.
+
+Use Theorem 11.37, we have
+\begin{equation}
+f(x)=f(a)+D^{(1)}f(a;h)+\frac{1}{2!}D^{(2)}f(a;h). \label{eq:taylor_ex_11.5.8}
+\end{equation}
+
+Since $f_{x_j}(a) = 0$ for some $a\in H$ and all $j=1,\cdots, n$, then $D^{(1)}f(a;h)=0$.
+
+For $1\leq i,j \leq n$, since $f$ is $C^2$ on $V$, then $\frac{\partial^2 f}{\partial x_i\ \partial x_j}$ is continuous on $V$. Moreover, $H$ is compact convex subset of $V$ and $a\in H$, then $\frac{\partial^2}{\partial x_i \partial x_j} f(a)$ is compact and hence bounded. So there is $M_{i j}>0$ such that
+$$
+\left| \frac{\partial^2}{\partial x_i \partial x_j} f(a) \right |\leq M_{i j}.
+$$
+It follows that
+\begin{align*}
+\left| D^{(2)}f(a;h) \right|
+&= \left| \sum_{i=1}^{n}\sum_{j=1}^{n} \frac{\partial^2}{\partial x_i \partial x_j} f(a)(x_i-a_i)(x_j-a_j) \right| \\
+&\leq \sum_{i=1}^{n}\sum_{j=1}^{n} \left| \frac{\partial^2}{\partial x_i \partial x_j} f(a)\cdot(x_i-a_i)(x_j-a_j) \right| \\
+&\leq \sum_{i=1}^{n}\sum_{j=1}^{n} M_{i j}\cdot\frac{1}{2} \left( (x_i-a_i)^2 + (x_j-a_j)^2 \right) \\
+&\leq n^2 M' \left( \frac{1}{2} n \| x-a \|^2 \right) \\
+&= \frac{1}{2}n^3 M'\|x-a\|^2
+\end{align*}
+where $M' = \max_{1\leq i,j\leq n}\{M_{i j}\}$.
+
+From \eqref{eq:taylor_ex_11.5.8}, for all $x\in H$, we have
+\begin{align*}
+|f(x)-f(a)| 
+&= \left|D^{(1})f(a;h)+\frac{1}{2!}D^{(2)}f(a;h) \right| \\
+&= \left| \frac{1}{2!}D^{(2)}f(a;h) \right| \\
+&\leq \frac{1}{4} n^3 M' \|x-a\|^2 \\
+&= M\|x-a\|^2
+\end{align*}
+where $M=\frac{1}{4}n^3 M'$ is constant as promised.
+\end{proof}
+\end{Exercise}
