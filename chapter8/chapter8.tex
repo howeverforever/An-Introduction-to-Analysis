@@ -1,40 +1,4 @@
-\documentclass{report}
-
-\usepackage[utf8]{inputenc}
-\usepackage[a4paper, total={6in, 8in}]{geometry}
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{fancyhdr}
-\usepackage{natbib}
-\usepackage{mathpazo}
-
-\usepackage{pgf,tikz}
-\usepackage{mathrsfs}
-\usetikzlibrary{arrows}
-
-\usepackage{graphicx}
-\graphicspath{ {images/}{drafts/} }
-\usepackage{caption}
-
-\usepackage{enumerate}
-\usepackage{type1cm}
-\usepackage{exercise,chngcntr}
-
-\newenvironment{solution}
-  {\begin{proof}[Solution]}
-  {\end{proof}}
-
-\newenvironment{sketch}
-  {\begin{proof}[Sketch]}
-  {\end{proof}}
-  
-\pagestyle{fancy}
-\fancyhf{}
-\rhead{\rightmark}
-\rfoot{\thepage}
-
-\begin{document}
-\counterwithin{Exercise}{section}
+\graphicspath{ {chapter8/images/}{chapter8/drafts/} }
 
 \setcounter{chapter}{7}
 \chapter{Euclidean Spaces}
@@ -109,4 +73,3 @@
 
 \setcounter{Exercise}{8}
 \input{section_8.4/ex_8.4.9}
-\end{document}

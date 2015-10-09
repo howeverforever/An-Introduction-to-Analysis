@@ -1,0 +1,51 @@
+\documentclass{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{fancyhdr}
+\usepackage{natbib}
+\usepackage{mathpazo}
+\usepackage{import}
+\usepackage{pgf,tikz}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{caption}
+
+\usepackage{enumerate}
+\usepackage{type1cm}
+\usepackage{exercise,chngcntr}
+
+
+\newenvironment{solution}
+  {\begin{proof}[Solution]}
+  {\end{proof}}
+
+\newenvironment{sketch}
+  {\begin{proof}[Sketch]}
+  {\end{proof}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\rightmark}
+\rfoot{\thepage}
+
+\addtocontents{toc}{\setcounter{tocdepth}{2}}
+\begin{document}
+\counterwithin{Exercise}{section}
+
+\tableofcontents
+\pagenumbering{roman}
+
+\newpage
+\pagenumbering{arabic}
+\subimport*{chapter6/}{chapter6}
+\subimport*{chapter7/}{chapter7}
+\subimport*{chapter8/}{chapter8}
+\subimport*{chapter10/}{chapter10}
+\subimport*{chapter11/}{chapter11}
+\end{document}
