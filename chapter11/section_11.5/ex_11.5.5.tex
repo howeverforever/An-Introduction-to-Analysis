@@ -1,0 +1,44 @@
+% === Exercise 11.5.5 ===
+\begin{Exercise}
+\begin{proof}
+When $p=1$, we know
+$$
+f(x)-f(a) = \int_{0}^{1}D^{(1)} f(a+t h;h) d t.
+$$
+Since $f$ is $C^p$ on $V$ and $L(x;a) \subset V$, by the Mean Value Theorem, there is $c\in L(x;a)$ such that
+$$
+\int_{0}^{1}D^{(1)} f(a+t h;h) d t = D^{(1)} f(c;h).
+$$
+Moreover, applying Taylor's Formula, we have
+$$
+f(x)-f(a) = D^{(1)} f(c;h).
+$$
+Hence, the formula holds for $p=1$.
+
+Suppose when $p=q$, the formula holds. We set 
+$$
+u=D^{(q)} f(a+t h; h) \text{ and } d v = (1-t)^{p-1}d t,
+$$
+then 
+$$
+d u=D^{(p+1)} f(a+t h; h)d t\text{ and } v=-\frac{1}{p}(1-t)^p.
+$$
+
+By Integration by Part, we have
+\begin{align*}
+\frac{1}{(q-1)!}\int_{0}^{1}(1-t)^{q-1}D^{(q)}f(a+t h;h)d t
+&= \left. -\frac{1}{p}(1-t)^q D^{(q)} f(a+t h;h) \right|_{0}^{1} \\
+&\quad + \int_{0}^{1}\frac{1}{q}(1-t)^{q} D^{(q+1)}f(a+t h;h)d t \\
+&= \frac{1}{q!}D^{(q)}f(a;h) + \frac{1}{q!}\int_{0}^{1}(1-t)^{q} D^{(q+1)}f(a+t h;h)d t.
+\end{align*}
+i.e,
+\begin{align*}
+f(x)-f(a) &
+= \sum_{k=1}^{q-1}\frac{1}{k!}D^{(k)}f(a;h)+\frac{1}{(q-1)!}\int_{0}^{1}(1-t)^{q-1}D^{(q)}f(a+t h;h)d t \\
+&= \sum_{k=1}^{q}\frac{1}{k!}D^{(k)}f(a;h)+\frac{1}{q!}\int_{0}^{1}(1-t)^{q}D^{(q+1)}f(a+t h;h)d t.
+\end{align*}
+Hence, we know the formula also holds for $p=q+1$.
+
+By induction, we conclude the formula holds for all $p\in\mathbb{N}$.
+\end{proof}
+\end{Exercise}

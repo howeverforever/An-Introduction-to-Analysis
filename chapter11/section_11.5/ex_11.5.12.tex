@@ -1,0 +1,44 @@
+% === Exercise 11.5.12 ===
+\begin{Exercise}
+\begin{enumerate}[a)]
+\item
+\begin{proof}
+Denote $E$ is a convex set in $\mathbb{R}^n$. 
+
+Suppose to contrary that $E$ is not connected, then there are two nonempty and relatively open sets $U$ and $V$ in $E$ such that $U\cap V = \phi$ and $U\cup V = E$.
+
+Since $U,V$ are nonempty and $E$ is convex, then there are $a\in U$ and $b\in V$ such that $L(a;b)\subset E$.
+
+We denote $L(a;b)$ clearly, that is,
+$$
+L(a;b) := \left\{t a + (1-t) b: 0\leq t \leq 1 \right\}.
+$$
+Set $f(t)=ta+(1-t)b$. Since $f:[0,1]\to \mathbb{R}^n$ is continuous on $[0,1]$ and $[0,1]$ is connected, then $L$ is connected.
+
+However, we claim $L$ is not connected under the supposition.
+
+We know $(L\cap U)\cup(L\cap V) = L$ and $(L\cap U)\cap(L\cap V) = \phi$. Since $U$ is relatively open in $E$, then there is an open set $A\subset E$ such that
+$$
+U = E\cap A
+$$
+which implies that
+$$
+L\cap U = L\cap(E\cap A) = L\cap A.
+$$
+Hence, $L\cap U$ is relatively open in $L$. Similarly, $L\cap V$ is also relatively open in $L$.
+
+Now we know $L$ is connected which is a contradiction to that $L$ is connected.
+
+We get $E$ is connected. Moreover, since $E$ is arbitrary, then we conclude every convex set in $\mathbb{R}^n$ is connected.
+\end{proof}
+
+\item
+\begin{solution}
+We give a counter-example.
+
+For $n=2$, we set $$E = \{(x,y):-1\leq x \leq 1, -|x| \leq y \leq |x|\},$$ then $E$ is connected.
+
+Pick $a=(-1,1)$ and $b=(1,1)$, we know $(0,1)\in L(a;b)$ but $(0,1)\notin E$. So $E$ is not convex.
+\end{solution}
+\end{enumerate}
+\end{Exercise}

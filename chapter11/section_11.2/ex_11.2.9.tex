@@ -1,0 +1,22 @@
+% === Exercise 11.2.9 ===
+\begin{Exercise}
+\begin{proof}
+Since $|f(x)| \leq \|x\|^{\alpha}$, then $f(0) = 0$.
+Consider
+\begin{align*}
+\left| \frac{(f(h)-f(0)-\nabla f(0)\cdot h}{\| h \|} \right|
+&= \frac{|f(h)|}{\| h \|} \\
+&\leq \frac{\| h \|^{\alpha}}{\| h \|} \\
+&= \| h \|^{\alpha-1} \to 0 \text{ as } h\to 0.
+\end{align*}
+Hence, $f$ is differentiable at $0$.
+
+\begin{itemize}
+\item When $\alpha = 1$
+
+Let $f(x) = \| x \|$, then $f$ is not differentiable at $0$. Hence $f$ might not be differentiable.
+\end{itemize}
+
+
+\end{proof}
+\end{Exercise}

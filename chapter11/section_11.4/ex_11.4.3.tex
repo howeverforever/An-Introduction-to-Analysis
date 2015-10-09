@@ -1,0 +1,24 @@
+% === Exercise 11.4.3 ===
+\begin{Exercise}
+\begin{proof}
+Consider
+$$
+\quad \rho^k f(x) = f(\rho x).
+$$
+Since $f$ is differentiable on $\mathbb{R}^n$, we differentiate both sides in $\rho$, then
+$$
+k \rho^{k-1} f(x) 
+= \nabla f(\rho x) \frac{\partial}{\partial \rho} \rho x
+= \nabla f(\rho x)\cdot x.
+$$
+Since it holds for all $\rho\in\mathbb{R}$, we pick $\rho = 1$, then
+$$
+k f(x) = \nabla f(x)\cdot x
+$$
+which implies
+$$
+x_1\frac{\partial f}{\partial x_1}(x) + \cdots + x_n\frac{\partial f}{\partial x_n}(x) = k f(x)
+$$
+for all $x=(x_1,\cdots,x_n)\in\mathbb{R}^n$.
+\end{proof}
+\end{Exercise}

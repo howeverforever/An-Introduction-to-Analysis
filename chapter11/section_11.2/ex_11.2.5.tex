@@ -1,0 +1,27 @@
+% === Exercise 11.2.5 ===
+\begin{Exercise}
+\begin{proof}
+Notice that $\alpha<\frac{3}{2}$, we calculate
+$$
+f_x(0,0) 
+= \lim_{h\to 0} \frac{f(h,0)-f(0,0)}{h} 
+= \lim_{h\to 0} h^{3-2\alpha}
+= 0.
+$$
+Similarly, $f_y(0,0) = 0$. We know $D f(0,0) = (0,0)$, then we calculate
+$$
+\frac{f(h,k)-f(0,0)-D f(0,0)\cdot(h,k)}{\| (h,k) \|}
+= \left( h^4+k^4 \right) \left(h^2+k^2 \right)^{\frac{1}{2}-\alpha} \to 0 \text{ as } (h,k)\to(0,0).
+$$
+Hence, $f$ is differentiable at $(0,0)$.
+
+For $(x,y) = \mathbb{R}^2 \backslash (0,0)$, we calculate
+\begin{align*}
+f_x(x,y) &= \frac{4x^3(x^2+y^2)-2\alpha x(x^4+y^4)}{(x^2+y^2)^{\alpha+1}}; \\
+f_y(x,y) &= \frac{4y^3(x^2+y^2)-2\alpha y(x^4+y^4)}{(x^2+y^2)^{\alpha+1}},
+\end{align*}
+are continuous on $\mathbb{R}^2 \backslash (0,0)$, and hence $f$ is differentiable on $\mathbb{R}^2 \backslash (0,0)$.
+
+We conclude $f$ is differentiable on $\mathbb{R}^2$ for all $\alpha<\frac{3}{2}$.
+\end{proof}
+\end{Exercise}

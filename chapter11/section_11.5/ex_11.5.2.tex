@@ -1,0 +1,16 @@
+% === Exercise 11.5.2 ===
+\begin{Exercise}
+\begin{proof}
+Since $f$ is $C^p$ and $B_r(x_0, y_0)$ is convex, it follows from Theorem 11.37 for $n=2$ such that
+$$
+\sum_{i_1=1}^{2}\cdots\sum_{i_j=1}^{2}\frac{\partial^j f}{\partial x_{i_1}\cdots\partial x_{i_j}} h_{i_1}\cdots h_{i_j}
+= \sum_{j=0}^{k}\binom{k}{j}(x-x_0)^j (y-y_0)^{k-j}\frac{\partial^k f}{\partial x^j\ \partial y^{k-j}}(x_0,y_0).
+$$
+Hence, we conclude there is $(c,d)\in L\left( (x,y);(0,0) \right)$ such that 
+\begin{align*}
+f(x,y) 
+&= f(x_0,y_0)+\sum_{k=1}^{p-1}\frac{1}{k!}\left( \sum_{j=0}^{k} \binom{k}{j}(x-x_0)^j (y-y_0)^{k-j} \frac{\partial^k f}{\partial x^j\ \partial y^{k-j}}(x_0,y_0) \right) \\
+&\quad + \frac{1}{p!}\sum_{j=0}^{p}\binom{p}{j}(x-x_0)^j (y-y_0)^{p-j} \frac{\partial^p f}{\partial x^j\ \partial y^{p-j}} (c,d).
+\end{align*}
+\end{proof}
+\end{Exercise}

@@ -1,0 +1,33 @@
+% === Exercise 11.4.1 ===
+\begin{Exercise}
+\begin{solution}
+Use Chain Rule directly, then
+$$
+w_p 
+= \frac{\partial F}{\partial x} \frac{\partial x}{\partial p}
++ \frac{\partial F}{\partial y} \frac{\partial y}{\partial p}
++ \frac{\partial F}{\partial z} \frac{\partial z}{\partial p},
+$$
+and
+$$
+w_q
+= \frac{\partial F}{\partial x} \frac{\partial x}{\partial q}
++ \frac{\partial F}{\partial y} \frac{\partial y}{\partial q}
++ \frac{\partial F}{\partial z} \frac{\partial z}{\partial q}.
+$$
+Also, doing carefully and patiently, we have
+\begin{align*}
+w_{pp}
+&= \frac{\partial}{\partial p}\left(\frac{\partial F}{\partial x} \right)\frac{\partial x}{\partial p} + \frac{\partial F}{\partial x}\frac{\partial^2 x}{\partial p^2} \\
+&\quad +\frac{\partial}{\partial p}\left(\frac{\partial F}{\partial y} \right)\frac{\partial y}{\partial p} + \frac{\partial F}{\partial y}\frac{\partial^2 y}{\partial p^2} \\
+&\quad +\frac{\partial}{\partial p}\left(\frac{\partial F}{\partial z} \right)\frac{\partial z}{\partial p} + \frac{\partial F}{\partial z}\frac{\partial^2 z}{\partial p^2} \\
+&= \frac{\partial F}{\partial x}\frac{\partial^2 x}{\partial p^2} + \frac{\partial F}{\partial y}\frac{\partial^2 y}{\partial p^2} + \frac{\partial F}{\partial z}\frac{\partial^2 z}{\partial p^2} \\
+&\quad + \left( \frac{\partial^2 F}{\partial x^2}\frac{\partial x}{\partial p} + \frac{\partial^2 F}{\partial x \partial y}\frac{\partial y}{\partial p} + \frac{\partial^2 F}{\partial x \partial z}\frac{\partial z}{\partial p}\right)\frac{\partial x}{\partial p} \\
+&\quad + \left( \frac{\partial^2 F}{\partial y \partial x}\frac{\partial x}{\partial p} + \frac{\partial^2 F}{\partial y^2}\frac{\partial y}{\partial p} + \frac{\partial^2 F}{\partial y \partial z}\frac{\partial z}{\partial p}\right)\frac{\partial y}{\partial p} \\
+&\quad + \left( \frac{\partial^2 F}{\partial z \partial x}\frac{\partial x}{\partial p} + \frac{\partial^2 F}{\partial z \partial y}\frac{\partial y}{\partial p} + \frac{\partial^2 F}{\partial z^2}\frac{\partial z}{\partial p}\right)\frac{\partial z}{\partial p} \\
+&= \frac{\partial F}{\partial x}\frac{\partial^2 x}{\partial p^2} + \frac{\partial F}{\partial y}\frac{\partial^2 y}{\partial p^2} + \frac{\partial F}{\partial z}\frac{\partial^2 z}{\partial p^2} \\
+&\quad + \frac{\partial^2 F}{\partial x^2}\frac{\partial^2 x}{\partial p^2} + \frac{\partial^2 F}{\partial y^2}\frac{\partial^2 y}{\partial p^2} + \frac{\partial^2 F}{\partial z^2}\frac{\partial^2 z}{\partial p^2} \\
+&\quad + 2\frac{\partial^2 F}{\partial x \partial y}\left(\frac{\partial x}{\partial p}\right) \left(\frac{\partial y}{\partial p}\right) + 2\frac{\partial^2 F}{\partial x \partial z}\left(\frac{\partial x}{\partial p}\right) \left(\frac{\partial z}{\partial p}\right) + 2\frac{\partial^2 F}{\partial y \partial z}\left(\frac{\partial y}{\partial p}\right) \left(\frac{\partial z}{\partial p}\right).
+\end{align*}
+\end{solution}
+\end{Exercise}

@@ -1,0 +1,194 @@
+\documentclass{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{fancyhdr}
+\usepackage{natbib}
+\usepackage{mathpazo}
+
+\usepackage{pgf,tikz}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+\usepackage{graphicx}
+\graphicspath{ {images/}{drafts/} }
+\usepackage{caption}
+
+\usepackage{enumerate}
+\usepackage{type1cm}
+\usepackage{exercise,chngcntr}
+
+\newenvironment{solution}
+  {\begin{proof}[Solution]}
+  {\end{proof}}
+
+\newenvironment{sketch}
+  {\begin{proof}[Sketch]}
+  {\end{proof}}
+  
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\rightmark}
+\rfoot{\thepage}
+
+\begin{document}
+\counterwithin{Exercise}{section}
+
+\setcounter{chapter}{10}
+\chapter{Differentiability on $\mathbb{R}^n$}
+\thispagestyle{empty}
+\newpage
+
+% === Section 11.1 ===
+\section{Partial Derivatives and Partial Integrals}
+
+\setcounter{Exercise}{1}
+\input{section_11.1/ex_11.1.2}
+
+\vspace{12pt}
+
+\setcounter{Exercise}{3}
+\input{section_11.1/ex_11.1.4}
+
+\vspace{12pt}
+
+\input{section_11.1/ex_11.1.5}
+
+
+% === Section 11.2 ===
+\section{The Definition of Differentiability}
+
+\setcounter{Exercise}{1}
+\input{section_11.2/ex_11.2.2}
+
+\vspace{12pt}
+
+\input{section_11.2/ex_11.2.3}
+
+\vspace{12pt}
+
+\input{section_11.2/ex_11.2.4}
+
+\vspace{12pt}
+
+\input{section_11.2/ex_11.2.5}
+
+\vspace{12pt}
+
+\input{section_11.2/ex_11.2.6}
+
+\vspace{12pt}
+
+\setcounter{Exercise}{7}
+\input{section_11.2/ex_11.2.8}
+
+\vspace{12pt}
+
+\input{section_11.2/ex_11.2.9}
+
+\vspace{12pt}
+
+\setcounter{Exercise}{10}
+\input{section_11.2/ex_11.2.11}
+
+
+% === Section 11.3 ===
+\section{Derivatives, Differentials, and Tangent Planes}
+
+\input{section_11.3/ex_11.3.1}
+
+\vspace{12pt}
+
+\input{section_11.3/ex_11.3.2}
+
+
+% === Section 11.4 ===
+\section{The Chain Rule}
+
+\input{section_11.4/ex_11.4.1}
+
+\vspace{12pt}
+
+\setcounter{Exercise}{2}
+\input{section_11.4/ex_11.4.3}
+
+\vspace{12pt}
+
+\input{section_11.4/ex_11.4.4}
+
+\vspace{12pt}
+
+\input{section_11.4/ex_11.4.5}
+
+\vspace{12pt}
+
+\input{section_11.4/ex_11.4.6}
+
+\vspace{12pt}
+
+\setcounter{Exercise}{9}
+\input{section_11.4/ex_11.4.10}
+
+\vspace{12pt}
+
+\input{section_11.4/ex_11.4.11}
+
+
+% === Section 11.5 ===
+\section{The Mean Value Theorem and Taylor's Formula}
+
+\input{section_11.5/ex_11.5.1}
+
+\vspace{12pt}
+
+\input{section_11.5/ex_11.5.2}
+
+\vspace{12pt}
+
+\setcounter{Exercise}{4}
+\input{section_11.5/ex_11.5.5}
+
+\vspace{12pt}
+
+\input{section_11.5/ex_11.5.6}
+
+\vspace{12pt}
+
+\setcounter{Exercise}{7}
+\input{section_11.5/ex_11.5.8}
+
+\vspace{12pt}
+
+\setcounter{Exercise}{10}
+\input{section_11.5/ex_11.5.11}
+
+\vspace{12pt}
+
+\input{section_11.5/ex_11.5.12}
+
+
+% === Section 11.6 ===
+\section{The Inverse Function Theorem}
+
+\input{section_11.6/ex_11.6.1}
+
+\vspace{12pt}
+
+\input{section_11.6/ex_11.6.2}
+
+\vspace{12pt}
+
+\input{section_11.6/ex_11.6.3}
+
+\vspace{12pt}
+
+\setcounter{Exercise}{6}
+\input{section_11.6/ex_11.6.7}
+
+\vspace{12pt}
+
+\setcounter{Exercise}{9}
+\input{section_11.6/ex_11.6.10}
+\end{document}
