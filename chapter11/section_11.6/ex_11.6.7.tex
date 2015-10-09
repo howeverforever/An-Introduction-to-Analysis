@@ -1,0 +1,46 @@
+% === Exercise 11.6.7 ===
+\begin{Exercise}
+\begin{proof}
+By hypotheses, we use the Implicit Function Theorem. Since $F(a) = 0$, and furthermore, $F_{x_j}(a) \neq 0$ implies
+$$
+\frac{\partial(F_1,\cdots,F_n)}{\partial(x_1,\cdots,x_n)}(a) \neq 0,
+$$
+then there exists open sets $W_j$ containing $(a_1,\cdots,a_{j-1},a_{j+1},\cdots,a_n)$, and a unique continuously differentiable function $g_j(u^{(j)})$ such that $F(x_1,\cdots,x_{j-1},g_j(u^{(j)}),x_{j+1},c\dots,x_n)=0$ for all $u^{(j)}\in W^j$.
+
+Notice that $g_j(u^{(j)}$ is continuously differentiable on $W^j$, then $g_j(u^{(j)}$ is $C^1$ on $W^j$.
+
+For any $j=1,\cdots, n$, we know the open set $W^j$ contains $(a_1,\cdots,a_{j-1},a_{j+1},\cdots,a_n)$, so there is $r_k^j$ with $1\leq k\leq n$ and $k\neq j$ such that the Cartesian product
+$$
+(a_1-r_1^j,a_1+r_1^j)\times\cdots\times(a_{j-1}-r_{j-1}^j,a_{j-1}+r_{j-1}^j)\times(a_{j+1}-r{j+1}^j,a_{j+1}+r_{j+1}^j)\times\cdots\times(a_n-r_n^j,a_n+r_n^j)
+$$
+is a subset of $W^j$. Hence for $a_j$, we pick
+$$
+r_j = \min_{1\leq k\leq n, k\neq j}\{r_k^j\},
+$$
+then the Cartesian product
+$$
+(a_1-r_1,a_1+r_1)\times\cdots\times(a_{j-1}-r_{j-1},a_{j-1}+r_{j-1})\times(a_{j+1}-r{j+1},a_{j+1}+r_{j+1})\times\cdots\times(a_n-r_n,a_n+r_n)
+$$
+contains $a=(a_1,\cdots,a_j,\cdots,a_n)$.
+
+Fix $a_j$, pick $r>0$ with $r=\min_{1\leq j \leq n}\{r_j\}$ such that $(x_1,\cdots,a_j,\cdots,x_n)\in B_r(a)$. Since $F_{x_j}(a) \neq 0$, then $F_{x_j}(x) \neq 0$ for all $x\in B_r(a)$. 
+
+Moreover, for all $x\in B_r(a)$, we consider
+$F_j := F(x_1,\cdots,x_{j-1},g_j(u^{(j)}),x_{j+1},c\dots,x_n)=0$ on $W^j$, then we differentiate both sides on $F_j$ over $x_{j-1}$ for $2\leq j \leq n$, and $F_1$ over $x_n$, we obtain
+$$
+\frac{\partial F}{\partial x_n} + \frac{\partial F}{\partial x_1}\frac{\partial g_1}{\partial x_n} = 0\text{, and }
+\frac{\partial F}{\partial x_j} + \frac{\partial F}{\partial x_{j-1}}\frac{\partial g_j}{\partial x_{j-1}} = 0 \mbox{ for } 2\leq j \leq n
+$$
+which implies
+$$
+\frac{\partial g_1}{\partial x_n} = -\frac{\frac{\partial F}{\partial x_n}}{\frac{\partial F}{\partial x_1}}\text{, and }
+\frac{\partial g_j}{\partial x_{j-1}} = -\frac{\frac{\partial F}{\partial x_j}}{\frac{\partial F}{\partial x_{j-1}}} \mbox{ for } 2\leq j \leq n.
+$$
+
+Finally, by multiplying these $n$ equations, we conclude
+$$
+\frac{\partial g_1}{\partial x_n}\frac{\partial g_2}{\partial x_1}\frac{\partial g_3}{\partial x_2}\cdots\frac{\partial g_n}{\partial x_{n-1}} = (-1)^n
+$$
+on $B_r(a)$ as promised.
+\end{proof}
+\end{Exercise}
