@@ -7,7 +7,6 @@
 \usepackage{fancyhdr}
 \usepackage{natbib}
 \usepackage{mathpazo}
-\usepackage{import}
 \usepackage{pgf,tikz}
 \usepackage{mathrsfs}
 \usetikzlibrary{arrows}
@@ -16,11 +15,14 @@
 \usepackage{epstopdf}
 \usepackage{caption}
 
+\usepackage{titletoc}
+\usepackage{import}
+
 \usepackage{enumerate}
 \usepackage{type1cm}
 \usepackage{exercise,chngcntr}
 
-
+% === Environment Settings ===
 \newenvironment{solution}
   {\begin{proof}[Solution]}
   {\end{proof}}
@@ -33,14 +35,30 @@
 \fancyhf{}
 \rhead{\rightmark}
 \rfoot{\thepage}
+% === -------------------- ===
 
-\addtocontents{toc}{\setcounter{tocdepth}{2}}
 \begin{document}
 \counterwithin{Exercise}{section}
 
-\tableofcontents
+% === Cover Page ===
+\include{cover}
+
+% === Contents Pages ===
 \pagenumbering{roman}
 
+\titlecontents{chapter}
+  [0pt]
+  {\addvspace{1em}}
+  {\bfseries\chaptername\ \thecontentslabel\quad}
+  {}
+  {\bfseries\hfill\contentspage}
+\tableofcontents
+
+% === Preface ===
+\newpage
+\include{preface}
+
+% === Main Pages ===
 \newpage
 \pagenumbering{arabic}
 \subimport*{chapter6/}{chapter6}
@@ -48,4 +66,5 @@
 \subimport*{chapter8/}{chapter8}
 \subimport*{chapter10/}{chapter10}
 \subimport*{chapter11/}{chapter11}
+
 \end{document}
