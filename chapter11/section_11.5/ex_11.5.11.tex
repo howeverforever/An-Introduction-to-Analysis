@@ -1,0 +1,62 @@
+% === Exercise 11.5.11 ===
+\begin{Exercise}
+\begin{enumerate}[a)]
+\item
+\begin{proof}
+Since $u$ is $C^2$ on $V$, then $u$ is continuous on $V$.
+
+Because $H\subset V$ and $H$ is closed, and notice that $H$ is a subset of Euclidean space, we know $H$ is compact. Then $u$ is uniformly continuous on $H$.
+
+Given $\epsilon>0$, for all $(x,t),(x_0,t_0)\in H$, there is $\delta>0$ with $2\delta<\min\{b-a,c\}$ such that
+\begin{equation}
+\|(x,t)-(x_0,t_0)\|<\delta \implies |u(x,t)-u(x_0,t_0)|<\epsilon. \label{eq:uc_ex_11.5.11}
+\end{equation}
+
+Let $K=\left[a+\frac{\delta}{2},b-\frac{\delta}{2}\right]\times\left[\frac{\delta}{2},c-\frac{\delta}{2}\right]$, then we know $K\subset H^{\circ}$ and $K$ is closed and hence compact.
+
+Finally, for all $(x,t)\in H\backslash K$, we can pick $(x_0,t_0)\in \partial H$ such that 
+$$
+\|(x,t)-(x_0,t_0)\|<\delta.
+$$
+By \eqref{eq:uc_ex_11.5.11} and hypothesis, we conclude
+$$
+u(x,t) > u(x_0,t_0)-\epsilon \geq -\epsilon.
+$$
+\end{proof}
+
+\item
+\begin{proof}
+We know $w$ is continuous on $H$ and $H$ is compact subset of Euclidean space, hence $H$ is bounded and closed.
+
+By the Extreme Value Theorem, $w$ is bounded on $H$. Moreover, there is $(x_2,t_2)\in H$ such that $w(x_2,t_2)$ is minimum on $H$.
+
+Suppose to contrary that $(x_2,t_2)\notin K$, that is, $(x_2,t_2)\in H \backslash K$. Notice that $t_2>0$. Then by hypothesis and part a), we have
+\begin{align*}
+w(x_2,t_2)
+&= u(x_2,t_2) + r(t_2-t_1) \\
+&\geq -\epsilon+r(t_2-t_1) \\
+&=r t_2-\frac{l}{2} \\
+&> r t_2 - l \\
+&> -l \\
+&= u(x_1,t_1) + r(t_1-t_1) \\
+&= w(x_1,t_1).
+\end{align*}
+This leads to a contradiction that $w(x_2,t_2)$ is minimum on $H$.
+
+Hence, we conclude the minimum of $w(x,t)$ on $H$ occurs at some $(x_2,t_2)\in K$ as promised.
+\end{proof}
+
+\item 
+\begin{proof}
+Suppose to contrary that $u$ attains the minimum on $H^{\circ}$, then $u(x_1,t_1)<0$ for some $(x_1,t_1)\in H^{\circ}$.
+
+Moreover from part b), we know $w$ attains the minimum on $H$ only occurs at some $(x_2,t_2)\in K \subset H^{\circ}$. Therefore, $w_{x x}(x_2,t_2)\geq 0$ and $w_{t}(x_2,t_2) = 0$.
+
+By hypothesis that $u_{x x} - u_{t} = 0$, we consider
+$$
+0 = w_{t}(x_2,t_2) = u_{t}(x_2,t_2)+r = u_{x x}(x_2,t_2)+r \geq r > 0.
+$$
+This leads to a contradiction. Hence $u$ attains the minimum on $\partial H$. Since the minimum of $u(x,t)$ on $\partial H$ is $0$, then we conclude $u(x,t)\geq 0$ for all $(x,t)\in H$.
+\end{proof}
+\end{enumerate}
+\end{Exercise}

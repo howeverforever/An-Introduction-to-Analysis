@@ -1,0 +1,45 @@
+% === Exercise 8.3.6 ===
+\begin{Exercise}
+\begin{enumerate}[a)]
+\item
+\begin{proof}
+$(\Longrightarrow)$
+Since $C$ is relatively closed in $E$, then by definition, there exists a closed set $B$ such that $C=E\cap B$. Because $E$ and $B$ are closed, we conclude $C$ is closed.
+
+$(\Longleftarrow)$
+Since $C\subseteq E$ implies $C=C\cap E$, and we know $C$ and $E$ are closed by hypotheses. By definition, we conclude $C$ is relatively closed in $E$.
+\end{proof}
+
+\item
+\begin{proof}
+$(\Longrightarrow)$
+Since $C$ is relatively closed in $E$, there exists a closed set $B$ such that $C=E\cap B$.
+
+Consider
+$$
+C\backslash E 
+= C\cap E^c 
+= E\cap \left(E\cap B \right)^c 
+= E\cap \left( E^c\cup B^c \right) 
+= \left( E\cap E^c\right) \cup \left( E \cap B^c\right)
+= E\cap B^c.
+$$
+Since $B^c$ is open, we conclude $E\backslash C$ is relatively open in $E$.
+
+$(\Longleftarrow)$
+Since $E\backslash C$ is relatively open in $E$, there exists an open set $A$ such that $E\backslash C = E\cap A$. Consider
+\begin{align*}
+C
+&= E\cap C
+= \left( E\cap E^c \right) \cup \left(E \cap C\right)
+= E\cap \left( E^c \cup C \right) \\
+&= E\cap \left( E\cap C^c \right)^c
+= E\cap \left( E\cap A \right)^c
+= E\cap \left( E^c \cup A^c \right) \\
+&= E \cap A^c.
+\end{align*}
+Since $A^c$ is closed, we conclude $C$ is relatively closed in $E$.
+\end{proof}
+
+\end{enumerate}
+\end{Exercise}

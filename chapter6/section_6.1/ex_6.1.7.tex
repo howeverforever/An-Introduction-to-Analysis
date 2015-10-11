@@ -1,0 +1,68 @@
+% === Exercise 6.1.7 ===
+\begin{Exercise}
+\begin{enumerate}[a)]
+\item 
+\begin{proof}
+Since $f'(x)$ exists for all $x \in \mathbb{R}$, we conclude $F'(x)$ exists.
+
+By the Mean Value Theorem, there is a number $c \in I$ so that
+$$ 
+|F(x)-F(y)| = F'(c)(x-y),\ \forall x,y \in I
+$$
+where 
+$$
+F'(c) = 1-\frac{f'(c)}{f'(a)}.
+$$
+
+Since $c \in I$, we know $\frac{f'(c)}{f'(a)} \in [1-r,1]$; therefore 
+$$ 
+0 
+\leq F'(c) 
+= 1-\frac{f'(c)}{f'(a)} 
+\leq r.
+$$
+As a result, we conclude that 
+$$
+|F(x)-F(y)| = |F'(c)||x-y| \leq r|x-y|,\ \forall x,y \in I. 
+$$
+\end{proof}
+
+\item
+\begin{proof}
+For $n=1$, by definition of $x_n$, we get
+$$
+|x_2-x_1| = |F(x_1)-F(x_0)| \leq r|x_1-x_0|.
+$$
+
+Assume for $n=k$, 
+$$
+|x_{k+1}-x_{k}| \leq r^k|x_1-x_0|
+$$ 
+holds, then for $n=k+1$, 
+$$
+|x_{k+2}-x_{k+1}| 
+= |F(x_{k+1})-F(x_{k})| 
+\leq r|x_{k+1}-x_{k}| 
+\leq r^{k+1}|x_1-x_0|
+$$ 
+also holds.
+
+By induction, we conclude
+$$
+|x_{n+1}-x_{n}| \leq r^n|x_1-x_0|,\ \forall n \in \mathbb{N}.
+$$
+\end{proof}
+
+\item 
+\begin{proof}
+Since $f(I) \subseteq I$ and $x_0 \in I$, we hold $x_n \in I,\ \forall n \in \mathbb{N}$. In addition, $I$ is a closed interval, by Bolzano-Weierstrass Theorem, there is a subsequence $\{x_{n_k}\}$ which converges to a fixed number $b \in I$.
+
+Moreover, by part b), we get $ \{x_n\}$  is Cauchy. Hence $$\lim_{n\to\infty} x_n = b. $$
+
+Besides, $F$ is differentiable on $I$, so $F$ is continuous on $I$.
+
+Consider the equation $x_n = F(x_{n-1})$ and notice $F$ is continuous on $I$. Taking the limit on both sides as $n\to\infty$, we have $b=F(b)$ which implies that $$b=b-\frac{f(b)}{f'(a)}.$$
+Then we conclude $f(b)=0$ as promised.
+\end{proof}
+\end{enumerate}
+\end{Exercise}

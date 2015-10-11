@@ -1,0 +1,35 @@
+% === Exercise 11.6.1 ===
+\begin{Exercise}
+\begin{enumerate}[a)]
+\item
+\begin{proof}
+Consider
+$$
+f'(t_0) = \begin{bmatrix}
+u'(t_0) \\
+v'(t_0)
+\end{bmatrix} 
+\neq
+\begin{bmatrix}
+0 \\
+0
+\end{bmatrix}.
+$$
+Hence, $u'(t_0)$ and $v'(t_0)$ cannot both be zero by definition of a matrix clearly.
+\end{proof}
+
+\item
+\begin{proof}
+Since $f'(t_0)\neq 0$, and $f$ is $C^2$ on $\mathbb{R}$ so is $C^1$ on $\mathbb{R}$. 
+
+Suppose $u'(t_0)\neq 0$, by the Inverse Function Theorem, there is an open set $W$ containing $t_0$ and a unique continuously differentiable 1-1 function $g$ on $f(W)$ containing $x_0$ such that $g(x) = t$ for all $x\in f(W)$. Notice that $g$ is $C^1$ on $f(W)$.
+
+Since $x_0 \in f(W)$, then $g(x_0) = t_0$. For $x$ near $x_0$ which means $x\in f(W)$, we have $g(x) = t$. Hence,
+$u(g(x)) = u(t) = x$.
+
+Suppose $v'(t_0)\neq 0$, then a similar argument establishes there is a $C^1$ function $h$ such that $h(y_0)=t_0$ and $v(h(y)) = y$ for $y$ near $y_0$.
+
+From part a), $u'(t_0)$ and $v'(t_0)$ cannot both be zero. Therefore, we conclude either one of two statements will hold.
+\end{proof}
+\end{enumerate}
+\end{Exercise}

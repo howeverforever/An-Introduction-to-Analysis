@@ -1,0 +1,97 @@
+% === Exercise 10.4.8 ===
+\begin{Exercise}
+\begin{enumerate}[a)]
+\item
+\begin{proof}
+W.L.O.G., we assume
+$$
+H_1 \subset H_2 \subset \cdots.
+$$
+
+Suppose to contrary that
+\begin{equation}\label{eq:cantor_counter}
+\bigcap_{k=1}^{\infty}H_k = \phi.
+\end{equation}
+For each $k\in\mathbb{N}$, we set $V_k = X\backslash H_k$. Taking the complement of both sides on \eqref{eq:cantor_counter}, we have
+$$
+X = \bigcup_{k=1}^{\infty}V_k.
+$$
+Then $\{V_k\}$ is an open covering of $X$. Since $X$ is compact, we extract a finite subcover, say $V_1 \supset V_2 \supset \cdots$ and $V_i = X$ for some $i\in\mathbb{N}$. It follows that $H_i = X\backslash V_i = \phi$ which is a contradiction to $H_i$ is nonempty by hypothesis.
+
+Hence, we conclude
+$$
+\bigcap_{k=1}^{\infty}H_k \neq \phi.
+$$
+\end{proof}
+
+\item
+\begin{proof}
+\begin{itemize}
+\item $\mathbf{(\sqrt{2}, \sqrt{3})\cap \mathbb{Q}\  is\ closed\ and\ bounded}$
+
+$(\sqrt{2}, \sqrt{3})\cap \mathbb{Q}$ is bounded trivially. Let $x_n\in(\sqrt{2}, \sqrt{3})\cap \mathbb{Q}$ and $x_n\to a \in \mathbb{Q}$, then by the limit comparison theorem,
+$$
+\sqrt{2} \leq a \leq \sqrt{3}.
+$$
+Since $a\in\mathbb{Q}$, then
+$$
+\sqrt{2} < a < \sqrt{3}
+$$
+which implies $a\in(\sqrt{2}, \sqrt{3})\cap \mathbb{Q}$ and hence $(\sqrt{2}, \sqrt{3})\cap \mathbb{Q}$ is closed.
+
+\item $\mathbf{(\sqrt{2}, \sqrt{3})\cap \mathbb{Q}\  is\ not\ compact}$
+
+Let $\{x_n\}\in(\sqrt{2}, \sqrt{3})\cap \mathbb{Q}$ with $x_1<x_2<\cdots$. Set $x_0 := 0$. Let 
+$$
+r_k=\min\left\{\frac{x_{k+1}-x_k}{2}, \frac{x_k-x_{k-1}}{2}\right\}.
+$$
+At first, we know
+$$
+(\sqrt{2}, \sqrt{3})\cap \mathbb{Q} \subset \bigcup_{k=1}^{\infty} B_{r_k}(x_k).
+$$
+
+Secondly, we show that open balls are disjoint to each other. Suppose to contrary that they are not disjoint to each other, W.L.O.G, we assume $i<j$, then there is a point $x\in B_{r_i}(x_i)\cap B_{r_j}(x_j)$. Hence,
+$$
+\left| x-x_i \right| < r_i \text{ and } \left| x-x_j \right| < r_j.
+$$
+which implies
+\begin{align*}
+x &< x_i+r_i \leq x_i+\frac{x_{i-1}-x_i}{2} = \frac{x_i+x_{i-1}}{2}; \\
+x &> x_j-r_j \geq x_j-\frac{x_j-x_{j-1}}{2} = \frac{x_j+x_{j-1}}{2}.
+\end{align*}
+Since the index $i<j$, and then
+$$
+x < \frac{x_i+x_{i-1}}{2} < \frac{x_j+x_{j-1}}{2} < x.
+$$
+which is a contradiction.
+
+If $(\sqrt{2}, \sqrt{3})\cap \mathbb{Q}$ is compact, then there exists $N\in\mathbb{N}$ such that 
+$$
+(\sqrt{2}, \sqrt{3})\cap \mathbb{Q} \subseteq \bigcup_{k=1}^{N} B_{r_k}(x_k).
+$$
+But the open balls are disjoint, so there is a point $x\in(\sqrt{2}, \sqrt{3})\cap \mathbb{Q}$ such that
+$$
+x\notin\bigcup_{k=1}^{N} B_{r_k}(x_k).
+$$
+We conclude $(\sqrt{2}, \sqrt{3})\cap \mathbb{Q}$ is not compact.
+\end{itemize}
+\end{proof}
+
+\item
+\begin{solution}
+Set $H_k := \left( \sqrt{2}-\frac{1}{k}, \sqrt{2}+\frac{1}{k} \right) \cap \mathbb{Q}$ for all $k\in\mathbb{N}$. A similar argument in part b) can get $H_k$ is closed and bounded for each $k\in\mathbb{N}$. Notice that
+$$
+H_1 \subset H_2 \subset \cdots.
+$$
+We know
+$$
+\bigcap_{k=1}^{\infty} H_k = \left\{\sqrt{2}\right\} \text{ and } \bigcap_{k=1}^{\infty} H_k \subseteq \mathbb{Q}.
+$$
+Since $\sqrt{2} \notin \mathbb{Q}$, this leads to a contradiction. Hence,
+$$
+\bigcap_{k=1}^{\infty} H_k = \phi
+$$
+might hold.
+\end{solution}
+\end{enumerate}
+\end{Exercise}

@@ -1,0 +1,16 @@
+% === Exercise 7.2.1 ===
+\begin{Exercise}
+\begin{enumerate}[a)]
+\item
+\begin{proof}
+Since $$\left| \sin\left(\frac{x}{k^2}\right) \right| \leq \frac{1}{k^2}$$
+for all $k\in\mathbb{N}$ and $x\in\mathbb{R}$, by the way ,$\sum_{k=1}^{\infty}\frac{1}{k^2} < \infty$. By the Comparison Test, we know $\sum_{k=1}^{\infty} \sin\left(\frac{x}{k^2}\right) < \infty$. Then by the Weierstrass M-Test, we know $$\sum_{k=1}^{\infty}\sin\left(\frac{x}{k^2}\right)$$ converges uniformly on any bounded interval in $\mathbb{R}$.
+\end{proof}
+
+\item 
+\begin{proof}
+Consider $$\left| e^{-kx} \right| = e^{-kx} \leq e^{-ka}$$ for all $k>0$ where $a > 0$.
+Since $\sum_{k=1}^{\infty} e^{-ka}$ converges, then $\sum_{k=1}^{\infty} e^{-kx}$ converges absolutely. By the Weierstrass M-Test, we conclude $$\sum_{k=1}^{\infty} e^{-kx}$$ converges uniformly on any closed subinterval of $(0,\infty)$.
+\end{proof}
+\end{enumerate}
+\end{Exercise}

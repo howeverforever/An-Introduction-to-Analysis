@@ -1,0 +1,109 @@
+% === Exercise 6.3.8 ===
+\begin{Exercise}
+\begin{enumerate}[a)]
+\item
+\begin{proof}
+Let $s:=\liminf_{k\to\infty}x_k$ and $s_n := \inf_{k>n}x_k$. We observe that $\lim_{n\to\infty}s_n = s$.\\
+If $s>x$ for some $x\in\mathbb{R}$, $$\exists N\in\mathbb{N}\text{ such that } s_n>x.$$ i.e., $x_k>x,\ \forall k > N$ as promised.
+\end{proof}
+
+\item
+\begin{proof}
+If $x_k$ converges to $x$, given $\epsilon > 0$, 
+$$
+\exists N \in\mathbb{N}\text{ such that } k\geq N \implies \left|x_k-x\right|<\epsilon.$$
+i.e., for any $n\geq N$, $$x_k<x-\epsilon,\ \forall k>n.
+$$
+Taking the infimum of this last inequality over $k>n$, we see that 
+$$
+s_n\leq x+\epsilon\text{ for any } n\geq N.
+$$
+Hence the limit of the $s_n$'s satisfies $s\leq x+\epsilon$; thus $s\leq x$.
+
+\vspace{2ex}
+
+A similar argument proves that $s\geq x$, then we conclude
+$$
+s=\liminf_{k\to\infty}x_k=x.
+$$
+\end{proof}
+
+\item
+\begin{proof}
+Let 
+$$
+b_n 
+= \inf_{k>n}\frac{a_{k+1}}{a_k} \text{ and } b 
+= \lim_{n\to\infty}b_n.
+$$
+For any $N\in\mathbb{N}$ where $N<n$. By definition of $b_n$, we have
+$$
+b_N
+\leq\frac{a_{k+1}}{a_k}\text{ for } k=N+1,N+2,...,n-1.
+$$
+Notice that $b_n>0,\ \forall n\in\mathbb{N}$. Multiplying these $n-N+1$ inequalities together, we have 
+$$
+b_N^{n-N-1}\leq\frac{a_{N+1}}{a_n}.
+$$ 
+Then taking $n$-th root of both sides, we see that 
+$$
+b_N^{1-\frac{N+1}{n}} \times \sqrt[n]{a_{N+1}} 
+\leq \sqrt[n]{a_n}.
+$$
+Taking the limit infimum on both sides and since the limit exists on the left hand side, 
+$$
+b_N 
+\leq \liminf_{n\to\infty}\sqrt[n]{a_n}.
+$$
+Finally, taking the limit on both sides as $N\to\infty$, we get 
+$$
+\liminf_{n\to\infty}\frac{a_{n+1}}{a_n} 
+\leq \liminf_{n\to\infty}\sqrt[n]{a_n}.
+$$
+A similar argument proves that
+$$
+\limsup_{n\to\infty}\sqrt[n]{a_n} 
+\leq \limsup_{n\to\infty}\frac{a_{n+1}}{a_n}.
+$$
+On the other hand, by the Limit Comparison Theorem,
+$$
+\liminf_{n\to\infty}\sqrt[n]{a_n} 
+\leq \limsup_{n\to\infty}\sqrt[n]{a_n}
+$$
+holds trivially. 
+
+Combining all above discussions and replacing the notation $n$ with $k$, we conclude 
+$$
+\liminf_{k\to\infty}\frac{a_{k+1}}{a_k} 
+\leq \liminf_{k\to\infty}\sqrt[k]{a_k} 
+\leq \limsup_{k\to\infty}\sqrt[k]{a_k} 
+\leq \limsup_{k\to\infty}\frac{a_{k+1}}{a_k}.
+$$
+\end{proof}
+
+\item
+\begin{proof}
+Notice $|b_n| > 0,\ \forall n\in\mathbb{N}$. Since
+$$
+\lim_{n\to\infty}\left|\frac{b_{n+1}}{b_n}\right| 
+= r \in \mathbb{R},
+$$ 
+we have 
+$$
+\liminf_{n\to\infty}\left|\frac{b_{n+1}}{b_n}\right| 
+= \limsup_{n\to\infty}\left|\frac{b_{n+1}}{b_n}\right| 
+= r.
+$$
+From part c), it squeezes that 
+$$
+\liminf_{n\to\infty}\sqrt[n]{|b_n|} 
+= \limsup_{n\to\infty}\sqrt[n]{|b_n|} 
+= r.
+$$
+which implies 
+$$
+\lim_{n\to\infty}\left|b_n\right|^{\frac{1}{n}} = r.
+$$
+\end{proof}
+\end{enumerate}
+\end{Exercise}

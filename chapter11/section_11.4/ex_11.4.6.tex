@@ -1,0 +1,34 @@
+% === Exercise 11.4.6 ===
+\begin{Exercise}
+\begin{proof}
+Consider
+\begin{equation}
+\frac{\partial u}{\partial r} = \frac{\partial f}{\partial x}\cos \theta + \frac{\partial f}{\partial y}\sin \theta. \label{eq:rho_u/rho_r}
+\end{equation}
+And
+\begin{align}
+\frac{\partial^2 u}{\partial r^2}
+&= \frac{\partial^2 f}{\partial x^2}(\cos^2 \theta) + \frac{\partial^2 f}{\partial x \partial y}(\cos \theta \sin \theta) + \frac{\partial^2 f}{\partial y^2}(\sin^2 \theta) + \frac{\partial^2 f}{\partial y \partial x}(\sin \theta \cos \theta) \notag \\
+&= \frac{\partial^2 f}{\partial x^2}(\cos^2 \theta) + \frac{\partial^2 f}{\partial y^2}(\sin^2 \theta) + 2\frac{\partial^2 f}{\partial x \partial y}(\sin \theta \cos \theta).  \label{eq:rho^2_u/rho_r^2}
+\end{align}
+On the other hand,
+$$
+\frac{\partial u}{\partial \theta} = \frac{\partial f}{\partial x}(-r\sin \theta) + \frac{\partial f}{\partial y}(r\cos \theta).
+$$
+And
+\begin{align}
+\frac{\partial^2 u}{\partial \theta^2}
+&= \left( \frac{\partial^2 f}{\partial x^2}(r^2\sin^2 \theta) + \frac{\partial^2 f}{\partial x \partial y}(-r^2\sin \theta \cos \theta)  \right) +\frac{\partial f}{\partial x}(-r\cos \theta) \notag \\
+&\quad +\left( \frac{\partial^2 f}{\partial y \partial x}(-r^2\sin \theta \cos \theta) + \frac{\partial^2 f}{\partial y^2}(r^2 \cos^2 \theta) \right) + \frac{\partial f}{\partial y}(-r\sin \theta) \notag \\
+&= r^2\left( \frac{\partial^2 f}{\partial x^2}(\sin^2 \theta) + \frac{\partial^2 f}{\partial y^2}(\cos^2 \theta) -2 \frac{\partial^2 f}{\partial x \partial y}(\sin \theta \cos \theta) \right) -r\frac{\partial f}{\partial x}\cos \theta - r\frac{\partial f}{\partial y}\sin \theta. \label{eq:rho^2_u/rho_theta^2}
+\end{align}
+By \eqref{eq:rho_u/rho_r}, \eqref{eq:rho^2_u/rho_r^2}, \eqref{eq:rho^2_u/rho_theta^2} and hypothesis that
+$$
+\frac{\partial^2 f}{\partial x^2} + \frac{\partial^2 f}{\partial y^2} = 0,
+$$
+we conclude
+$$
+\frac{1}{r^2}\frac{\partial^2 u}{\partial \theta^2} + \frac{1}{r}\frac{\partial u}{\partial r} + \frac{\partial^2 u}{\partial r^2} = \frac{\partial^2 f}{\partial x^2} + \frac{\partial^2 f}{\partial y^2} = 0.
+$$
+\end{proof}
+\end{Exercise}

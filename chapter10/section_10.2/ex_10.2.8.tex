@@ -1,0 +1,32 @@
+% === Exercise 10.2.8 ===
+\begin{Exercise}
+\begin{proof}
+$(\Longrightarrow)$
+Since $f_n\to f$ uniformly on $[a,b]$. Hence $f\in C[a,b]$ and there exists $N\in\mathbb{N}$ such that
+$$
+n\geq N \implies \left| f_n(x)-f(x) \right| < \epsilon.
+$$
+for all $x\in[a,b]$. Then for any $n\geq N$,
+$$
+\sup_{x\in[a,b]} \left| f_n(x)-f(x) \right| \leq \epsilon
+$$
+implies
+$$
+\rho(f_n, f) \leq \epsilon.
+$$
+So $f_n \to f$ in the metric of $C[a,b]$.
+
+\vspace{2ex}
+
+$(\Longleftarrow)$
+Since $f_n \to f$ in the metric of $C[a,b]$, we know $f\in C[a,b]$ and there exists $N\in\mathbb{N}$ such that
+$$
+n\geq N \implies \sup_{x\in[a,b]} \left| f_n(x) - f(x) \right| < \epsilon.
+$$
+implies
+$$
+\left| f_n(x) - f(x) \right| < \epsilon
+$$
+for all $x\in[a,b]$. Then we conclude $f_n\to f$ uniformly on $[a,b]$.
+\end{proof}
+\end{Exercise}

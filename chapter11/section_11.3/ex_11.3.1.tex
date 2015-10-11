@@ -1,0 +1,46 @@
+% === Exercise 11.3.1 ===
+\begin{Exercise}
+\begin{enumerate}[a)]
+\item
+\begin{proof}
+Consider
+$$
+D f(x,y) = (1,-1)\text{ and } D g(x,y) = (2x,2y).
+$$
+We know $f_x, f_y, g_x, g_y$ exist and are continuous on $\mathbb{R}^2$, hence $f$ and $g$ are differentiable on $\mathbb{R}^2$.
+
+Moreover,
+$$
+D(f+g)(x,y) = D f(x,y) + D g(x,y) = (2x+1,2y-1).
+$$
+And
+\begin{align*}
+D(f\cdot g)(x,y) 
+&= f(x,y)D g(x,y) + g(x,y)D f(x,y) \\
+&= (x-y)\cdot(2x,2y) + (x^2+y^2)\cdot(1,-1) \\
+&= (3x^2-2x y+y^2, -x^2+2x y-3y^2).
+\end{align*}
+\end{proof}
+
+\item
+\begin{proof}
+Consider
+$$
+D f(x,y) = (y,x)\text{ and } D g(x,y) = (\sin x+x\cos x,\sin y).
+$$
+We know $f_x, f_y, g_x, g_y$ exist and are continuous on $\mathbb{R}^2$, hence $f$ and $g$ are differentiable on $\mathbb{R}^2$.
+
+Moreover,
+$$
+D(f+g)(x,y) = D f(x,y) + D g(x,y) = (\sin x+x\cos x+y,x+\sin y).
+$$
+And
+\begin{align*}
+D(f\cdot g)(x,y) 
+&= f(x,y)D g(x,y) + g(x,y)D f(x,y) \\
+&= x y\cdot(\sin x+x\cos x, \sin y)+(x\sin x-\cos y)\cdot(y,x) \\
+&= (x^2 y \cos x+2x y\sin x-y\cos y, x^2\sin x+x y\sin y-x\cos y).
+\end{align*}
+\end{proof}
+\end{enumerate}
+\end{Exercise}

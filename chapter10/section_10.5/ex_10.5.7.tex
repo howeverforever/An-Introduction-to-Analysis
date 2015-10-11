@@ -1,0 +1,45 @@
+% === Exercise 10.5.7 ===
+\begin{Exercise}
+\begin{proof}
+$(\Longrightarrow)$
+
+By Exercise 10.3.8, we know for each $\{E_{\alpha}\}$, there is a open set $F_{\alpha}$ in $X$ such that
+$$
+E_{\alpha} = F_{\alpha}\cap H.
+$$
+Notice that $\{F_{\alpha}\}_{\alpha\in A}$ is an open covering of $H$.
+Since $H$ is compact, there exists finite subset $A_0$ of $A$ such that
+$$
+H \subseteq \bigcup_{\alpha\in A_0} F_{\alpha}.
+$$
+Hence,
+$$
+H 
+\subseteq H\cap\bigcup_{\alpha\in A_0} F_{\alpha}
+= \bigcup_{\alpha\in A_0} F_{\alpha} \cap H
+= \bigcup_{\alpha\in A_0} E_{\alpha}.
+$$
+which means $H$ has a finite subcover $\{E_{\alpha}\}_{\alpha\in A_0}$.
+
+\vspace{2ex}
+
+$(\Longleftarrow)$
+Let $\{F_{\beta}\}_{\beta\in B}$ be an open covering of $H$, Then
+$$
+H \subseteq \bigcup_{\beta\in B} F_{\beta}.
+$$
+Hence,
+$$
+H
+\subseteq H\cap\bigcup_{\beta\in B}F_{\beta} 
+= \bigcup_{\beta\in B}F_{\beta} \cap H
+$$
+which implies $F_{\beta} \cap H$ is an open covering of $H$. Since $F_{\beta} \cap H$ are relatively open in $X$ for all $\beta\in B$, by hypothesis, we know there is a subset $B_0$ of $B$ such that
+$$
+H
+\subseteq \bigcup_{\beta\in B_0}F_{\beta} \cap H
+\subseteq \bigcup_{\beta\in B_0}F_{\beta}.
+$$
+This conclude every cover of $H$ has a finite subcover, which means $H$ is compact.
+\end{proof}
+\end{Exercise}

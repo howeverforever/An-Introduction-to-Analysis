@@ -1,0 +1,46 @@
+% === Exercise 11.4.11 ===
+\begin{Exercise}
+\begin{enumerate}[a)]
+\item
+\begin{proof}
+Notice that
+$$
+D_u f(a) := \lim_{t\to 0}\frac{f(a+t u)-f(a)}{t}
+$$
+where $\| u \| = 1$.
+
+For each $u\in\mathbb{R}^n$ with $\| u \| = 1$, let $g(t) = f(a+t u)$, then differentiate both sides in $t$, we have $\nabla g(t) = \nabla f(a+t u)\cdot u$.
+
+Then we consider
+\begin{align*}
+D_u f(a) 
+&= \lim_{t\to 0}\frac{f(a+t u)-f(a)}{t} \\
+&= \lim_{t\to 0}\frac{g(t)-g(0)}{t} \\
+&= \nabla g(0) \\
+&= \nabla f(a)\cdot u.
+\end{align*}
+\end{proof}
+
+\item
+\begin{proof}
+By hypothesis, we have
+$$
+\nabla f(a) \cdot u = \| \nabla f(a) \| \| u \| \cos \theta.
+$$
+From part a) and $\| u \| = 1$, we conclude
+$$
+D_u f(a) = \nabla f(a)\cdot u = \| \nabla f(a) \| \| u \| \cos \theta =  \| \nabla f(a) \| \cos \theta.
+$$
+\end{proof}
+
+\item
+\begin{solution}
+From part b), we know $\theta \in [0,\frac{\pi}{2}]$ which implies 
+$$
+0\leq D_u f(a) \leq \| \nabla f(a) \|.
+$$
+
+The maximum of $D_u f(a)$ is $\| \nabla f(a) \|$ if and only if $\theta = 0$. This occurs when $u$ is parallel to $\nabla f(a)$.
+\end{solution}
+\end{enumerate}
+\end{Exercise}

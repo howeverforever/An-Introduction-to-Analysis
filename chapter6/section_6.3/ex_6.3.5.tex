@@ -1,0 +1,28 @@
+% === Exercise 6.3.5 ===
+\begin{Exercise}
+\begin{proof}
+Since $0<\frac{1}{k}\leq1 \mbox{ and } \sin{\frac{1}{k}} > 0$ for all $k\in\mathbb{N}$, we know 
+$$ 
+1+k\sin{\frac{1}{k}} > 0.
+$$
+Hence 
+$$ 
+\lim_{k\to\infty}\left|\frac{a_k}{a_{k-1}}\right| 
+= \lim_{k\to\infty}\left(\frac{1}{1+k\sin{\frac{1}{k}}}\right) 
+= \frac{1}{2} < 1 
+$$ 
+where 
+$$ 
+\lim_{k\to\infty}\left(k\sin{\frac{1}{k}}\right) 
+= \lim_{k\to\infty}\left(\frac{\sin{\frac{1}{k}}}{\frac{1}{k}}\right) 
+= \lim_{k\to\infty}\left(\cos{\frac{1}{k}}\right) 
+= 1.
+$$
+
+By the Ratio Test, we conclude 
+$$
+\sum_{k=1}^{\infty}a_k
+$$
+converges absolutely.
+\end{proof}
+\end{Exercise}

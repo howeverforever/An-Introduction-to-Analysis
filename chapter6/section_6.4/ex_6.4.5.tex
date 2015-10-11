@@ -1,0 +1,19 @@
+% === Exercise 6.4.5 ===
+\begin{Exercise}
+\begin{proof}
+By Abel's formula, consider 
+$$
+\sum_{k=1}^{n}a_k b_k 
+=  A_{n,1}b_n - \sum_{k=1}^{n-1}A_{k,1}(b_{k+1}-b_k)
+= A_{n,1}b_n + \sum_{k=1}^{n-1}A_{k,1}(b_k-b_{k+1}).
+$$ 
+
+Notice $A_{n,1} = \sum_{k=1}^{n}a_k = s_n$ and $s_n$ is bounded by the hypotheses. 
+
+Since $b_n\to 0\text{ as } n\to\infty$, then $s_n b_n\to 0\text{ as } n\to\infty$. Now taking the limit on both sides as $n\to\infty$, we conclude  
+$$
+\sum_{k=1}^{\infty}a_k b_k 
+= \sum_{k=1}^{\infty}s_k (b_k - b_{k+1}).
+$$
+\end{proof}
+\end{Exercise}

@@ -1,0 +1,25 @@
+% === Exercise 10.1.2 ===
+\begin{Exercise}
+\begin{proof}
+$(\Longrightarrow)$
+There exists a number $M>0$ and $b\in X$ such that $\rho(x_k, b) \leq M$ for all $k\in\mathbb{N}$. Notice $\rho(b, a)$ is finite since $a, b\in X$. Hence
+$$
+\rho(x_k,a) 
+\leq \rho(x_k,b) + \rho(b,a) 
+\leq M + \rho(b,a) < \infty
+$$ 
+for all $k\in\mathbb{N}$ which implies $$
+\sup_{k\in\mathbb{N}}\rho(x_k,a) 
+< \infty.
+$$
+
+\vspace{2ex}
+
+$(\Longleftarrow)$
+Since 
+$$
+\sup_{k\in\mathbb{N}}\rho(x_k,a) < \infty,
+$$ 
+we choose $M>0$ such that $\rho(x_k,a) \leq M$ for all $k\in\mathbb{N}$. Then by definition, since $a\in X$, we conclude $\{x_k\} $ is bounded in $X$.
+\end{proof}
+\end{Exercise}

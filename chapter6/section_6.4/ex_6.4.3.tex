@@ -1,0 +1,122 @@
+% === Exercise 6.4.3 ===
+\begin{Exercise}
+\begin{enumerate}[a)]
+\item
+\begin{solution}
+Let 
+$$
+a_k := \frac{(-1)^k k^3}{(k+1)!}.
+$$
+
+Since 
+$$
+\lim_{k\to\infty}\left|\frac{a_{k+1}}{a_k}\right| 
+= \lim_{k\to\infty}\left|\frac{-1}{k+2}\left(\frac{k+1}{k}\right)^3\right| 
+= 0 
+< 1,
+$$ by the Ratio Test, we conclude the series \textbf{converges absolutely}.
+\end{solution}
+
+\item
+\begin{solution}
+Let 
+$$a_k := \frac{(-1)\times(-3)\times...\times(1-2k)}{1 \times 4 \times ... \times (3k-2)}.
+$$
+
+Since 
+$$
+\lim_{k\to\infty}\left|\frac{a_{k+1}}{a_k}\right| 
+= \lim_{k\to\infty}\left|\frac{-2k-1}{3k+1}\right| 
+= \frac{2}{3} 
+< 1,
+$$ by the Ratio Test, we conclude the series \textbf{converges absolutely}.
+\end{solution}
+
+\item
+\begin{solution}
+Let 
+$$
+a_k := \frac{\left( k+1 \right)^k}{p^k k!}.
+$$
+
+Since 
+$$
+\lim_{k\to\infty}\left|\frac{a_{k+1}}{a_k}\right| 
+= \lim_{k\to\infty}\left|\frac{k+2}{p\left(k+1\right)}\left(1+\frac{1}{k+1}\right)^k\right| 
+= \frac{e}{p}
+$$ 
+where 
+$$
+\lim_{k\to\infty}\left(1+\frac{1}{k+1}\right)^k = e,
+$$
+by the Ratio Test, we conclude the series \textbf{converges absolutely}.
+\end{solution}
+
+\item
+\begin{solution}
+Let
+$$
+a_k := \frac{\sqrt{k}}{k+1}.
+$$
+
+Calculate 
+$$
+a_k' = \frac{-3k-1}{2\sqrt{k}\left(k+1\right)^2} < 0
+$$ 
+since $k\in\mathbb{N}$. Moreover, 
+$$
+\lim_{k\to\infty}a_k = 0,
+$$ 
+so we know 
+$$
+a_k\downarrow 0\text{ as }k\to\infty.
+$$ 
+
+By the Alternating Series Test, we have 
+$$
+\sum_{k=1}^{\infty}\left(-1\right)^{k+1}a_k
+$$ 
+which converges.
+
+Is it absolutely convergent? Using the divergent p-Series
+$$
+b_k := \frac{1}{k},
+$$ 
+we have 
+$$
+\lim_{k\to\infty}\frac{a_k}{b_k}
+= \lim_{k\to\infty}\left(\frac{\sqrt{k}}{1+\frac{1}{k}}\right) 
+= \infty.
+$$ 
+
+By the Limit Comparison Test, we know 
+$$
+\sum_{k=1}^{\infty}a_k
+$$ 
+diverges. Then we conclude the series \textbf{converges conditionally}.
+\end{solution}
+
+\item
+\begin{solution}
+Let 
+$$
+a_k := \frac{(-1)^k\sqrt{k+1}}{\sqrt{k}\ k^k}.
+$$
+
+Since
+$$
+\lim_{k\to\infty}\left|\frac{a_{k+1}}{a_k}\right| 
+= \lim_{k\to\infty}\left(\sqrt{\frac{k+2}{k+1}}\sqrt{\frac{k}{k+1}}\left(\frac{1}{k+1}\right)\left(1-\frac{1}{k+1}\right)^k\right) 
+= 0 
+< 1
+$$
+where 
+$$
+\lim_{k\to\infty}\left(1-\frac{1}{k+1}\right)^k 
+= \frac{1}{e}.
+$$
+
+By the Ratio Test, we conclude the series \textbf{converges absolutely}.
+\end{solution}
+\end{enumerate}
+\end{Exercise}

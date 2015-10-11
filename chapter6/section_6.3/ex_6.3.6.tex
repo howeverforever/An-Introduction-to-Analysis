@@ -1,0 +1,74 @@
+% === Exercise 6.3.6 ===
+\begin{Exercise}
+\begin{enumerate}[a)]
+\item 
+\begin{proof}
+For $N\in\mathbb{N}$, 
+$$ 
+\sum_{k=1}^{\infty}\left( \sum_{j=1}^{N}a_{k j} \right) 
+= \sum_{j=1}^{N}\left( \sum_{k=1}^{\infty}a_{k j} \right). 
+$$ 
+
+By the Limit Theorem. Then fix $N$, for any $K\in\mathbb{N}$, 
+$$ 
+\sum_{k=1}^{K}\left( \sum_{j=1}^{N}a_{k j} \right) 
+\leq \sum_{k=1}^{\infty}\left( \sum_{j=1}^{\infty}a_{k j} \right).
+$$
+
+If right hand side is finite, by the Monotone Convergence Theorem, we have
+$$
+\sum_{k=1}^{\infty}\left( \sum_{j=1}^{N}a_{k j} \right) \leq \sum_{k=1}^{\infty}\left( \sum_{j=1}^{\infty}a_{k j} \right).
+$$
+
+On the other hand if it is infinite, then it holds trivially; hence for any $N\in\mathbb{N}$,
+$$
+\sum_{j=1}^{N}\left( \sum_{k=1}^{\infty}a_{k j} \right) \leq \sum_{k=1}^{\infty}\left( \sum_{j=1}^{\infty}a_{k j} \right).
+$$ 
+
+Using the Monotone Convergence Theorem again, we conclude
+$$
+\sum_{j=1}^{\infty}\left( \sum_{k=1}^{\infty}a_{k j} \right) 
+\leq \sum_{k=1}^{\infty}\left( \sum_{j=1}^{\infty}a_{k j} \right).
+$$
+\end{proof}
+
+\item
+\begin{proof}
+Set $B_j = \sum_{k=1}^{\infty}a_{k j}$. From part a), 
+$$
+\sum_{j=1}^{\infty}B_j 
+= \sum_{j=1}^{\infty}\left( \sum_{k=1}^{\infty}a_{k j} \right) 
+\leq \sum_{k=1}^{\infty}\left( \sum_{j=1}^{\infty}a_{k j} \right) 
+= \sum_{k=1}^{\infty}A_k
+$$ 
+converges so does $\sum_{j=1}^{\infty}B_j$ which implies both 
+$$
+\sum_{j=1}^{\infty}\left( \sum_{k=1}^{\infty}a_{k j} \right) 
+\leq \sum_{k=1}^{\infty}\left( \sum_{j=1}^{\infty}a_{k j} \right) \mbox{ and } \sum_{k=1}^{\infty}\left( \sum_{j=1}^{\infty}a_{k j} \right) 
+\leq \sum_{j=1}^{\infty}\left( \sum_{k=1}^{\infty}a_{k j} \right) 
+$$ 
+hold. So we conclude 
+$$
+\sum_{j=1}^{\infty}\left( \sum_{k=1}^{\infty}a_{k j} \right) 
+= \sum_{k=1}^{\infty}\left( \sum_{j=1}^{\infty}a_{k j} \right).
+$$
+\end{proof}
+
+\item
+\begin{proof}
+Consider 
+$$
+a_{k j} = \begin{cases}
+1 & \mbox{if } j=k \\
+-1 & \mbox{if } j=k+1 \\
+0 & \mbox{otherwise} 
+\end{cases}.
+$$
+Then the equation from part b) implies
+$$ 
+1 = 0
+$$
+which is obviously a contradiction.
+\end{proof}
+\end{enumerate}
+\end{Exercise}

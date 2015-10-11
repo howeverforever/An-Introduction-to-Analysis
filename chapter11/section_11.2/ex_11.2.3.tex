@@ -1,0 +1,19 @@
+% === Exercise 11.2.3 ===
+\begin{Exercise}
+\begin{proof}
+Calculate
+$$
+f_x(0,0) 
+= \lim_{h\to 0} \frac{f(h,0)-f(0,0)}{h} 
+= \lim_{h\to 0} \frac{0}{h}
+= 0.
+$$
+Similarly, $f_y(0,0) = 0$. We know $D f(0,0) = (0,0)$, then we calculate
+$$
+\frac{f(h,k)-f(0,0)-D f(0,0)\cdot(h,k)}{\| (h,k) \|}
+= \frac{\sqrt{|h k|}}{\sqrt{h^2+k^2}}
+= \frac{\sqrt{t}}{\sqrt{1+t^2}}
+$$
+with $k=h t$. This depends on $t$. Hence, $f$ is not differentiable at $(0,0)$. 
+\end{proof}
+\end{Exercise}

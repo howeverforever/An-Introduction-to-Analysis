@@ -1,0 +1,29 @@
+% === Exercise 6.2.5 ===
+\begin{Exercise}
+\begin{proof}
+Since for $p \geq 0$, we have 
+$$
+\frac{|a_k|}{k^p} \leq |a_k|.
+$$
+
+By the Comparison Test, we know 
+$$
+\sum_{k=1}^{\infty}\frac{|a_k|}{k^p}
+$$
+converges. 
+
+When $p < 0$, the series might converge or diverge. e.g. set $p=-1$ and $a_k=\frac{1}{k}$, then 
+$$
+\sum_{k=1}^{\infty}\frac{|a_k|}{k^p} 
+= \sum_{k=1}^{\infty}1
+$$ 
+diverges. 
+
+For the same $p$, set $a_k = \frac{1}{k^3}$, then the series 
+$$
+\sum_{k=1}^{\infty}\frac{|a_k|}{k^p} 
+= \sum_{k=1}^{\infty}\frac{1}{k^2}
+$$ 
+converges by the p-Series Test.
+\end{proof}
+\end{Exercise}

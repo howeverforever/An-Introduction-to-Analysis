@@ -1,0 +1,52 @@
+% === Exercise 6.2.1 ===
+\begin{Exercise}
+\begin{enumerate}[a)]
+\item 
+\begin{proof}
+Let 
+$$
+a_n := \frac{2n+5}{3n^3+2n-1}\text{ and } b_n :=\frac{1}{n^2}.
+$$
+
+Since $\sum_{k=1}^{\infty}\frac{1}{k^2}$ converges by the p-Series Test; besides,
+$$
+0
+< \lim_{n\to\infty}\frac{a_n}{b_n} 
+= \frac{2}{3} 
+< \infty.
+$$
+
+By the Limit Comparison Test, we conclude 
+$$
+\sum_{k=1}^{\infty}\frac{2k+5}{3k^3+2k-1}
+$$ 
+converges.
+\end{proof}
+
+\item [d)]
+\begin{proof}
+Since $\log{k} < k,\ \forall k \in \mathbb{N}$, we have 
+$$
+\sum_{k=1}^{\infty}\frac{k^3\log^2{k}}{e^k} 
+\leq \sum_{k=1}^{\infty}\frac{k^5}{e^k}.
+$$
+
+Let 
+$$
+a_n := \frac{n^5}{e^n}\text{ and } b_n :=\frac{1}{n^2}.
+$$
+
+Since $\sum_{k=1}^{\infty}\frac{1}{k^2}$ converges by the p-Series Test; besides,
+$$
+\lim_{n\to\infty}\frac{a_n}{b_n} 
+= \lim_{n\to\infty}\frac{n^7}{e^n} 
+= 0. 
+$$
+By the Limit Comparison Test and the Comparison Test, we conclude 
+$$
+\sum_{k=1}^{\infty}\frac{k^3\log^2{k}}{e^k}
+$$ 
+converges.
+\end{proof}
+\end{enumerate}
+\end{Exercise}

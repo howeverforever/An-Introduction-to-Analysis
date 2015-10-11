@@ -1,0 +1,60 @@
+% === Exercise 10.4.7 ===
+\begin{Exercise}
+\begin{proof}
+We denote 
+$$
+f(x) 
+:= {\rm dist}(x,B) 
+= \left\{\rho(x,y):y\in B\right\}.
+$$
+
+Since $A,B$ are compact and $X$ has Bolzano-Weierstrass Property, then $A$ and $B$ are closed and bounded.
+\begin{itemize}
+\item $\mathbf{Claim\ \mathit{f}\ is\ continuous\ on\ \mathit{A}}$
+
+Given $\epsilon>0$, for any $y\in B$, there exists $\delta = \epsilon > 0$ and $x_1, x_2\in A$ such that $\rho(x_1,x_2) < \delta$. Then 
+\begin{alignat*}{7}
+\quad&& \rho(x_1,y) &\leq \rho(x_1,x_2) + \rho(x_2, y)\quad&\text{and}\quad&& \rho(x_2,y) &\leq \rho(x_2,x_1) + \rho(x_1, y)  \\
+\implies\quad&& f(x_1) &\leq \rho(x_1,x_2) + f(x_2)\quad&\text{and}\quad&& f(x_2) &\leq \rho(x_1,x_2) + f(x_1) \\
+\implies\quad&& f(x_1)-f(x_2) &\leq \rho(x_1,x_2) \quad&\text{and}\quad&& f(x_2)-f(x_1) &\leq \rho(x_1,x_2)
+\end{alignat*}
+Hence,
+$$
+\left| f(x_1)-f(x_2) \right| \leq \rho(x_1, x_2) < \delta = \epsilon.
+$$
+
+It follows that $f$ is continuous on $A$.
+\end{itemize}
+
+Since $A$ is bounded and closed, and $f$ is continuous on $A$, by the Extreme Value Theorem, there exists $x_0\in A$ such that $f(x_0)=\inf_{x\in A}f(x)$.
+
+Since $A\cap B = \phi$, for any $x\in A$ implies $x\notin B$. 
+
+Since $B$ is closed, from exercise 10.3.5, we know $f(x) > 0$ for all $x\in A$. 
+
+For any $x\in A$, we know
+$$
+\rho(x,y)
+\geq f(x)
+\geq f(x_0)
+> 0
+$$
+for all $y\in B$. Hence $\rho(x,y) > 0$ for all $x\in A$ and $y\in B$. 
+
+By definition of dist function, we conclude
+$$
+{\rm dist}(A,B) > 0.
+$$
+
+\begin{itemize}
+\item $\mathbf{If\ A,B\ are\ only\ closed}$
+
+Let
+\begin{align*}
+A &:= \left\{(x,1):x\geq 0\right\} \\
+B &:= \left\{(x,y):y=\frac{x}{1+x},\ x\geq 0\right\}.
+\end{align*}
+i.e., $A,B$ are not bounded. We know $A\cap B=\phi$ as desired. However, set $(x, y) \in B$. $y\to 1$ as $x\to\infty$. Pick $(x, 1)\in A$ where $x$ is the same. In this view, dist$(A,B)=0$.
+\end{itemize}
+\end{proof}
+\end{Exercise}

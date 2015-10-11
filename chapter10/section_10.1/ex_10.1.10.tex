@@ -1,0 +1,44 @@
+% === Exercise 10.1.10 ===
+\begin{Exercise}
+\begin{enumerate}[a)]
+\item
+\begin{proof}
+Suppose $E$ is sequentially compact and $x_n \in E$ is a convergent sequence.
+\item [$\mathbf{E\ is\ closed}$] ~\\
+Since $E$ is sequentially compact, then there exists subsequence $x_{n_k}$ of $x_n$ converges to some point in $E$. Since a sequence can have at most one limit, we know they converge to the same limit called $a\in E$. Hence $E$ is closed.
+\item [$\mathbf{E\ is\ bounded}$] ~\\
+By contradiction, we suppose $E$ is not bounded. Let $a\in E$ such that $\rho(x_n, a) > n$ for all $n\in\mathbb{N}$. Since $E$ is sequentially compact, we have subsequence $x_{n_k}$ of $x_n$ which converges to a point $b\in E$. i.e., given $\epsilon > 0$, there exists $N\in\mathbb{N}$ such that
+$$
+n_k\geq N \implies \rho(x_{n_k}, b) < \epsilon.
+$$
+Then for any $n_k \geq N$,
+$$
+\rho(x_{n_k}, a)
+\leq \rho(x_{n_k}, b) + \rho(b, a)
+< \epsilon + \rho(b,a)
+< \infty.
+$$
+However $\rho(x_{n_k}, a) > n_k$ which implies $\rho(x_{n_k}, a)\to\infty$ as $k\to\infty$. This leads to a contradiction. Hence $E$ is bounded.
+Finally, we conclude $E$ is closed and bounded.
+\end{proof}
+
+\item
+\begin{proof}
+\item [$\mathbf{\mathbb{R}\ is\ closed}$] ~\\
+Notice $\mathbb{R}^c = \phi$. Since the empty set contains no points, so every point $x\in\phi$ implies $B_{\epsilon}(x) \subseteq \phi$ vacuously where $\epsilon>0$. Then by definition, we know $\phi$ is open and hence $\mathbb{R}$ is closed.
+
+\item [$\mathbf{\mathbb{R}\ is\ not\ sequentially\ compact}$] ~\\
+Let $x_n = n$ be a sequence in $\mathbb{R}$. However $$x_n \to\infty\notin\mathbb{R}\text{ as } n\to\infty.$$
+Hence $\mathbb{R}$ is not sequentially compact.
+\end{proof}
+
+\item
+\begin{proof}
+Let $E \subseteq \mathbb{R}$ and $E$ is closed and bounded. Set $x_n$ is a bounded sequence in $E$.
+
+By the Bolzano-Weierstrass Theorem, there exists a subsequence $x_{n_k}$ of $x_n$ converges to $x_0 \in \mathbb{R}$. i.e., $\lim_{k\to\infty}x_{n_k} = x_0$. Since $x_{n_k} \in E$ and $E$ is closed, we know $x_0\in E$. Hence $E$ is sequentially compact. 
+
+Since $E$ is arbitrary, then we conclude every closed bounded subset of $\mathbb{R}$ is sequentially compact.
+\end{proof}
+\end{enumerate}
+\end{Exercise}

@@ -1,0 +1,100 @@
+% === Exercise 11.2.11 ===
+\begin{Exercise}
+\begin{enumerate}[a)]
+\item
+\begin{proof}
+Since $f_x, f_y$ exist in $B_r(a,b)$, we set $|h|<\frac{r}{\sqrt{2}}$.
+
+Moreover, since $f_y$ is differentiable at $(a,b)$, by the Mean Value Theorem, there is $k\in(0,h)$ such that
+\begin{align*}
+f(a+h,b+h)-f(a+h,b) &= f_y(a+h,b+k) ((b+h)-b); \\
+f(a,b+h)-f(a,b) &= f_y(a,b+k) ((b+h)-b).
+\end{align*}
+Then substituting $k$ with $t h$ where $t\in(0,1)$, we have
+\begin{align*}
+\Delta(h)
+&= (f(a+h,b+h)-f(a+h,b)) - (f(a,b+h)-f(a,b)) \\
+&= f_y(a+h, b+k) h - f_y(a,b+k) h \\
+&= h\left( f_y(a+h,b+t h)-f_y(a,b+t h) \right).
+\end{align*}
+We know $\nabla f_y(a,b) = (f_{y x}(a,b), f_{y y}(a,b))$ exists by hypothesis, hence
+$$
+\nabla f_y(a,b)\cdot(h,t h)-\nabla f_y(a,b)\cdot(0,t h)
+= h f_{y x}(a,b).
+$$
+
+We conclude
+\begin{align*}
+\frac{\Delta(h)}{h}
+&= f_y(a+h,b+t h)-f_y(a,b+t h) \\
+&= f_y(a+h,b+t h)-f_y(a,b+t h) - f_y(a,b) + f_y(a,b) \\
+&\quad + h f_{y x}(a,b) - \left( \nabla f_y(a,b)\cdot(h,t h)-\nabla f_y(a,b)\cdot(0,t h) \right) \\
+&= f_y(a+h,b+ t h)-f_y(a,b)-\nabla f_y(a,b)\cdot(h,t h)\\
+&\quad -\left( f_y(a,b+t h)-f_y(a,b)-\nabla f_y(a,b)\cdot(0,t h) \right) + h f_{y x}(a,b)
+\end{align*}
+for some $t\in(0,1)$.
+\end{proof}
+
+\item
+\begin{proof}
+Let 
+\begin{align*}
+\epsilon_1(h) &:= f_y(a+h,b+t h)-f_y(a,b)-\nabla f_y(a,b)\cdot(h,t h); \\
+\epsilon_2(h) &:= f_y(a,b+t h)-f_y(a,b)-\nabla f_y(a,b)\cdot(0,t h),
+\end{align*}
+imply
+\begin{align}
+\left| \frac{\epsilon_1(h)}{h} \right| 
+&= \left| \frac{f_y(a+h,b+t h)-f_y(a,b)-\nabla f_y(a,b)\cdot(h,t h)}{\| (h, t h) \|} \times \frac{\| (h, t h) \|}{h} \right| \notag \\
+&\leq \left| \frac{f_y(a+h,b+t h)-f_y(a,b)-\nabla f_y(a,b)\cdot(h,t h)}{\| (h, t h) \|} \right|; \label{eq:eps1} \\
+\left| \frac{\epsilon_2(h)}{h} \right|
+&= \left| \frac{f_y(a,b+t h)-f_y(a,b)-\nabla f_y(a,b)\cdot(0,t h)}{\|(0,t h) \|} \times \frac{\|(0, t h) \|}{h} \right| \notag \\
+&\leq\left| \frac{f_y(a,b+t h)-f_y(a,b)-\nabla f_y(a,b)\cdot(0,t h)}{\|(0,t h) \|} \right|. \label{eq:eps2}
+\end{align}
+Since $f_y$ is differentiable at $(a,b)$, we have
+\begin{align}
+&\lim_{h\to 0} \frac{f_y(a+h,b+t h)-f_y(a,b)-\nabla f_y(a,b)\cdot(h,t h)}{\| (h, t h) \|} = 0; \label{eq:fy1}\\
+&\lim_{h\to 0} \frac{f_y(a,b+t h)-f_y(a,b)-\nabla f_y(a,b)\cdot(0,t h)}{\|(0,t h) \|} = 0.  \label{eq:fy2}
+\end{align}
+
+Taking limit of both sides on \eqref{eq:eps1} and \eqref{eq:eps2} as $h\to 0$, by the Squeeze Theorem from \eqref{eq:fy1} and \eqref{eq:fy2}, we have
+$$
+\lim_{h\to 0} \frac{\epsilon_1(h)}{h} = 0,\text{ and }\lim_{h\to 0} \frac{\epsilon_2(h)}{h} = 0.
+$$
+
+Finally, we conclude
+$$
+\lim_{h\to 0}\frac{\Delta(h)}{h^2}
+= \lim_{h\to 0} \left( \frac{\epsilon_1(h)}{h}-\frac{\epsilon_2(h)}{h}+f_{y x}(a,b) \right) \\
+= f_{y x}(a,b).
+$$
+\end{proof}
+
+\item
+\begin{proof}
+By a similar argument from part a), we have
+\begin{align*}
+\frac{\Delta(h)}{h}
+&= f_x(a+t h,b+h)-f_x(a,b)-\nabla f_x(a,b)\cdot(t h,h)\\
+&\quad -\left( f_x(a+t h,b+)-f_x(a,b)-\nabla f_x(a,b)\cdot(t h,0) \right) + h f_{x y}(a,b)
+\end{align*}
+for some $t\in(0,1)$.
+
+Moreover, by a similar argument from part b), we have
+$$
+\lim_{h\to 0}\frac{\Delta(h)}{h^2}
+= f_{x y}(a,b).
+$$
+
+Hence, 
+$$
+f_{y x}(a,b) = \lim_{h\to 0}\frac{\Delta(h)}{h^2} = f_{x y}(a,b).
+$$
+We conclude
+$$
+\frac{\partial^2 f}{\partial x\ \partial y}(a,b)
+= \frac{\partial^2 f}{\partial y\ \partial x}(a,b).
+$$
+\end{proof}
+\end{enumerate}
+\end{Exercise}
