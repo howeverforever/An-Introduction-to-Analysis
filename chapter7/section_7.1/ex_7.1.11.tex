@@ -3,17 +3,18 @@
 \begin{proof}
 Since $f_n$ is integrable on $[0,1]$ and $f_n\to f$ uniformly on $[0,1]$, we know $f$ is integrable and hence is bounded.
 Then $\exists M > 0, N_1\in\mathbb{N}$ such that $$n\geq N_1 \implies \left| f(x) \right| \leq M \mbox{ for } x\in[0,1].$$
-Moreover, given $\epsilon>0$, $\exists N_2\in\mathbb{N}$ such that $$n\geq N_2 \implies \left| \int_{0}^{d} f_n(x) dx - \int_{0}^{d} f(x) dx \right| < \frac{\epsilon}{3}\mbox{ for } d\in[0,1].$$
-Also, by the Uniform Cauchy Criterion, $\exists N_3\in\mathbb{N}$ such that $$n,m\geq N_3 \implies \left| \int_{0}^{d} f_n(x) dx - \int_{0}^{d} f_m(x) dx \right| < \frac{\epsilon}{3}\mbox{ for } d\in[0,1].$$
+Moreover, given $\epsilon>0$, $\exists N_2\in\mathbb{N}$ such that $$n\geq N_2 \implies \left| \int_{0}^{d} f_n(x) d x - \int_{0}^{d} f(x) d x \right| < \frac{\epsilon}{3}\mbox{ for } d\in[0,1].$$
+Also, by the Uniform Cauchy Criterion, $\exists N_3\in\mathbb{N}$ such that $$n,m\geq N_3 \implies \left| \int_{0}^{d} f_n(x) d x - \int_{0}^{d} f_m(x) d x \right| < \frac{\epsilon}{3}\mbox{ for } d\in[0,1].$$
 Notice $b_n \uparrow 1$ as $n\to\infty$, hence $\exists N_4 \in\mathbb{N}$ such that $$n\geq N_4 \implies 1- b_n < \frac{\epsilon}{3M}.$$
 Finally, pick $N = \max\{N_1,N_2,N_3,N_4\}$, for any $n\geq N$, we have
-\begin{flalign*}
-&\left| \int_{0}^{b_n} f_n(x) dx - \int_{0}^{1} f(x) dx \right| &\\
-\leq& \left| \int_{0}^{b_n} f_n(x) dx - \int_{0}^{b_n} f_N(x) dx \right| + \left| \int_{0}^{b_n} f_N(x) dx - \int_{0}^{b_n} f(x) dx \right| + \left| \int_{b_n}^{1} f(x) dx \right| &\\
-\leq& \int_{0}^{b_n} \left| f_n(x) - f_N(x) \right| dx + \int_{0}^{b_n} \left| f_N(x) - f(x) \right| dx + \int_{b_n}^{1} |f(x)| dx &\\
-<&\ b_n\left( \frac{\epsilon}{3} \right) + b_n\left( \frac{\epsilon}{3} \right) +\left( 1-b_n \right) M &\\
-<&\ 1\times\frac{\epsilon}{3} + 1\times\frac{\epsilon}{3} +\frac{\epsilon}{3M}\times M = \epsilon.
-\end{flalign*}
+\begin{align*}
+&\quad \left| \int_{0}^{b_n} f_n(x) d x - \int_{0}^{1} f(x) d x \right| \\
+&\leq \left| \int_{0}^{b_n} f_n(x) d x - \int_{0}^{b_n} f_N(x) d x \right| + \left| \int_{0}^{b_n} f_N(x) d x - \int_{0}^{b_n} f(x) d x \right| + \left| \int_{b_n}^{1} f(x) d x \right| \\
+&\leq \int_{0}^{b_n} \left| f_n(x) - f_N(x) \right| d x + \int_{0}^{b_n} \left| f_N(x) - f(x) \right| d x + \int_{b_n}^{1} |f(x)| d x \\
+&< b_n\left( \frac{\epsilon}{3} \right) + b_n\left( \frac{\epsilon}{3} \right) +\left( 1-b_n \right) M \\
+&< 1\times\frac{\epsilon}{3} + 1\times\frac{\epsilon}{3} +\frac{\epsilon}{3M}\times M \\
+&= \epsilon.
+\end{align*}
 Hence, $$\lim_{n\to\infty}\int_{0}^{b_n} f_n(x) dx = \int_{0}^{1} f(x) dx.$$
 \end{proof}
 \end{Exercise}

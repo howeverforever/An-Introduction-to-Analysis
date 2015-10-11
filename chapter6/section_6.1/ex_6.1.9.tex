@@ -4,18 +4,39 @@
 \item
 \begin{proof}
 For all $n>N$,
-\begin{flalign*}
-&\left|nb-\sum_{k=1}^{n}b_k\right| = \left|\sum_{k=1}^{n}(b-b_k)\right| \leq \sum_{k=1}^{n}|b-b_k| \leq \sum_{k=1}^{N} |b-b_k| + \sum_{k=N+1}^{n}M = \sum_{k=1}^{N}|b_k-b| + M(n-N). &
-\end{flalign*}
+\begin{align*}
+\left|nb-\sum_{k=1}^{n}b_k\right| 
+&= \left|\sum_{k=1}^{n}(b-b_k)\right| \\
+&\leq  \sum_{k=1}^{n}|b-b_k| \\
+&\leq \sum_{k=1}^{N} |b-b_k| + \sum_{k=N+1}^{n}M \\
+&= \sum_{k=1}^{N}|b_k-b| + M(n-N).
+\end{align*}
 \end{proof}
 
 \item
 \begin{proof}
 Since $\lim_{n\to\infty} b_n = b$, given $\epsilon>0$, $\exists N\in\mathbb{N}$ such that $n \geq N \implies |b_n-b| < \epsilon$.
-Then if $n > N$, by part a), $$\left|\frac{b_1+b_2+...+b_n}{n}-b\right| = \left|\frac{b_1+b_2+...+b_n-nb}{n}\right| \leq \left|\frac{\sum_{k=1}^{n}\left|b_k-b\right|}{n}\right|+\epsilon\left(1-\frac{N}{n}\right). $$
-Taking the limit of both sides as $n\to\infty$, we have $$\limsup_{n\to\infty}\left|\frac{b_1+b_2+...+b_n}{n}-b\right| \leq \epsilon.$$
-This hold for any $\epsilon > 0$, so $$\lim_{n\to\infty}\left|\frac{b_1+b_2+...+b_n}{n}-b\right| = 0 $$
-which implies $$\frac{b_1+b_2+...+b_n}{n}\to b \text{ as } n\to\infty.$$
+Then when $n > N$, by part a), we have 
+$$
+\left|\frac{b_1+b_2+...+b_n}{n}-b\right| 
+= \left|\frac{b_1+b_2+...+b_n-nb}{n}\right| 
+\leq \left|\frac{\sum_{k=1}^{n}\left|b_k-b\right|}{n}\right|+\epsilon\left(1-\frac{N}{n}\right).
+$$
+
+Taking the limit of both sides as $n\to\infty$, we have 
+$$
+\limsup_{n\to\infty}\left|\frac{b_1+b_2+...+b_n}{n}-b\right| 
+\leq \epsilon.
+$$
+
+This hold for any $\epsilon > 0$, so 
+$$
+\lim_{n\to\infty}\left|\frac{b_1+b_2+...+b_n}{n}-b\right| = 0 
+$$
+which implies 
+$$
+\frac{b_1+b_2+...+b_n}{n}\to b \text{ as } n\to\infty.
+$$
 \end{proof}
 
 \item

@@ -1,11 +1,19 @@
 % === Exercise 6.1.5 ===
 \begin{Exercise}
 \begin{solution}
-\begin{flalign*}
- &\sum_{k=1}^{\infty}\left(x^k-x^{k-1}\right)\left(x^k+x^{k-1}\right) = \sum_{k=1}^{\infty}\left(x^{2k}-x^{2k-2}\right) = \lim_{n\to\infty}\left(x^{2n}-1\right)\ \text{converges.} &\\
-\iff& |x| \leq 1. &
-\end{flalign*}
-As a result, $$\sum_{k=1}^{\infty}\left(x^k-x^{k-1}\right)\left(x^k+x^{k-1}\right) = \begin{cases} 0 & \mbox{for } x=\pm1 \\
--1 & \mbox{for } x\in(-1,1)\end{cases}.$$
+\begin{align*}
+\sum_{k=1}^{\infty}\left(x^k-x^{k-1}\right)\left(x^k+x^{k-1}\right) 
+&= \sum_{k=1}^{\infty}\left(x^{2k}-x^{2k-2}\right) \\
+&= \lim_{n\to\infty}\left(x^{2n}-1\right)
+\end{align*}
+converges if and only if $|x| \leq 1$.
+As a result, 
+$$
+\sum_{k=1}^{\infty}\left(x^k-x^{k-1}\right)\left(x^k+x^{k-1}\right) 
+= \begin{cases} 
+0 & \mbox{for } x=\pm1 \\
+-1 & \mbox{for } x\in(-1,1)
+\end{cases}.
+$$
 \end{solution}
 \end{Exercise}
