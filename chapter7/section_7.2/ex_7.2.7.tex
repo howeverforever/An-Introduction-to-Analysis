@@ -5,13 +5,15 @@ Since $g_1$ is bounded on $E$ and $g_k(x) \geq g_{k+1}(x) \geq 0$ for all $x\in 
 Set $$S_n(x) := \sum_{k=1}^{n}f_k(x)\mbox{ and } S(x) := \sum_{k=1}^{\infty}f_k(x).$$
 Since $f$ converges uniformly on $E$, given $\epsilon>0$, $\exists N\in\mathbb{N}$ such that $$n>m>N \implies \left| S_n(x)-S_{m-1}(x) \right| \leq \frac{\epsilon}{3M}\mbox{ and } \left| S_{m-1}(x)-S(x) \right| \leq \frac{\epsilon}{3M}.$$
 Hence, 
-\begin{flalign*}
-&\left| \sum_{k=m}^{n} f_k(x) g_k(x) \right| \\
-=& \left| S_n(x) g_n(x) - S_{m-1} g_m(x) + \sum_{k=m}^{n-1}S_k(x)\left( g_k(x)-g_{k+1}(x) \right) \right| \\
-=& \left| \left[ S_n(x)-S_{m-1}(x) \right] g_n(x) + S_{m-1}(x) \left[ g_n(x)-g_m(x) \right] + \sum_{k=m}^{n-1}S_k(x)\left( g_k(x)-g_{k+1}(x) \right) \right| \\
-=& \left| \left( S_n(x)-S_{m-1}(x) \right) g_n(x) + \left( S_{m-1}(x)-S(x) \right) \left( g_n(x) - g_m(x) \right) + \sum_{k=m}^{n-1}\left( S_k(x)-S(x) \right) \left( g_k(x)-g_{k+1}(x) \right) \right| \\
-<&\ \frac{\epsilon}{3M} \times M + \frac{\epsilon}{3M} \times M + \frac{\epsilon}{3M} \times M = \epsilon.
-\end{flalign*}
+\begin{align*}
+&\quad \left| \sum_{k=m}^{n} f_k(x) g_k(x) \right| \\
+&= \left| S_n(x) g_n(x) - S_{m-1} g_m(x) + \sum_{k=m}^{n-1}S_k(x)\left( g_k(x)-g_{k+1}(x) \right) \right| \\
+&= \left| \left[ S_n(x)-S_{m-1}(x) \right] g_n(x) + S_{m-1}(x) \left[ g_n(x)-g_m(x) \right] + \sum_{k=m}^{n-1}S_k(x)\left( g_k(x)-g_{k+1}(x) \right) \right| \\
+&\leq \left| \left( S_n(x)-S_{m-1}(x) \right) g_n(x) + \left( S_{m-1}(x)-S(x) \right) \left( g_n(x) - g_m(x) \right) \right| \\
+&\quad + \left| \sum_{k=m}^{n-1}\left( S_k(x)-S(x) \right) \left( g_k(x)-g_{k+1}(x) \right) \right| \\
+&< \frac{\epsilon}{3M} \times M + \frac{\epsilon}{3M} \times M + \frac{\epsilon}{3M} \times M \\
+&= \epsilon.
+\end{align*}
 By the Uniform Cauchy Criterion, $\sum_{k=1}^{\infty}f_k g_k$ converges uniformly on $E$.
 \end{proof}
 \end{Exercise}

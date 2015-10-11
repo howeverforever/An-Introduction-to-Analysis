@@ -28,7 +28,7 @@ U'\cup V'
 = A\cap (A\cup B)
 = A.
 $$
-By definition, we conclude $U'$ and $V'$ separate $A$ which implies $A$ is not connected. This leads to a contradiction with hypotheses that $A$ is connected.
+By definition, we conclude $U'$ and $V'$ separate $A$ which implies $A$ is not connected. This leads to a contradiction with hypothesis that $A$ is connected.
 
 \item [$\mathbf{Case\ 2.}$]
 $A\cap U = \phi$ or $B\cap V = \phi$.
@@ -36,14 +36,14 @@ $A\cap U = \phi$ or $B\cap V = \phi$.
 \vspace{1ex}
 
 W.L.O.G., we assume $A\cap U = \phi$. Consider
-\begin{flalign*}
-& A\cup B = U\cup V &\\
-\implies& U\cap(A\cup B) = U\cap(U\cup V) &\\
-\implies& (U\cap A)\cup (U\cap B) = U &\\
-\implies& \phi\cup(U\cap) = U &\\
-\implies& U\cap B = U &\\
-\implies& U \subseteq B. &
-\end{flalign*}
+\begin{alignat*}{7}
+\quad&& A\cup B &= U\cup V \\
+\implies&& U\cap(A\cup B) &= U\cap(U\cup V) \\
+\implies&& (U\cap A)\cup (U\cap B) &= U \\
+\implies&& \phi\cup(U\cap) &= U \\
+\implies&& U\cap B &= U \\
+\implies&& U &\subseteq B.
+\end{alignat*}
 Set $B_1 := B\cap U$ and $B_2 := B\cap V$.
 We consider
 \begin{align*}
@@ -57,25 +57,25 @@ Moreover, with a similar argument from $\mathbf{Case\ 1.}$, we also know $B_1$ a
 
 If $B_2 \neq \phi$, then since $B_2 = B\cap V$, we claim $B_1$ and $B_2$ separate $B$ by definition.
 Otherwise $B_2 = \phi$, then continue to consider
-\begin{flalign*}
-& A\cup B = U\cup V &\\
-\implies& A\cap(A\cup B) = A\cap(U\cup V) &\\
-\implies& A = (A\cap U)\cup (A\cap V) &\\
-\implies& A = A\cap V & \\
-\implies& A \subseteq V. &
-\end{flalign*}
-Since $B\cap V = \phi$ implies $V \subseteq B^c$, so $A \subseteq B^c$. We conclude $A\cap B = \phi$ which leads to a contradiction with hypotheses that $A\cap B\neq \phi$.
+\begin{alignat*}{7}
+\quad&& A\cup B &= U\cup V \\
+\implies&& A\cap(A\cup B) &= A\cap(U\cup V) \\
+\implies&& A &= (A\cap U)\cup (A\cap V) \\
+\implies&& A &= A\cap V \\
+\implies&& A &\subseteq V.
+\end{alignat*}
+Since $B\cap V = \phi$ implies $V \subseteq B^c$, so $A \subseteq B^c$. We conclude $A\cap B = \phi$ which leads to a contradiction with hypothesis that $A\cap B\neq \phi$.
 
 A similar argument proves the condition $B\cap V = \phi$. 
 \end{enumerate}
-Finally, we conclude $A\cap B$ is connected under the hypotheses as promised.
+Finally, we conclude $A\cap B$ is connected under the hypothesis as promised.
 \end{proof}
 
 \item
 \begin{proof}
 Denote $$E_k := \bigcup_{i=1}^{k}E_{n_i}.$$
 where $n_i\in A \mbox{ for } i=1,2,\cdots,k$.
-We pick $n_1\in A$ arbitrarily, then $E_1 = E_{n_1}$ is connected by hypotheses.
+We pick $n_1\in A$ arbitrarily, then $E_1 = E_{n_1}$ is connected by hypothesis.
 
 Assume for $n=k$, $E_k$ is connected. Then for $n=k+1$, we
 pick $n_{k+1}\in A$ arbitrarily, then we know $E_k$ and $E_{n_{k+1}}$ are connected sets. Since $\cap_{\alpha\in A}E_{\alpha} \neq \phi$, it follows that $E_k \cap E_{n_{k+1}} \neq \phi$. From part a), we have $E_k \cup E_{n_{k+1}} = E_{k+1}$ is also connected.

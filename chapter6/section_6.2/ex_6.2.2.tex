@@ -3,17 +3,45 @@
 \begin{enumerate}[a)]
 \item 
 \begin{proof}
-Let $$a_n := \frac{3n^3+n-4}{5n^4-n^2+1}\text{ and } b_n :=\frac{1}{n}.$$
-Since $\sum_{k=1}^{\infty}\frac{1}{k}$ diverges by the p-Series Test, besides
-$$0<\lim_{n\to\infty}\frac{a_n}{b_n} = \frac{3}{5} < \infty.$$
-By the Limit Comparison Test, we conclude $$\sum_{k=1}^{\infty}\frac{3k^3+k-4}{5k^4-k^2+1}$$ diverges.
+Let 
+$$
+a_n := \frac{3n^3+n-4}{5n^4-n^2+1}\text{ and } b_n :=\frac{1}{n}.
+$$
+
+Since $\sum_{k=1}^{\infty}\frac{1}{k}$ diverges by the p-Series Test; besides,
+$$
+0
+< \lim_{n\to\infty}\frac{a_n}{b_n} 
+= \frac{3}{5} 
+< \infty.
+$$
+
+By the Limit Comparison Test, we conclude 
+$$
+\sum_{k=1}^{\infty}\frac{3k^3+k-4}{5k^4-k^2+1}
+$$ 
+diverges.
 \end{proof}
 
 \item [d)]
 \begin{proof}
-Consider $$\int_{2}^{\infty}\frac{1}{x\log^p{x}} = \left|(\log{x})^{1-p}\right|_{2}^{\infty} + p\int_{2}^{\infty}\frac{1}{x\log^p{x}}.$$
-Since $p \leq 1$, then $1-p \geq 0$, we have $$\int_{2}^{\infty}\frac{1}{x\log^p{x}} = \frac{\left|(\log{x})^{1-p}\right|_{2}^{\infty}}{1-p} = \infty.$$
-By the Integral Test, we conclude $$\int_{2}^{\infty}\frac{1}{x\log^p{x}}\quad\mbox{ for }p \leq 1$$
+Consider 
+$$
+\int_{2}^{\infty}\frac{1}{x\log^p{x}} 
+= \left|(\log{x})^{1-p}\right|_{2}^{\infty} + p\int_{2}^{\infty}\frac{1}{x\log^p{x}}.
+$$
+
+Since $p \leq 1$, then $1-p \geq 0$, we have 
+$$
+\int_{2}^{\infty}\frac{1}{x\log^p{x}} 
+= \frac{\left|(\log{x})^{1-p}\right|_{2}^{\infty}}{1-p} 
+= \infty.
+$$
+
+By the Integral Test, we conclude 
+$$
+\int_{2}^{\infty}\frac{1}{x\log^p{x}}\quad\mbox{ for }p \leq 1
+$$
 diverges.
 \end{proof}
 \end{enumerate}

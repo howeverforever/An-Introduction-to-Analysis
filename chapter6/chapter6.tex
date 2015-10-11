@@ -1,39 +1,16 @@
-\documentclass{report}
-\usepackage[utf8]{inputenc}
-\usepackage[a4paper, total={6in, 8in}]{geometry}
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{fancyhdr}
-\usepackage{natbib}
-\usepackage{mathpazo}
-\usepackage{graphicx}
-\usepackage{enumerate}
-\usepackage{type1cm}
-\usepackage{exercise,chngcntr}
-
-\newenvironment{solution}
-  {\begin{proof}[Solution]}
-  {\end{proof}}
-
-\pagestyle{fancy}
-\fancyhf{}
-\rhead{\rightmark}
-\rfoot{\thepage}
-
-\begin{document}
-
-\counterwithin{Exercise}{section}
-
 \setcounter{chapter}{5}
 \chapter{Infinite Series of Real Numbers}
 \thispagestyle{empty}
 \newpage
-
 % === Section 6.1 ===
 \section{Introduction}
 
 \setcounter{Exercise}{3}
 \input{section_6.1/ex_6.1.4}
+
+\vspace{12pt}
+
+\input{section_6.1/ex_6.1.5}
 
 \vspace{12pt}
 
@@ -118,5 +95,3 @@
 \vspace{12pt}
 
 \input{section_6.4/ex_6.4.6}
-
-\end{document}
