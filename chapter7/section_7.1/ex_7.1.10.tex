@@ -4,22 +4,22 @@
 Since $f_n\to f$ uniformly on $E$, given $\epsilon > 0$, $\exists N\in\mathbb{N}$ such that $$n\geq N \implies \left| f_n(x)-f(x) \right| < \epsilon$$ for all $x\in E$; and then since each $f_n$ is bounded and $f_n\to f$ uniformly on $E$, we know $f$ is bounded. So $\exists M_n > 0$ such that 
 $$
 \left| f_n(x)-f(x) \right| 
-\leq M_n\mbox{ for } n=1,2,...,N-1.
+\leq M_n\mbox{ for } n=1,2,\cdots,N-1.
 $$
 Hence 
 \begin{align*}
-\left| \frac{f_1(x)+...+f_n(x)}{n}-f(x) \right| 
+\left| \frac{f_1(x)+\cdots+f_n(x)}{n}-f(x) \right| 
 &\leq \frac{\sum_{k=1}^{N-1}\left| f_k(x)-f(x) \right|}{n} + \frac{\sum_{k=N}^{n}\left| f_k(x)-f(x) \right|}{n} \\
 &< \frac{(N-1)M}{n} + \left( 1-\frac{N-1}{n} \right) \epsilon
 \end{align*}
 where 
 $$ 
-M = \max\{M_1,M_2,...,M_{N-1}\}+1.
+M = \max\{M_1,M_2,\cdots,M_{N-1}\}+1.
 $$
 
 Taking the limit of both sides as $n\to\infty$, we have
 $$ 
-\limsup_{n\to\infty}\left| \frac{f_1(x)+...+f_n(x)}{n}-f(x) \right| 
+\limsup_{n\to\infty}\left| \frac{f_1(x)+\cdots+f_n(x)}{n}-f(x) \right| 
 \leq \epsilon.
 $$
 
