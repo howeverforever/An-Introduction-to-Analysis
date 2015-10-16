@@ -3,15 +3,15 @@
 \begin{enumerate}[a)]
 \item
 \begin{proof}
-Suppose $A\cup B$ is $\mathbf{not}$ connected. i.e., there exists nonempty sets $U$, $V$ are relatively open in $A\cup B$ such that $U\cap V=\phi$ and $U\cup V=A\cup B$.
+Suppose $A\cup B$ is $\mathbf{not}$ connected. i.e., there exists nonempty sets $U$, $V$ are relatively open in $A\cup B$ such that $U\cap V=\emptyset$ and $U\cup V=A\cup B$.
 \begin{enumerate}
 \item [$\mathbf{Case\ 1.}$] 
-$A\cap U\neq \phi$ and $B\cap V\neq \phi$.
+$A\cap U\neq \emptyset$ and $B\cap V\neq \emptyset$.
 
 \vspace{1ex}
 
 Set $U' := A\cap U$ and $V' := A\cap V$. We claim $U'$ and $V'$ separate $A\cup B$. \\
-Consider $U'\cap V' = (A\cap U)\cap (A\cap V) = A\cap (U\cap V) = A\cap \phi = \phi.$
+Consider $U'\cap V' = (A\cap U)\cap (A\cap V) = A\cap (U\cap V) = A\cap \emptyset = \emptyset.$
 Then since $U$ is relatively open in $A\cup B$, there exists an open set $G$ such that $U = (A\cup B)\cap G$. Moreover, 
 $$
 U'
@@ -31,16 +31,16 @@ $$
 By definition, we conclude $U'$ and $V'$ separate $A$ which implies $A$ is not connected. This leads to a contradiction with hypothesis that $A$ is connected.
 
 \item [$\mathbf{Case\ 2.}$]
-$A\cap U = \phi$ or $B\cap V = \phi$.
+$A\cap U = \emptyset$ or $B\cap V = \emptyset$.
 
 \vspace{1ex}
 
-W.L.O.G., we assume $A\cap U = \phi$. Consider
+W.L.O.G., we assume $A\cap U = \emptyset$. Consider
 \begin{alignat*}{7}
 \quad&& A\cup B &= U\cup V \\
 \implies&& U\cap(A\cup B) &= U\cap(U\cup V) \\
 \implies&& (U\cap A)\cup (U\cap B) &= U \\
-\implies&& \phi\cup(U\cap) &= U \\
+\implies&& \emptyset\cup(U\cap) &= U \\
 \implies&& U\cap B &= U \\
 \implies&& U &\subseteq B.
 \end{alignat*}
@@ -53,10 +53,10 @@ B_1\cup B_2
 &= B\cap(A\cup B) \\
 &= B.
 \end{align*}
-Moreover, with a similar argument from $\mathbf{Case\ 1.}$, we also know $B_1$ and $B_2$ are relatively open in $B$. By the way, $U = U\cap B = B_1 \neq \phi$. Then we should discuss whether $B_2 = \phi$ or not.
+Moreover, with a similar argument from $\mathbf{Case\ 1.}$, we also know $B_1$ and $B_2$ are relatively open in $B$. By the way, $U = U\cap B = B_1 \neq \emptyset$. Then we should discuss whether $B_2 = \emptyset$ or not.
 
-If $B_2 \neq \phi$, then since $B_2 = B\cap V$, we claim $B_1$ and $B_2$ separate $B$ by definition.
-Otherwise $B_2 = \phi$, then continue to consider
+If $B_2 \neq \emptyset$, then since $B_2 = B\cap V$, we claim $B_1$ and $B_2$ separate $B$ by definition.
+Otherwise $B_2 = \emptyset$, then continue to consider
 \begin{alignat*}{7}
 \quad&& A\cup B &= U\cup V \\
 \implies&& A\cap(A\cup B) &= A\cap(U\cup V) \\
@@ -64,9 +64,9 @@ Otherwise $B_2 = \phi$, then continue to consider
 \implies&& A &= A\cap V \\
 \implies&& A &\subseteq V.
 \end{alignat*}
-Since $B\cap V = \phi$ implies $V \subseteq B^c$, so $A \subseteq B^c$. We conclude $A\cap B = \phi$ which leads to a contradiction with hypothesis that $A\cap B\neq \phi$.
+Since $B\cap V = \emptyset$ implies $V \subseteq B^c$, so $A \subseteq B^c$. We conclude $A\cap B = \emptyset$ which leads to a contradiction with hypothesis that $A\cap B\neq \emptyset$.
 
-A similar argument proves the condition $B\cap V = \phi$. 
+A similar argument proves the condition $B\cap V = \emptyset$. 
 \end{enumerate}
 Finally, we conclude $A\cap B$ is connected under the hypothesis as promised.
 \end{proof}
@@ -78,7 +78,7 @@ where $n_i\in A \mbox{ for } i=1,2,\cdots,k$.
 We pick $n_1\in A$ arbitrarily, then $E_1 = E_{n_1}$ is connected by hypothesis.
 
 Assume for $n=k$, $E_k$ is connected. Then for $n=k+1$, we
-pick $n_{k+1}\in A$ arbitrarily, then we know $E_k$ and $E_{n_{k+1}}$ are connected sets. Since $\cap_{\alpha\in A}E_{\alpha} \neq \phi$, it follows that $E_k \cap E_{n_{k+1}} \neq \phi$. From part a), we have $E_k \cup E_{n_{k+1}} = E_{k+1}$ is also connected.
+pick $n_{k+1}\in A$ arbitrarily, then we know $E_k$ and $E_{n_{k+1}}$ are connected sets. Since $\cap_{\alpha\in A}E_{\alpha} \neq \emptyset$, it follows that $E_k \cap E_{n_{k+1}} \neq \emptyset$. From part a), we have $E_k \cup E_{n_{k+1}} = E_{k+1}$ is also connected.
 By induction, we know $E_k$ is connected for all $k\in\mathbb{N}$ which implies
 $$
 E = \bigcup_{\alpha\in A} E_{\alpha}
@@ -87,27 +87,27 @@ $$ is connected.
 
 \item
 \begin{proof}
-Since a subset of $\mathbb{R}$ is connected if and only if $E$ is an interval, we suppose $A = [a_1, b_1]$ and $B = [a_2, b_2]$. Since $A\cap B \neq \phi$, we discuss all conditions which are fulfilled.
+Since a subset of $\mathbb{R}$ is connected if and only if $E$ is an interval, we suppose $A = [a_1, b_1]$ and $B = [a_2, b_2]$. Since $A\cap B \neq \emptyset$, we discuss all conditions which are fulfilled.
 \begin{enumerate}
 \item [$\mathbf{Case\ 1.}$]
 $a_1 \leq b_1$ and $b_1 \leq a_2 < b_2$
 
-where $A\cap B = [b1, a2] \neq \phi$. Then $A\cup B = [a_1, b_2]$ is an interval, so is connected.
+where $A\cap B = [b1, a2] \neq \emptyset$. Then $A\cup B = [a_1, b_2]$ is an interval, so is connected.
 
 \item [$\mathbf{Case\ 2.}$]
 $a_1 \leq b_1$ and $a_2 \geq b_2$.
 
-where $A\cap B = [b1, b2] \neq \phi$. Then $A\cup B = [a_1, a_2]$ is an interval, so is connected.
+where $A\cap B = [b1, b2] \neq \emptyset$. Then $A\cup B = [a_1, a_2]$ is an interval, so is connected.
 
 \item [$\mathbf{Case\ 3.}$]
 $b_1 \leq a_1$ and $a_1 \leq b_2 < a_2$.
 
-where $A\cap B = [a1, b2] \neq \phi$. Then $A\cup B = [b_1, a_2]$ is an interval, so is connected.
+where $A\cap B = [a1, b2] \neq \emptyset$. Then $A\cup B = [b_1, a_2]$ is an interval, so is connected.
 
 \item [$\mathbf{Case\ 4.}$]
 $b_1 \leq a_1$ and $b_2 \geq a_2$.
 
-where $A\cap B = [a1, a2] \neq \phi$. Then $A\cup B = [b_1, b_2]$ is an interval, so is connected.
+where $A\cap B = [a1, a2] \neq \emptyset$. Then $A\cup B = [b_1, b_2]$ is an interval, so is connected.
 \end{enumerate}
 Hence, $A\cap B$ is always connected as promised.
 \end{proof}
@@ -117,9 +117,9 @@ Hence, $A\cap B$ is always connected as promised.
 The counter-example is that two subsets of $\mathbb{R}^2$ are supposed as following, 
 \begin{align*}
 A &:= \{(x,y) : -1\leq x \leq 1, -|x| \leq y \leq |x|\} \\
-B &:=\{(x,y) : -1 \leq x \leq 1, -1 \leq y \leq 1\}\backslash\{(0,0)\}
+B &:=\{(x,y) : -1 \leq x \leq 1, -1 \leq y \leq 1\}\setminus\{(0,0)\}
 \end{align*}
-where $A\cap B = \{(x, y): -1 \leq x \leq 1, -|x| \leq y \leq |x|\} \backslash \{(0,0)\} \neq \phi.$
+where $A\cap B = \{(x, y): -1 \leq x \leq 1, -|x| \leq y \leq |x|\} \setminus \{(0,0)\} \neq \emptyset.$
 
 We can pick $U := \{(x,y):x<0\}$ and $V := \{(x,y):x>0\}$ to separate $A\cap B$, so $A\cap B$ is not connected.
 \end{proof}

@@ -10,17 +10,17 @@ $$
 
 Suppose to contrary that
 \begin{equation}\label{eq:cantor_counter}
-\bigcap_{k=1}^{\infty}H_k = \phi.
+\bigcap_{k=1}^{\infty}H_k = \emptyset.
 \end{equation}
-For each $k\in\mathbb{N}$, we set $V_k = X\backslash H_k$. Taking the complement of both sides on \eqref{eq:cantor_counter}, we have
+For each $k\in\mathbb{N}$, we set $V_k = X\setminus H_k$. Taking the complement of both sides on \eqref{eq:cantor_counter}, we have
 $$
 X = \bigcup_{k=1}^{\infty}V_k.
 $$
-Then $\{V_k\}$ is an open covering of $X$. Since $X$ is compact, we extract a finite subcover, say $V_1 \supset V_2 \supset \cdots$ and $V_i = X$ for some $i\in\mathbb{N}$. It follows that $H_i = X\backslash V_i = \phi$ which is a contradiction to $H_i$ is nonempty by hypothesis.
+Then $\{V_k\}$ is an open covering of $X$. Since $X$ is compact, we extract a finite subcover, say $V_1 \supset V_2 \supset \cdots$ and $V_i = X$ for some $i\in\mathbb{N}$. It follows that $H_i = X\setminus V_i = \emptyset$ which is a contradiction to $H_i$ is nonempty by hypothesis.
 
 Hence, we conclude
 $$
-\bigcap_{k=1}^{\infty}H_k \neq \phi.
+\bigcap_{k=1}^{\infty}H_k \neq \emptyset.
 $$
 \end{proof}
 
@@ -89,7 +89,7 @@ $$
 $$
 Since $\sqrt{2} \notin \mathbb{Q}$, this leads to a contradiction. Hence,
 $$
-\bigcap_{k=1}^{\infty} H_k = \phi
+\bigcap_{k=1}^{\infty} H_k = \emptyset
 $$
 might hold.
 \end{solution}
